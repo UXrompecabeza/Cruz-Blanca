@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Flecha abajo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01_REEM_Historico" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="003_RH" transform="translate(-264.000000, -414.000000)" fill="#1697F3" fill-rule="nonzero">
+            <path d="M264.099381,415.924433 C263.974837,415.803526 263.974837,415.602015 264.057866,415.460957 L265.469358,414.09068 C265.614658,413.969773 265.822231,413.969773 265.946774,414.09068 L270.243521,418.241814 C270.388822,418.36272 270.596394,418.36272 270.720937,418.241814 L275.017684,414.09068 C275.162985,413.969773 275.370557,413.969773 275.495101,414.09068 L276.906592,415.460957 C277.031136,415.602015 277.031136,415.803526 276.906592,415.924433 L270.741695,421.90932 C270.596394,422.030227 270.388822,422.030227 270.264278,421.90932 L264.099381,415.924433 Z" id="Flecha-abajo"></path>
+        </g>
+    </g>
+</svg>

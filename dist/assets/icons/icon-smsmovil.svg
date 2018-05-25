@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="26px" viewBox="0 0 30 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ui/header" transform="translate(-283.000000, -18.000000)">
+            <g id="Group" transform="translate(283.000000, 18.000000)">
+                <g id="ico/sms">
+                    <path d="M1.43739651,5.41913832 C1.43739651,4.87795854 1.85927238,4.43739651 2.37745382,4.43739651 L20.621609,4.43739651 C21.1390717,4.43739651 21.5609476,4.87867724 21.5609476,5.41913832 L21.5609476,17.6822866 C21.5609476,18.2234664 21.1390717,18.6640284 20.6208903,18.6640284 L16.5853996,18.6640284 L16.5853996,22.9661562 L11.3410584,18.6640284 L2.37745382,18.6640284 C1.85927238,18.6647471 1.43739651,18.2241851 1.43739651,17.6830053 L1.43739651,5.41913832 Z M2.37745382,20.1021436 L10.8279079,20.1021436 L18.0235148,26.0062498 L18.0235148,20.1021436 L20.621609,20.1021436 C21.9325146,20.1021436 22.9990628,19.0169093 22.9990628,17.6830053 L22.9990628,5.41913832 C22.9990628,4.08523436 21.9332333,3 20.621609,3 L2.37745382,3 C1.06654821,3 0,4.08523436 0,5.41913832 L0,17.6822866 C0,19.0169093 1.06654821,20.1021436 2.37745382,20.1021436 Z" id="Fill-5" fill="#0A0B09" fill-rule="evenodd" transform="translate(11.499531, 14.503125) scale(-1, 1) translate(-11.499531, -14.503125) "></path>
+                    <text id="SMS" font-family="Montserrat-Bold, Montserrat" font-size="6" font-weight="bold" fill="#000000">
+                        <tspan x="5" y="14">SMS</tspan>
+                    </text>
+                    <g id="ico/alerta-azul-globo" transform="translate(15.000000, 0.000000)">
+                        <circle id="Oval" fill="#C6007E" fill-rule="evenodd" cx="7.5" cy="7.5" r="7.5"></circle>
+                        <text id="1" font-family=".AppleSystemUIFont" font-size="8" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="5.53320312" y="10">1</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
