@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    // validaEspecialidad();
+    validaEspecialidad();
     limitCaracters();
     initRut();
     limpiarVal();
@@ -312,9 +312,9 @@ $(".key").on("click change paste keyup", function() {
     }
 })
 
-$('#btnForm').click(function() {
-    // function validaEspecialidad() {
-    //     $(".input-specialty").on("change paste keyup", function() {
+// $('#btnForm').click(function() {
+    function validaEspecialidad() {
+        $(".input-specialty").on("change paste keyup", function() {
             console.log("entraste nivel 1");
             var a = $('#input-specialty').val();
             var ax = $('#input-specialty-mo').val();
@@ -331,15 +331,8 @@ $('#btnForm').click(function() {
                 }
                 $('.specialty-box_op5').removeClass('hide');
                 
-            } else if (a == "Medicina general" || ax == "Medicina general") {
-                console.log("entraste nivel 2");
-                if($('.specialty-box').siblings().not('.hide')) {
-                    $('.specialty-box').addClass('hide');
-                }
-                $('.specialty-box_op1').removeClass('hide');
-                $('.flujo-lg_attach').removeClass('hide');
-                
-            } else if (a == "Psicología" ||a == "psicología" || a == "psicologia" || a == "sicología" || a == "sicologia" || ax == "Psicología") {
+            } else if (a == "Psicología" || a == "psicología" || a == "psicologia" || a == "sicología" || a == "sicologia" || ax == "Psicología") {
+                console.log("psicologia")
                 if($('.specialty-box').siblings().not('.hide')) {
                     $('.specialty-box').addClass('hide');
                 }
@@ -352,6 +345,27 @@ $('#btnForm').click(function() {
                 }
                 $('.specialty-box_op3').removeClass('hide');
                 $('.flujo-lg_attach').removeClass('hide');
+                $('.flujo-lg_files').removeClass('hide'); 
+                
+                // if($('.specialty-box').siblings().not('.hide')) {
+                //     $('.specialty-box').addClass('hide');
+                // }
+                // $('.specialty-box_op3').removeClass('hide');
+                // $('.flujo-lg_attach').removeClass('hide');
+            } else if (a == "Medicina general" || ax == "Medicina general") {
+                console.log("entraste nivel 2");
+                if($('.specialty-box').siblings().not('.hide')) {
+                    $('.specialty-box').addClass('hide');
+                }
+                $('.specialty-box_op1').removeClass('hide');
+                $('.flujo-lg_attach').removeClass('hide');
+                $('.flujo-lg_files').removeClass('hide'); 
+                
+                // if($('.specialty-box').siblings().not('.hide')) {
+                //     $('.specialty-box').addClass('hide');
+                // }
+                // $('.specialty-box_op3').removeClass('hide');
+                // $('.flujo-lg_attach').removeClass('hide');
                 
             } else {
                 if($('.specialty-box').siblings().not('.hide')) {
@@ -359,5 +373,6 @@ $('#btnForm').click(function() {
                 }
             }
     //     });
-    // }
-})
+    })
+}
+// })
