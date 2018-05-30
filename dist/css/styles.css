@@ -107,7 +107,8 @@ table {
     text-align: left !important;
   }
   #formReembolso .specialty-box .attach-files .row {
-    padding-top: 0 !important;
+    padding-top: 0;
+    margin-top: 1em !important;
   }
   #formReembolso .specialty-box .attach-files .alert-box .alert-text_up {
     padding-left: 1.2em;
@@ -143,6 +144,9 @@ table {
   #formReembolso .item-form {
     margin: .5em 0;
     display: inline-block;
+  }
+  #formReembolso #doctor {
+    margin-left: 0 !important;
   }
   .resumen-box h1 {
     font-size: 16px !important;
@@ -239,6 +243,9 @@ table {
     text-align: left;
     float: left;
     padding-left: 3em;
+  }
+  .adjuntosModal .modal-dialog .modal-content .modal-footer button {
+    width: 60% !important;
   }
 }
 
@@ -686,7 +693,7 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   width: 100%;
   background-color: #bbb;
   font-weight: 500;
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 .navbar-bottom a {
@@ -1353,10 +1360,6 @@ button:disabled {
 
 .attach-files .document-charged {
   width: 100%;
-  padding-bottom: 1em;
-  background-color: #f7f7f7;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
   margin-bottom: 1em;
   display: none;
 }
@@ -1367,6 +1370,14 @@ button:disabled {
 
 .attach-files .document-charged .delete-document {
   text-align: right;
+}
+
+.attach-files .document-charged .box_grey {
+  padding: 1em 0 !important;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: .5em !important;
 }
 
 .msj-exito {
@@ -1556,7 +1567,7 @@ button:disabled {
 }
 
 .adjuntosModal .modal-dialog .modal-content .modal-footer button {
-  width: 300px !important;
+  width: 60% !important;
   position: absolute;
   left: 20%;
   bottom: -25%;
