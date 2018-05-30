@@ -94,6 +94,10 @@ function initRut() {
     $('.input_rut').rut();
 }
 
+$(".terms-link").click(function() {
+    $(".leerMas").toggle();
+})
+
 function validaReemb() {
     var a = document.forms["formReembolso"]["especialidad"];
     var ax = document.forms["formReembolso"]["especialidad-mo"];
@@ -314,14 +318,14 @@ $('#btnForm').click(function() {
             console.log("entraste nivel 1");
             var a = $('#input-specialty').val();
             var ax = $('#input-specialty-mo').val();
-            if(a == "Medicina pediátrica" || a == "medicina pediátrica" || a == "medicina pediatrica") {
+            if(a == "Medicina pediátrica" || a == "medicina pediátrica" || a == "medicina pediatrica" || ax == "Medicina pediátrica" ) {
                 if($('.specialty-box').siblings().not('.hide')) {
                     $('.specialty-box').addClass('hide');
                 }
                 $('.flujo-lg_attach').removeClass('hide');
                 $('.specialty-box_op4').removeClass('hide');
                 
-            } else if (a == "Psiquiatría" ||a == "psiquiatría" || a == "psiquiatria" || a == "siquiatría" || a == "siquiatria" || ax == "Psiquiatría") {
+            } else if (a == "Psiquiatría" ||a == "psiquiatría" || a == "psiquiatria" || a == "siquiatría" || a == "siquiatria" || ax == "Psiquiatría"  || ax == "Psiquiatría") {
                 if($('.specialty-box').siblings().not('.hide')) {
                     $('.specialty-box').addClass('hide');
                 }
@@ -335,14 +339,14 @@ $('#btnForm').click(function() {
                 $('.specialty-box_op1').removeClass('hide');
                 $('.flujo-lg_attach').removeClass('hide');
                 
-            } else if (a == "Psicología" ||a == "psicología" || a == "psicologia" || a == "sicología" || a == "sicologia") {
+            } else if (a == "Psicología" ||a == "psicología" || a == "psicologia" || a == "sicología" || a == "sicologia" || ax == "Psicología") {
                 if($('.specialty-box').siblings().not('.hide')) {
                     $('.specialty-box').addClass('hide');
                 }
                 $('.flujo-sm_attach').removeClass('hide');
                 $('.specialty-box_op2').removeClass('hide');
                 $('.flujo-sm_files').removeClass('hide');           
-            } else if (a == "Ginecología" || a == "ginecología" || a == "ginecologia") {
+            } else if (a == "Ginecología" || a == "ginecología" || a == "ginecologia" || ax == "Ginecología") {
                 if($('.specialty-box').siblings().not('.hide')) {
                     $('.specialty-box').addClass('hide');
                 }

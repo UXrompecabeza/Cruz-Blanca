@@ -42,7 +42,7 @@ table {
 @media (max-width: 768px) {
   .main-container {
     width: 100% !important;
-    padding: 0 14px;
+    padding: 0 14px !important;
   }
   .hide-sm {
     visibility: hidden;
@@ -66,6 +66,20 @@ table {
   .terms-and-conditions {
     text-align: left label;
     text-align-font-size: 12px;
+  }
+  .leerMas {
+    display: none;
+  }
+  .asterisc {
+    font-size: 16px !important;
+  }
+  .flujo-lg .input-form {
+    width: 100% !important;
+  }
+  .flujo-lg .form-label {
+    margin-bottom: .5em !important;
+    display: inline-block !important;
+    padding-left: 1em !important;
   }
   .narrow-container {
     width: 100% !important;
@@ -980,7 +994,7 @@ button:disabled {
 }
 
 .menu-buttons-large {
-  padding: 1.5em 0 3em;
+  padding-top: 1.5em;
 }
 
 .menu-buttons-large .menu-button {
@@ -1192,7 +1206,7 @@ button:disabled {
   margin: 0 auto 2em auto;
 }
 
-#formReembolso .specialty input {
+#formReembolso .specialty .input-specialty {
   background: url("../assets/icons/icon-arrow-bottom.svg");
   background-repeat: no-repeat;
   background-position-x: 97%;
@@ -1229,7 +1243,7 @@ button:disabled {
 #formReembolso .input-form {
   border: 1px solid #eeeeee;
   border-radius: 4px;
-  width: 95.5%;
+  width: 90%;
   font-size: 14px;
   color: #4a4a4a;
   padding: .65em 1em;
@@ -1255,6 +1269,46 @@ button:disabled {
 
 .btn-next {
   margin-bottom: 1em;
+}
+
+.flujo-lg {
+  padding-top: 2.5em;
+}
+
+.flujo-lg .section-subtitle {
+  padding-bottom: .5em;
+}
+
+.item-form {
+  text-align: left;
+  padding: 0 0 1em 0 !important;
+}
+
+.item-form .form-label {
+  font-size: 12px;
+  color: #4a4a4a;
+  margin-bottom: 0;
+  display: block;
+  padding-left: 1.3em;
+}
+
+.care {
+  padding: .5em 0 1em 0;
+}
+
+.care span {
+  font-size: 11px;
+  color: #00a8ff;
+  font-style: italic;
+  padding-left: .5em;
+}
+
+.rut-container {
+  display: inline;
+}
+
+#doctor {
+  margin-left: 1em;
 }
 
 .attach-files {
@@ -2248,6 +2302,16 @@ header .header-mo .box-notification img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 10px;
+}
+
+.feedback .select-element:hover {
+  background-color: #f0f8fd;
+  cursor: pointer;
+}
+
+.feedback .select-element:focus {
+  background-color: #f0f8fd;
+  cursor: pointer;
 }
 
 .feedback .select-element .btn-icon {
