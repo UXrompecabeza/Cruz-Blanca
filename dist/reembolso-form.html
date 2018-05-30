@@ -14,119 +14,153 @@
     <title>Cruz Blanca</title>
   </head>
   <body>
-    <div class="main-container"> 
-      <div class="hide-sm">
-        <header>
-          <div class="header-desk">
-            <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-CB.png" alt=""/></div>
-            <div class="header-box-sesion">
-              <div class="sesion-alert"><img src="assets/imgs/icon-bell.png" alt=""/></div>
-              <div class="sesion-inbox"><img src="assets/imgs/icon-notification.png" alt=""/></div>
-              <div class="sesion-user-data_avatar"><img src="assets/imgs/user-profile.png" alt=""/></div>
-              <div class="sesion-user-data">
-                <div class="sesion-user-data_name">
-                  <p class="data-txt">Bienvenida</p>
-                  <p class="user-name">andrea lagos</p>
+    <form action="reembolso-resumen.html" id="formReembolso" onsubmit="return validaReemb()">
+      <div class="main-container">
+        <div class="hide-sm">
+          <header>
+            <div class="header-desk">
+              <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-CB.png" alt=""/></div>
+              <div class="header-box-sesion">
+                <div class="sesion-alert"><img src="assets/imgs/icon-bell.png" alt=""/></div>
+                <div class="sesion-inbox"><img src="assets/imgs/icon-notification.png" alt=""/></div>
+                <div class="sesion-user-data_avatar"><img src="assets/imgs/user-profile.png" alt=""/></div>
+                <div class="sesion-user-data">
+                  <div class="sesion-user-data_name">
+                    <p class="data-txt">Bienvenida</p>
+                    <p class="user-name">andrea lagos</p>
+                  </div>
+                  <div class="sesion-user-data-menu"><img src="assets/icons/icon-question.svg" alt=""/></div>
                 </div>
-                <div class="sesion-user-data-menu"><img src="assets/icons/icon-question.svg" alt=""/></div>
               </div>
+            </div>
+          </header>
+          <nav class="menu-navbar hide-sm">
+            <ul>
+              <li><a class="active" href="#">Inicio</a></li>
+              <li><a href="#">Plan de Salud</a></li>
+              <li><a href="#">Cotizaciones</a></li>
+              <li><a href="#">Bonos</a></li>
+              <li><a href="#">Reembolsos</a></li>
+              <li><a href="#">Presupuetos</a></li>
+              <li><a href="#">Licencias médicas</a></li>
+              <li><a href="#">Ges/Caec</a></li>
+            </ul>
+          </nav>
+          <div class="breadcrumb">
+            <ul>
+              <li><a class="txt-black" href="#">Inicio /</a></li>
+              <li><a class="txt-grey" href="#">Reembolso en linea /</a></li>
+              <li><a class="txt-blue" href="#">Mis Solicitudes</a></li>
+            </ul>
+          </div>
+        </div>
+        <header class="hide-md hide-lg">
+          <div class="header-mo">
+            <div class="row">
+              <div class="box-icon_menu col-3"><a href="#"><img src="assets/icons/icon-menu.svg" alt=""/></a></div>
+              <div class="box-logo col-6"><a href="#"><img src="assets/imgs/logo-cb.png" alt=""/></a></div>
+              <div class="box-notification col-3 center"><a href="#"><img src="assets/icons/icon-smsmovil.svg" alt=""/></a></div>
             </div>
           </div>
         </header>
-        <nav class="menu-navbar hide-sm">
-          <ul>
-            <li><a class="active" href="#">Inicio</a></li>
-            <li><a href="#">Plan de Salud</a></li>
-            <li><a href="#">Cotizaciones</a></li>
-            <li><a href="#">Bonos</a></li>
-            <li><a href="#">Reembolsos</a></li>
-            <li><a href="#">Presupuetos</a></li>
-            <li><a href="#">Licencias médicas</a></li>
-            <li><a href="#">Ges/Caec</a></li>
-          </ul>
-        </nav>
-        <div class="breadcrumb">
-          <ul>
-            <li><a class="txt-black" href="#">Inicio /</a></li>
-            <li><a class="txt-grey" href="#">Reembolso en linea /</a></li>
-            <li><a class="txt-blue" href="#">Mis Solicitudes</a></li>
-          </ul>
-        </div>
-      </div>
-      <header class="hide-md hide-lg">
-        <div class="header-mo">
-          <div class="row">
-            <div class="box-icon_menu col-3"><a href="#"><img src="assets/icons/icon-menu.svg" alt=""/></a></div>
-            <div class="box-logo col-6"><a href="#"><img src="assets/imgs/logo-cb.png" alt=""/></a></div>
-            <div class="box-notification col-3 center"><a href="#"><img src="assets/icons/icon-smsmovil.svg" alt=""/></a></div>
-          </div>
-        </div>
-      </header>
-      <section class="narrow-container">
-        <div class="reembolso-main">
-          <h1 class="section-title section-title_desk">Reembolso para atención médica</h1>
-          <h4 class="hide-md hide-lg">Datos para reembolso</h4>
-          <div class="hide-sm">
-            <p class="info-obligatory">* Información obligatoria </p>
-          </div>
-          <div class="carousel-users">
-            <h4 class="carousel-title section-subtitle">¿Para quién es el reembolso?</h4>
-            <div class="carousel"><img class="icon-left" src="./assets/icons/icon-arrow-left.svg"/><img class="icon-right" src="./assets/icons/icon-arrow-right.svg"/>
-              <div class="item"><img class="icon-user" src="./assets/imgs/user-profile.png"/>
-                <div class="user-info"><span class="name">Eduardo Rojas Calderón</span><span class="relation">Titular</span></div>
+        <div class="breadcrumb-mo hide-md hide-lg"><a href="index.html"><img src="assets/icons/icon-arrow-left.svg" alt=""/>
+            <p>Volver</p></a></div>
+        <section class="narrow-container">
+          <div class="reembolso-main">
+            <h1 class="section-title section-title_desk">Reembolso de atención médica</h1>
+            <h4 class="hide-md hide-lg">Datos para reembolso</h4>
+            <div class="hide-sm">
+              <p class="info-obligatory">* Información obligatoria </p>
+            </div>
+            <div class="carousel-users">
+              <h4 class="carousel-title section-subtitle">¿Para quién es el reembolso?</h4>
+              <div class="carousel owl-carousel owl-theme">
+                <div class="item">
+                  <div class="img_user"><img class="icon-user" src="./assets/icons/icon_user.svg"/></div>
+                  <div class="user-info"><span class="name">Eduardo Rojas Calderón</span><span class="relation">Titular</span></div>
+                </div>
+                <div class="item">
+                  <div class="img_user"><img class="icon-user" src="./assets/icons/icon_user.svg"/></div>
+                  <div class="user-info"><span class="name">Susana Caballero López</span><span class="relation">Esposa</span></div>
+                </div>
+                <div class="item">
+                  <div class="img_user"><img class="icon-user" src="./assets/icons/icon_user.svg"/></div>
+                  <div class="user-info"><span class="name">Francisco Rojas Caballero</span><span class="relation">Hijo</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="reembolso-info">
+              <div class="short-name key">
+                <h4 class="form-title">Agrega un nombre corto al reembolso</h4>
+                <p class="asterisc">*</p>
+                <input class="input-form" type="text" name="inputShort" placeholder="Ej. Gripe de Pablito" id="input-short-name"/>
               </div>
             </div>
           </div>
-          <div class="reembolso-info hide-sm">
-            <div class="short-name">
-              <h4 class="form-title section-subtitle">Agrega un nombre corto al reembolso</h4>
-              <p class="asterisc">*</p>
-              <input class="input-form" type="text" placeholder="Ej. Gripe de Pablito" id="input-short-name"/>
-            </div>
-            <div class="specialty">
-              <h4 class="form-title section-subtitle">¿Qué especialidad?</h4>
-              <p class="asterisc">*</p>
-              <input class="input-form" type="text" list="especialidad" placeholder="Escriba o seleccione su especialidad" id="input-specialty"/>
-              <datalist id="especialidad">
-                <option value="Medicina general">Medicina general</option>
-                <option value="Psicología">Psicología</option>
-                <option value="Psiquiatría">Psiquiatría</option>
-                <option value="Ginecología">Ginecología</option>
-                <option value="Medicina pediátrica">Medicina pediátrica</option>
-              </datalist>
-            </div>
+        </section>
+      </div>
+      <hr class="hide-md hide-lg"/>
+      <div class="main-container">
+        <h4 class="section-subtitle hide-md hide-lg">Datos consulta</h4>
+        <div class="specialty key">
+          <h4 class="form-title">¿Qué especialidad?</h4>
+          <p class="asterisc">*</p>
+          <div class="specialty-input_movil hide-lg hide-md">
+            <select class="input-specialty" name="especialidad-mo" id="input-specialty-mo">
+              <option value="Medicina general" active="active">Seleccione una especialidad</option>
+              <option value="Medicina general" active="active">Medicina general</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Psiquiatría">Psiquiatría</option>
+              <option value="Ginecología">Ginecología</option>
+              <option value="Medicina pediátrica">Medicina pediátrica</option>
+            </select>
           </div>
-          <div class="hide-sm" id="form-hidden">
-            <div class="reembolso-form_hidden">
-              <h4 class="form-title section-subtitle">Información consulta</h4>
+          <div class="specialty-input_desk hide-sm">
+            <input class="input-specialty input-form" type="text" name="especialidad" onkeypress="validaEspecialidad()" onclick="validaEspecialidad()" list="especialidad" placeholder="Escriba o seleccione su especialidad" id="input-specialty"/>
+            <datalist id="especialidad">
+              <option value="Medicina general">Medicina general</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Ginecología">Ginecología</option>
+            </datalist>
+          </div>
+          <div class="specialty-box specialty-box_op1 hide">
+            <div class="flujo-lg">
+              <h4 class="section-subtitle hide-sm">Información consulta</h4>
               <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 col-sm-12 no-padding item-form">
                   <div class="date-form">
-                    <label for="date">Fecha de atención</label>
+                    <label class="form-title" for="date">Fecha de atención</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" name="date" placeholder="dd/mm/aaaa" id="date"/>
                   </div>
-                  <div class="invoice-form">
-                    <label for="invoice">Nº de boleta</label>
+                </div>
+                <div class="col-md-6 col-sm-12 no-padding item-form">
+                  <div class="amount-form">
+                    <label class="form-title" for="amount">Monto solicitado a reembolsar</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
-                  </div>
-                  <div class="care left"><img src="./assets/icons/icon-ojo.svg"/><span>Boleta de atención médica</span></div>
-                  <div class="doctor-form">
-                    <label for="doctor">RUT del médico</label>
-                    <input class="input-form" type="text" name="doctor" placeholder="8.770.764-5" id="doctor"/>
+                    <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="amount" placeholder="$ 000.000" id="amount"/>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="amount-form">
-                    <label for="amount">Monto solicitado a reembolsar</label>
+                <h4 class="section-subtitle hide-md hide-lg">Información consulta</h4>
+                <div class="col-md-6 col-sm-12 no-padding item-form">
+                  <div class="invoice-form">
+                    <label class="form-title" for="invoice">Nº de boleta</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" name="amount" placeholder="$ 000.000" id="amount"/>
+                    <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
                   </div>
+                  <div class="care left"><img src="./assets/icons/icon-ojo.svg"/><span>Boleta de atención médica</span></div>
+                </div>
+                <div class="col-md-6 col-sm-12 no-padding item-form">
                   <div class="rut-form">
-                    <label for="rut">RUT del prestador</label>
+                    <label class="form-title" for="rut">RUT del prestador</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" name="rut" placeholder="10.256.731-4" id="rut"/>
+                    <input class="input-form input_rut" type="text" name="rut" placeholder="10.256.731-4" id="rut"/>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 no-padding item-form">
+                  <div class="doctor-form">
+                    <label class="form-title" for="doctor">RUT del médico</label>
+                    <input class="input-form input_rut" type="text" name="doctor" placeholder="8.770.764-5" id="doctor"/>
                   </div>
                 </div>
               </div>
@@ -134,123 +168,277 @@
             <div class="attach-files">
               <h4 class="section-subtitle">Adjunta archivos</h4>
               <div class="row">
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12 no-padding">
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar mínimo 3 archivos</p>
-                    <div class="alert_sub">
-                      <p class="alert-text_down">1. Boleta de atención médica</p><img class="hide-md" src="./assets/icons/icon-ojo.svg"/>
+                    <div class="flujo-lg_files hide-sm hide">
+                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                    </div>
+                    <div class="flujo-sm_files hide">
+                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                      <div class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                      <div class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12 no-padding">
                   <div class="box-files">
-                    <button class="btn-attach_big"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
+                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target=".adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
                   </div>
                   <div class="box-dashed">
                     <p>No hay archivos adjuntos</p>
                   </div>
                 </div>
+                <div class="flujo-lg_attach hide">
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flujo-sm_attach hide">
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="hide-sm">
-              <button class="btn-next" type="button" data-toggle="modal" data-target="#reembolsoModal">Siguiente</button>
+          </div>
+          <div class="specialty-box specialty-box_op2 hide">
+            <div class="attach-files">
+              <h4 class="section-subtitle">Adjunta archivos</h4>
+              <div class="row">
+                <div class="col-lg-6 col-md-12 no-padding">
+                  <div class="alert-box left">
+                    <p class="asterisc">*</p>
+                    <p class="alert-text_up">Debes adjuntar mínimo 3 archivos</p>
+                    <div class="flujo-lg_files hide-sm hide">
+                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                    </div>
+                    <div class="flujo-sm_files hide">
+                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                      <div class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                      <div class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 no-padding">
+                  <div class="box-files">
+                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target=".adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
+                  </div>
+                  <div class="box-dashed">
+                    <p>No hay archivos adjuntos</p>
+                  </div>
+                </div>
+                <div class="flujo-lg_attach hide">
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flujo-sm_attach hide">
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="specialty-box specialty-box_op3 hide">
+            <div class="flujo-md"> 
+              <h4 class="section-subtitle hide-sm">Información consulta</h4>
+              <div class="row">
+                <div class="col-md-6 col-sm-12 no-padding">
+                  <div class="amount-form">
+                    <label for="amount">Monto solicitado a reembolsar</label>
+                    <p class="asterisc">*</p>
+                    <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="amount2" placeholder="$ 000.000" id="amount"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attach-files">
+              <h4 class="section-subtitle">Adjunta archivos</h4>
+              <div class="row">
+                <div class="col-lg-6 col-md-12 no-padding">
+                  <div class="alert-box left">
+                    <p class="asterisc">*</p>
+                    <p class="alert-text_up">Debes adjuntar mínimo 3 archivos</p>
+                    <div class="flujo-lg_files hide-sm hide">
+                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                    </div>
+                    <div class="flujo-sm_files hide">
+                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                      <div class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                      <div class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 no-padding">
+                  <div class="box-files">
+                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target=".adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
+                  </div>
+                  <div class="box-dashed">
+                    <p>No hay archivos adjuntos</p>
+                  </div>
+                </div>
+                <div class="flujo-lg_attach hide">
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flujo-sm_attach hide">
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-charged">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
+                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+        <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
+      </div>
+      <div class="validacion">
+        <ul></ul>
+      </div>
+      <div class="adjuntosModal modal fade" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reembolsoModalLabel">Adjuntar archivo</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li><a><img src="./assets/icons/icon_img.svg"/><span>Foto</span></a></li>
+                <li><a><img src="./assets/icons/icon_documenr.svg"/><span>Documento pdf</span></a></li>
+              </ul>
+            </div>
+            <div class="modal-footer center">
+              <button class="btn-blue" type="button" data-dismiss="modal" id="btnAdjuntarArchivos">Finalizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="hide-sm">
         <div class="navbar-bottom"><a href="#">
             <div class="navbar-bottom-return"><img src="assets/icons/icon-volverizq.svg" alt=""/>
               <p>Volver</p>
             </div></a></div>
       </div>
-    </div>
-    <div class="reembolso-form-mo hide-md hide-lg">
-      <div class="box-info_upper">
-        <div class="short-name">
-          <p class="asterisc">*</p>
-          <label for="name">Agrega nombre corto a reembolso</label>
-          <input class="input-form" type="text" name="name" placeholder="Ej. Gripe de Pablito" id="name"/>
-        </div>
-      </div>
-      <div class="box-info_middle">
-        <h4>Datos consulta</h4>
-        <div class="specialty cell">
-          <p class="asterisc">*</p>
-          <label for="especialidad">Selecciona especialidad</label>
-          <select id="especialidad">
-            <option value="Medicina general" active="active">Medicina general</option>
-            <option value="Psicología">Psicología</option>
-            <option value="Psiquiatría">Psiquiatría</option>
-            <option value="Ginecología">Ginecología</option>
-            <option value="Medicina pediátrica">Medicina pediátrica</option>
-          </select>
-        </div>
-        <div class="date-form cell">
-          <p class="asterisc">*</p>
-          <label for="date">Fecha de atención</label>
-          <input class="input-form" type="text" name="date" placeholder="dd/mm/aaaa" id="date"/>
-        </div>
-        <div class="alert-date"><img src="./assets/icons/icon-alert.svg"/>
-          <p>Fecha máxima: 28/09/2017</p>
-        </div>
-        <div class="amount-form cell">
-          <p class="asterisc">*</p>
-          <label for="amount">Monto solicitado a reembolsar</label>
-          <input class="input-form" type="text" name="amount" placeholder="$ 000.000" id="amount"/>
-        </div>
-        <p class="alert-asterisc">* Son obligatorios</p>
-      </div>
-      <div class="box-info_down">
-        <h4>Información consulta
-          <div class="care left"><img src="./assets/icons/icon-ojo.svg"/><span>Boleta de atención médica</span></div>
-          <div class="invoice-form cell">
-            <p class="asterisc">*</p>
-            <label for="invoice">Nº de boleta</label>
-            <input class="input-form" type="text" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
-          </div>
-          <div class="rut-form cell">
-            <p class="asterisc">*</p>
-            <label for="rut">RUT del prestador</label>
-            <input class="input-form" type="text" name="rut" placeholder="Últimos 10 dígitos" id="rut"/>
-          </div>
-          <div class="doctor-form cell">
-            <label for="doctor">RUT del médico</label>
-            <input class="input-form" type="text" name="doctor" placeholder="8.770.764-5" id="doctor"/>
-          </div>
-          <p class="alert-asterisc">* Son obligatorios</p>
-        </h4>
-      </div>
-      <div class="box-attach">
-        <div class="box-header">
-          <p class="asterisc">*</p>
-          <p class="text-attach">Adjuntar boleta</p><a href="#" data-toggle="modal" data-target="#boletaModal"><img src="assets/icons/icon-ojo.svg" alt=""/>
-            <p>Boleta</p></a>
-        </div>
-        <div class="button-attach-only">
-          <button class="btn-outline-icon"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
-        </div>
-        <div class="box-dashed">
-          <p>No hay archivos adjuntos</p>
-        </div>
-        <div class="instructions"> <img src="./assets/icons/icon-alert.svg"/>
-          <p>Puedes adjuntar la cantidad de archivos que necesites.</p>
-        </div>
-      </div>
-    </div>
+    </form>
     <div class="hide-md hide-lg">
-      <button class="btn-next" type="button" data-toggle="modal" data-target="#reembolsoModal">Siguiente</button>
+      <div class="footer-floating-option"><img src="assets/icons/icon-asistente.svg" alt=""/></div>
+      <footer class="footer-mo">
+        <div class="footer-brand-logo"><img src="assets/imgs/logo-CB-footer.png" alt=""/></div>
+        <div class="footer-comunication"><a class="phone" href="#"><img src="assets/imgs/phone.png" alt=""/></a><a class="whatsapp" href="#"><img src="assets/imgs/wsp.png" alt=""/></a><a class="location" href="#"><img src="assets/imgs/location.png" alt=""/></a></div>
+      </footer>
     </div>
-    <div class="footer-floating-option"><img src="assets/icons/icon-asistente.svg" alt=""/></div>
-    <footer class="footer-mo">
-      <div class="footer-brand-logo"><img src="assets/imgs/logo-CB-footer.png" alt=""/></div>
-      <div class="footer-comunication"><a class="phone" href="#"><img src="assets/imgs/phone.png" alt=""/></a><a class="whatsapp" href="#"><img src="assets/imgs/wsp.png" alt=""/></a><a class="location" href="#"><img src="assets/imgs/location.png" alt=""/></a></div>
-    </footer>
   </body>
 </html>
 <script src="js/libs/jquery-3.3.1.min.js"></script>
 <script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
+<script src="js/libs/jquery.rut.chileno.js"></script>
 <script src="js/libs/site.js"></script>
 <script src="js/funciones.js"></script>
