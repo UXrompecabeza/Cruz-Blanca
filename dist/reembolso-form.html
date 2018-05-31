@@ -19,7 +19,7 @@
         <div class="hide-sm">
           <header>
             <div class="header-desk">
-              <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-CB.png" alt=""/></div>
+              <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-cb.png" alt=""/></div>
               <div class="header-box-sesion">
                 <div class="sesion-alert"><img src="assets/imgs/icon-bell.png" alt=""/></div>
                 <div class="sesion-inbox"><img src="assets/imgs/icon-notification.png" alt=""/></div>
@@ -93,7 +93,7 @@
               <div class="short-name key">
                 <h4 class="form-title">Agrega un nombre corto al reembolso</h4>
                 <p class="asterisc">*</p>
-                <input class="input-form" type="text" name="inputShort" placeholder="Ej. Gripe de Pablito" id="input-short-name"/>
+                <input class="input-form" type="text" name="inputShort" placeholder="Ej. Gripe de Pablito" oninput="test()" onclick="test()" id="input-short-name"/>
               </div>
             </div>
           </div>
@@ -106,8 +106,8 @@
           <h4 class="form-title">¿Qué especialidad?</h4>
           <p class="asterisc">*</p>
           <div class="specialty-input_movil hide-lg hide-md">
-            <select class="input-specialty" name="especialidad-mo" id="input-specialty-mo">
-              <option value="Medicina general">Seleccione una especialidad</option>
+            <select class="input-specialty" name="especialidad-mo" id="input-specialty-mo" onchange="test()" onclick="test()">
+              <option active="active" value="">Seleccione una especialidad</option>
               <option value="Medicina general">Medicina general</option>
               <option value="Psicología">Psicología</option>
               <option value="Psiquiatría">Psiquiatría</option>
@@ -116,11 +116,13 @@
             </select>
           </div>
           <div class="specialty-input_desk hide-sm">
-            <input class="input-specialty input-form" type="text" name="especialidad" onkeypress="validaEspecialidad()" onclick="validaEspecialidad()" list="especialidad" placeholder="Escriba o seleccione su especialidad" id="input-specialty"/>
+            <input class="input-specialty input-form" type="text" name="especialidad" onchange="test()" oninput="test()" onclick="test()" list="especialidad" placeholder="Escriba o seleccione su especialidad" id="input-specialty"/>
             <datalist id="especialidad">
-              <option value="Medicina general">Medicina general</option>
-              <option value="Psicología">Psicología</option>
-              <option value="Ginecología">Ginecología</option>
+              <select>
+                <option value="Medicina general">Medicina general</option>
+                <option value="Psicología">Psicología</option>
+                <option value="Ginecología">Ginecología</option>
+              </select>
             </datalist>
           </div>
           <div class="specialty-box specialty-box_op1 hide">
@@ -139,6 +141,9 @@
                     <label class="form-label" for="amount">Monto solicitado a reembolsar</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="amount" placeholder="$ 000.000" id="amount"/>
+                  </div><br/>
+                  <div class="hide-lg hide-md">
+                    <p class="info-obligatory-mo">* Son obligatorios</p>
                   </div>
                 </div>
                 <h4 class="section-subtitle hide-md hide-lg">Información consulta</h4>
@@ -147,8 +152,24 @@
                     <label class="form-label" for="invoice">Nº de boleta</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
+                  </div><a class="verModal" href="#" data-toggle="modal" data-target="#boletaModalRut">
+                    <div class="care left"><span>Boleta de atención médica</span><img src="./assets/icons/icon-ojo.svg"/></div></a>
+                  <div class="modal fade" id="boletaModalRut" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="reembolsoModalLabel">Ejemplo Boleta</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-title_serie">
+                            <p>Boleta Centro Médico</p>
+                          </div>
+                          <div class="modal-info_boleta"><img src="assets/imgs/boleta-modelo.jpeg"/></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="care left"><img src="./assets/icons/icon-ojo.svg"/><span>Boleta de atención médica</span></div>
                 </div>
                 <div class="col-md-6 col-sm-12 item-form">
                   <div class="rut-form">
@@ -163,23 +184,39 @@
                     <input class="input-form input_rut" type="text" name="doctor" placeholder="8.770.764-5" id="doctor"/>
                   </div>
                 </div>
+                <div class="hide-lg hide-md">
+                  <p class="info-obligatory-mo">* Son obligatorios</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="excedentes-box">
+                  <div class="form-group">
+                    <label class="form-check-label" for="excLg">
+                      <div class="col-cbx">
+                        <input class="form-check-input" type="checkbox" name="cbxExc" id="excLg" onchange="usarExcedentes(this);"/><span class="checkmark"></span>
+                      </div>
+                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#">Términos y Condiciones</a>
+                        <p class="excLgClass exc">Tienes <span class="strong">$60.000</span> disponibles en excedentes</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="attach-files">
+              <div class="hide-sm">
+                <p class="info-obligatory">* Información obligatoria </p>
+              </div>
               <h4 class="section-subtitle">Adjunta archivos</h4>
               <div class="row">
                 <div class="col-lg-6 col-md-12 no-padding">
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar archivos</p>
-                    <div class="flujo-lg_files hide-sm hide">
-                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                    </div>
-                    <div class="flujo-sm_files hide">
-                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                      <div class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                      <div class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                    </div>
+                    <div class="flujo-lg_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-sm_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
@@ -195,8 +232,10 @@
                     <div class="row">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>1 | Boleta.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -205,54 +244,70 @@
                 <div class="flujo-sm_attach hide">
                   <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>1 | Boleta.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>2 | Informe médico.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>2 | Informe médico.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Orden médica.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>3 | Orden médica.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
             </div>
           </div>
           <div class="specialty-box specialty-box_op2 hide">
+            <div class="row">
+              <div class="col-12">
+                <div class="excedentes-box">
+                  <div class="form-group">
+                    <label class="form-check-label" for="excSm">
+                      <div class="col-cbx">
+                        <input class="form-check-input" type="checkbox" name="cbxExc" id="excSm" onchange="usarExcedentes(this);"/><span class="checkmark"></span>
+                      </div>
+                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#">Términos y Condiciones</a>
+                        <p class="excSmClass exc">Tienes <span class="strong">$60.000</span> disponibles en excedentes</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="attach-files">
+              <div class="hide-sm">
+                <p class="info-obligatory">* Información obligatoria </p>
+              </div>
               <h4 class="section-subtitle">Adjunta archivos</h4>
               <div class="row">
                 <div class="col-lg-6 col-md-12 no-padding">
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar archivos</p>
-                    <div class="flujo-lg_files hide-sm hide">
-                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                    </div>
-                    <div class="flujo-sm_files hide">
-                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                      <div class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                      <div class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                    </div>
+                    <div class="flujo-lg_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-sm_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
@@ -268,8 +323,10 @@
                     <div class="row">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>1 | Boleta.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -278,66 +335,82 @@
                 <div class="flujo-sm_attach hide">
                   <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>1 | Boleta.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>2 | Informe médico.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>2 | Informe médico.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Orden médica.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>3 | Orden médica.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
             </div>
           </div>
           <div class="specialty-box specialty-box_op3 hide">
             <div class="flujo-md"> 
               <h4 class="section-subtitle hide-sm">Información consulta</h4>
               <div class="row">
-                <div class="col-md-6 col-sm-12 no-padding">
+                <div class="col-md-6 col-sm-12 item-form">
                   <div class="amount-form">
-                    <label for="amount">Monto solicitado a reembolsar</label>
+                    <label class="form-label" for="amount">Monto solicitado a reembolsar</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="amount2" placeholder="$ 000.000" id="amount2"/>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="excedentes-box">
+                  <div class="form-group">
+                    <label class="form-check-label" for="excMd">
+                      <div class="col-cbx">
+                        <input class="form-check-input" type="checkbox" name="cbxExc" id="excMd" onchange="usarExcedentes(this);"/><span class="checkmark"></span>
+                      </div>
+                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#">Términos y Condiciones</a>
+                        <p class="excMdClass exc">Tienes <span class="strong">$60.000</span> disponibles en excedentes</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="attach-files">
+              <div class="hide-sm">
+                <p class="info-obligatory">* Información obligatoria </p>
+              </div>
               <h4 class="section-subtitle">Adjunta archivos</h4>
               <div class="row">
                 <div class="col-lg-6 col-md-12 no-padding">
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar archivos</p>
-                    <div class="flujo-lg_files hide-sm hide">
-                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                    </div>
-                    <div class="flujo-sm_files hide">
-                      <div class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                      <div class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                      <div class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></div>
-                    </div>
+                    <div class="flujo-lg_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-sm_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
@@ -353,8 +426,10 @@
                     <div class="row">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>1 | Boleta.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -363,40 +438,43 @@
                 <div class="flujo-sm_attach hide">
                   <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Boleta.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>1 | Boleta.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>2 | Informe médico.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>2 | Informe médico.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="document-charged">
                     <div class="row">
-                      <div class="col-12">
+                      <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document"><span>1 | Orden médica.jpg</span></div>
-                          <div class="col-6 delete-document"><a href="#"><img src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-6 text-document">
+                            <p>3 | Orden médica.jpg</p>
+                          </div>
+                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
             </div>
           </div>
         </div>
-        <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
+        <button class="btn-next" type="button" id="btnMostrarCampos">Siguiente</button>
       </div>
       <div class="validacion">
         <ul></ul>
@@ -410,8 +488,8 @@
             </div>
             <div class="modal-body">
               <ul>
-                <li><a><img src="./assets/icons/icon_img.svg"/><span>Foto</span></a></li>
-                <li><a><img src="./assets/icons/icon_documenr.svg"/><span>Documento pdf</span></a></li>
+                <li><a href="assets/imgs/boleta.png" target="_blank"><img src="./assets/icons/icon_img.svg"/><span>Foto</span></a></li>
+                <li><a href="assets/imgs/boleta.png" target="_blank"><img src="./assets/icons/icon_documenr.svg"/><span>Documento pdf</span></a></li>
               </ul>
             </div>
             <div class="modal-footer center">
@@ -421,16 +499,18 @@
         </div>
       </div>
       <div class="hide-sm">
-        <div class="navbar-bottom"><a href="#">
-            <div class="navbar-bottom-return"><img src="assets/icons/icon-volverizq.svg" alt=""/>
-              <p>Volver</p>
-            </div></a></div>
+        <div class="main-container">
+          <div class="navbar-bottom"><a href="#">
+              <div class="navbar-bottom-return"><img src="assets/icons/icon-volverizq.svg" alt=""/>
+                <p>Volver</p>
+              </div></a></div>
+        </div>
       </div>
     </form>
     <div class="hide-md hide-lg">
       <div class="footer-floating-option"><img src="assets/icons/icon-asistente.svg" alt=""/></div>
       <footer class="footer-mo">
-        <div class="footer-brand-logo"><img src="assets/imgs/logo-CB-footer.png" alt=""/></div>
+        <div class="footer-brand-logo"><img src="assets/imgs/logo-cb-footer.png" alt=""/></div>
         <div class="footer-comunication"><a class="phone" href="#"><img src="assets/imgs/phone.png" alt=""/></a><a class="whatsapp" href="#"><img src="assets/imgs/wsp.png" alt=""/></a><a class="location" href="#"><img src="assets/imgs/location.png" alt=""/></a></div>
       </footer>
     </div>
@@ -440,5 +520,6 @@
 <script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
 <script src="js/libs/jquery.rut.chileno.js"></script>
+<script src="js/libs/datalist-polyfill.min.js"></script>
 <script src="js/libs/site.js"></script>
 <script src="js/funciones.js"></script>

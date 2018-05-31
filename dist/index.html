@@ -19,7 +19,7 @@
         <div class="hide-sm">
           <header>
             <div class="header-desk">
-              <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-CB.png" alt=""/></div>
+              <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-cb.png" alt=""/></div>
               <div class="header-box-sesion">
                 <div class="sesion-alert"><img src="assets/imgs/icon-bell.png" alt=""/></div>
                 <div class="sesion-inbox"><img src="assets/imgs/icon-notification.png" alt=""/></div>
@@ -69,17 +69,20 @@
           <div class="menu-buttons-large hide-sm">
             <div class="menu-button">
               <div class="row">
-                <div class="col-lg-4 col-md-12">
-                  <div class="button-large"><a href="#"><img src="assets/icons/icon-firstaid.svg"/><span class="button-large-title">Atención médica</span>
-                      <p class="button-large-subtitle">Consultas a tu médico con reserva de hora, urgencias, atención internacional.</p></a></div>
+                <div class="col-lg-4 col-md-12"><a class="btnLink" onclick="focusBtnmo()">
+                    <div class="button-large btn-large-mo"><img src="assets/icons/icon-firstaid.svg"/><span class="button-large-title">Atención médica</span>
+                      <p class="button-large-subtitle">Consultas a tu médico con reserva de hora, urgencias, atención internacional.</p>
+                    </div></a>
                 </div>
-                <div class="col-lg-4 col-md-12 tester">
-                  <div class="button-large"><a href="#"><img src="./assets/icons/icon-tester.svg"/><span class="button-large-title">Exámenes y procedimientos</span>
-                      <p class="button-large-subtitle">Estudios y procedimientos ambulatorios.</p></a></div>
+                <div class="col-lg-4 col-md-12 tester"><a class="btnLink" onclick="focusBtnmo()">
+                    <div class="button-large btn-large-mo"><img src="./assets/icons/icon-tester.svg"/><span class="button-large-title">Exámenes y procedimientos</span>
+                      <p class="button-large-subtitle">Estudios y procedimientos ambulatorios.</p>
+                    </div></a>
                 </div>
-                <div class="col-lg-4 col-md-12 sign">
-                  <div class="button-large"><a href="#"><img src="./assets/icons/icon-sign.svg"/><span class="button-large-title">Otras atenciones</span>
-                      <p class="button-large-subtitle">Kinesiología, Fonoaudiología, Nutrición, Lentes ópticos, ortesis y prótesis.</p></a></div>
+                <div class="col-lg-4 col-md-12 sign"><a class="btnLink" onclick="focusBtnmo()">
+                    <div class="button-large btn-large-mo"><img src="./assets/icons/icon-sign.svg"/><span class="button-large-title">Otras atenciones</span>
+                      <p class="button-large-subtitle">Kinesiología, Fonoaudiología, Nutrición, Lentes ópticos, ortesis y prótesis.</p>
+                    </div></a>
                 </div>
               </div>
             </div>
@@ -90,15 +93,15 @@
             <div class="box-header">
               <h2 class="box-title lefted hide-md">Solicitar Reembolso</h2>
             </div>
-            <div class="box-content"><a class="select-element">
+            <div class="box-content"><a class="select-element btn-large-mo" href="#" onclick="focusBtnmo()">
                 <div class="btn-icon"><img src="assets/icons/icon-firstaid.svg" alt=""/></div>
                 <div class="btn-text">
                   <h4>Atención Médica</h4><span>Consultas a tu médico con reserva de hora, urgencias, atención internacional.</span>
-                </div></a><a class="select-element">
+                </div></a><a class="select-element btn-large-mo" href="#" onclick="focusBtnmo()">
                 <div class="btn-icon"><img src="assets/icons/icon-tester.svg"/></div>
                 <div class="btn-text">
                   <h4>Exámenes y procedimientos</h4><span>Estudios y procedimientos ambulatorios.</span>
-                </div></a><a class="select-element">
+                </div></a><a class="select-element btn-large-mo" href="#" onclick="focusBtnmo()">
                 <div class="btn-icon"><img src="assets/icons/icon-sign.svg" alt=""/></div>
                 <div class="btn-text">
                   <h4>Otras atenciones</h4><span>Kinesiología, Fonoaudiología, Nutrición, Lentes ópticos, ortesis y prótesis.</span>
@@ -114,7 +117,9 @@
                   </label>
                 </div>
                 <p class="terms-text">
-                   Lorem ipsum dolor sit amet consectetur adipiscing elit cubilia netus, <span class="leerMas">ultricies tristique varius dignissim erat massa aptent conubia, vivamus lectus accumsan litora felis dui at ad. Aliquet rhoncus </span>ultricies….</p><a class="terms-link">Leer todo el texto</a>
+                   Lorem ipsum dolor sit amet consectetur adipiscing elit cubilia netus, ultricies tristique varius dignissim erat massa aptent conubia, vivamus lectus accumsan litora felis dui at ad. Aliquet rhoncus 
+                  ultricies….
+                </p><a class="terms-link" href="#" download="download">Descargar Términos y Condiciones</a>
               </div>
             </div>
           </div>
@@ -131,7 +136,7 @@
     <div class="hide-md hide-lg">
       <div class="footer-floating-option"><img src="assets/icons/icon-asistente.svg" alt=""/></div>
       <footer class="footer-mo">
-        <div class="footer-brand-logo"><img src="assets/imgs/logo-CB-footer.png" alt=""/></div>
+        <div class="footer-brand-logo"><img src="assets/imgs/logo-cb-footer.png" alt=""/></div>
         <div class="footer-comunication"><a class="phone" href="#"><img src="assets/imgs/phone.png" alt=""/></a><a class="whatsapp" href="#"><img src="assets/imgs/wsp.png" alt=""/></a><a class="location" href="#"><img src="assets/imgs/location.png" alt=""/></a></div>
       </footer>
     </div>
@@ -140,5 +145,6 @@
 <script src="js/libs/jquery-3.3.1.min.js"></script>
 <script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
+<script src="/js/libs/selectize.js"></script>
 <script src="js/libs/site.js"></script>
 <script src="js/funciones.js"></script>
