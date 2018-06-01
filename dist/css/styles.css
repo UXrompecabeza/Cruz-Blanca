@@ -1278,6 +1278,10 @@ a.btnLink:active {
   margin: 0 auto 2em auto;
 }
 
+#formReembolso .specialty .top {
+  vertical-align: top !important;
+}
+
 #formReembolso .specialty .input-specialty {
   background: url("../assets/icons/icon-arrow-bottom.svg");
   background-repeat: no-repeat;
@@ -1349,19 +1353,16 @@ a.btnLink:active {
 .input-form::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #767676 !important;
-  font-style: italic !important;
 }
 
 .input-form::-moz-placeholder {
   /* Firefox */
-  color: #767676;
-  font-style: italic;
+  color: #767676 !important;
 }
 
 .input-form::-ms-input-placeholder {
   /* IE 10+ */
   color: #767676;
-  font-style: italic;
 }
 
 .date-form input {
@@ -1369,6 +1370,10 @@ a.btnLink:active {
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 50%;
+}
+
+a {
+  cursor: pointer;
 }
 
 a:hover {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/libs/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/libs/owl.carousel.css"/>
     <link rel="stylesheet" href="css/libs/owl.theme.default.css"/>
+    <link rel="stylesheet" href="css//libs/selectize.css"/>
     <link rel="stylesheet" href="css/libs/progress-tracker.css"/>
     <link rel="stylesheet" href="css/libs/site.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
@@ -104,7 +105,15 @@
         <h4 class="section-subtitle hide-md hide-lg">Datos consulta</h4>
         <div class="specialty">
           <h4 class="form-title">¿Qué especialidad?</h4>
-          <p class="asterisc">*</p>
+          <p class="asterisc top">*</p>
+          <div class="specialty-input_desk hide-sm">
+            <select class="demo-default" name="especialidad" id="input-specialty" placeholder="Escriba o seleccione su especialidad" onchange="test()" onclick="test()">
+              <option value="">Seleccione su especialidad</option>
+              <option value="Medicina general">Medicina general</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Ginecología">Ginecología</option>
+            </select>
+          </div>
           <div class="specialty-input_movil hide-lg hide-md">
             <select class="input-specialty" name="especialidad-mo" id="input-specialty-mo" onchange="test()" onclick="test()">
               <option active="active" value="">Seleccione una especialidad</option>
@@ -114,16 +123,6 @@
               <option value="Ginecología">Ginecología</option>
               <option value="Medicina pediátrica">Medicina pediátrica</option>
             </select>
-          </div>
-          <div class="specialty-input_desk hide-sm">
-            <input class="input-specialty input-form" type="text" name="especialidad" onchange="test()" oninput="test()" onclick="test()" list="especialidad" placeholder="Escriba o seleccione su especialidad" id="input-specialty"/>
-            <datalist id="especialidad">
-              <select>
-                <option value="Medicina general">Medicina general</option>
-                <option value="Psicología">Psicología</option>
-                <option value="Ginecología">Ginecología</option>
-              </select>
-            </datalist>
           </div>
           <div class="specialty-box specialty-box_op1 hide">
             <div class="flujo-lg">
@@ -152,7 +151,7 @@
                     <label class="form-label" for="invoice">Nº de boleta</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
-                  </div><a class="verModal" href="#" data-toggle="modal" data-target="#boletaModalRut">
+                  </div><a class="verModal" data-toggle="modal" data-target="#boletaModalRut">
                     <div class="care left"><span>Boleta de atención médica</span><img src="./assets/icons/icon-ojo.svg"/></div></a>
                   <div class="modal fade" id="boletaModalRut" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -519,7 +518,8 @@
 <script src="js/libs/jquery-3.3.1.min.js"></script>
 <script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
 <script src="js/libs/jquery.rut.chileno.js"></script>
-<script src="js/libs/datalist-polyfill.min.js"></script>
+<script src="js/libs/selectize.min.js"></script>
 <script src="js/libs/site.js"></script>
 <script src="js/funciones.js"></script>

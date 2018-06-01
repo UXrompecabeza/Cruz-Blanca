@@ -41,6 +41,17 @@ $("#date").keyup(function (event) {
     }
 })
 
+//Datalist
+
+$('#input-specialty').selectize({
+    create: false,
+    sortField: {
+        field: 'text',
+        direction: 'asc'
+    },
+    dropdownParent: 'body'
+});
+
 //Borrar documento adjunto
 
 $(".deleteDoc").click(function() {
