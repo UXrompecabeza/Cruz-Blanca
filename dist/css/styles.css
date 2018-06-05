@@ -63,44 +63,72 @@ table {
     width: 15em !important;
     padding: .5em !important;
   }
-  .terms-and-conditions {
-    text-align: left label;
-    text-align-font-size: 12px;
+  hr {
+    margin: 0 !important;
+    border-top: 1px solid rgba(0, 168, 255, 0.4) !important;
   }
-  .leerMas {
-    display: none;
-  }
-  .asterisc {
+  .box-header h2 {
     font-size: 16px !important;
+    text-align: left;
   }
-  .flujo-lg .input-form, .flujo-md .input-form {
-    width: 100% !important;
+  .terms-and-conditions {
+    text-align: left;
+    border-top: none !important;
   }
-  .flujo-lg .form-label, .flujo-md .form-label {
-    margin-bottom: .5em !important;
-    display: inline-block !important;
-    padding-left: 1em !important;
+  .terms-and-conditions label {
+    font-size: 12px;
   }
   .narrow-container {
     width: 100% !important;
     padding: 0;
   }
-  .reembolso-main {
+  #formReembolso .flujo-lg, #formReembolso .flujo-md {
+    padding-top: .5em !important;
+  }
+  #formReembolso .flujo-lg .input-form, #formReembolso .flujo-md .input-form {
+    width: 100%;
+  }
+  #formReembolso .flujo-lg .form-label, #formReembolso .flujo-md .form-label {
+    margin-bottom: .5em !important;
+    display: inline-block !important;
+    padding-left: 1em !important;
+  }
+  #formReembolso .flujo-lg .alert_date, #formReembolso .flujo-md .alert_date {
+    display: inline-block;
+    width: 38%;
+    padding-left: .3em;
+  }
+  #formReembolso .flujo-lg .alert_date img, #formReembolso .flujo-md .alert_date img {
+    width: 14%;
+    vertical-align: top;
+  }
+  #formReembolso .flujo-lg .alert_date p, #formReembolso .flujo-md .alert_date p {
+    display: inline-block;
+    font-size: 11px;
+    color: #767676;
+    width: 82%;
+    font-style: italic;
+    padding-left: .3em;
+  }
+  #formReembolso .reembolso-main {
     padding-bottom: 0 !important;
   }
-  .reembolso-main h1 {
+  #formReembolso .reembolso-main h1 {
     font-size: 16px !important;
     text-align: left;
     margin: 0 !important;
   }
-  .reembolso-main h4 {
+  #formReembolso .reembolso-main h4 {
     font-size: 16px;
     text-align: left;
-    font-weight: 300;
+    font-weight: 400 !important;
     padding-top: .3em;
   }
-  .reembolso-main .reembolso-info {
+  #formReembolso .reembolso-main .reembolso-info {
     padding: 1em 0 !important;
+  }
+  #formReembolso .reembolso-main .reembolso-info .short-name .form-title {
+    margin-left: -1em;
   }
   #formReembolso .specialty {
     width: 100% !important;
@@ -108,24 +136,40 @@ table {
   }
   #formReembolso .specialty select {
     width: 100% !important;
+    background: url("../assets/icons/icon-arrow-bottom.svg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
   }
-  #formReembolso .specialty-box .attach-files .row {
-    padding-top: 0;
-    margin-top: 1em !important;
+  #formReembolso .specialty .specialty-box .attach-files {
+    padding: 0 !important;
   }
-  #formReembolso .specialty-box .attach-files .alert-box .alert-text_up {
+  #formReembolso .specialty .specialty-box .attach-files .row {
+    margin: 0 !important;
+  }
+  #formReembolso .specialty .specialty-box .attach-files .row .box-dashed {
+    margin: 1em auto 0 auto !important;
+  }
+  #formReembolso .specialty .specialty-box .attach-files .alert-box .alert-text_up {
     padding-left: 1.2em;
     margin-top: 0 !important;
   }
-  #formReembolso .asterisc {
-    display: inline-block;
-    font-size: 25px;
-    text-align: left;
-    float: left;
-    height: 0 !important;
-    width: 5%;
-    position: relative;
-    top: -3px;
+  #formReembolso .specialty .specialty-box .attach-files .flujo-lg_files, #formReembolso .specialty .specialty-box .attach-files .flujo-sm_files {
+    margin: 0 !important;
+  }
+  #formReembolso .specialty .specialty-box .attach-files .flujo-sm_attach, #formReembolso .specialty .specialty-box .attach-files .flujo-md_attach, #formReembolso .specialty .specialty-box .attach-files .flujo-lg_attach {
+    margin: 0 !important;
+    padding-bottom: 3em;
+  }
+  #formReembolso .specialty .specialty-box .attach-files .alert_attach {
+    margin: 1em 0;
+  }
+  #formReembolso .specialty .specialty-box .attach-files .alert_attach span {
+    font-size: 11px;
+    color: #4a4a4a;
+    font-weight: 300;
+    font-style: italic;
+    padding-left: .5em;
   }
   #formReembolso .form-title {
     font-size: 12px !important;
@@ -133,22 +177,43 @@ table {
     padding-left: 1em;
     margin-bottom: 0;
     width: 95%;
-    font-weight: 400;
+    font-weight: 400 !important;
     padding-top: .3em;
+  }
+  #formReembolso .date-form label {
+    width: 85%;
+  }
+  #formReembolso .date-form input {
+    width: 60% !important;
   }
   #formReembolso .input-form {
     color: #4a4a4a;
-    width: 100%;
+    width: 100% !important;
+  }
+  #formReembolso #doctor {
+    margin-left: 0 !important;
+  }
+  #formReembolso .asterisc {
+    display: inline-block;
+    text-align: left;
+    float: left;
+    font-size: 16px !important;
+    height: 0 !important;
+    width: 5%;
+    position: relative;
+    top: -3px;
   }
   #formReembolso .section-subtitle {
     font-size: 16px;
+    margin: 1em 0 1.5em 0;
+    padding: 0 !important;
   }
   #formReembolso .item-form {
     margin: .5em 0;
     display: inline-block;
   }
-  #formReembolso #doctor {
-    margin-left: 0 !important;
+  #formReembolso a .care {
+    padding: 0 !important;
   }
   .resumen-box h1 {
     font-size: 16px !important;
@@ -161,6 +226,9 @@ table {
     text-align: left;
     font-weight: 300;
   }
+  .resumen-box h5 {
+    margin-bottom: .3em;
+  }
   .resumen-box .reembolso-resumen-main {
     margin: auto !important;
     margin-bottom: 2em !important;
@@ -171,8 +239,11 @@ table {
   .resumen-box .change-request a {
     font-size: 12px !important;
   }
+  .resumen-box .box-informe {
+    padding: 1em 1em 0 1em;
+  }
   .reembolso-exito-main {
-    padding: .5em 0 1em !important;
+    padding: .5em 0 0 !important;
   }
   .reembolso-exito-main .narrow-container {
     width: 100% !important;
@@ -199,7 +270,7 @@ table {
   }
   .box-request-mail p {
     font-size: 11px !important;
-    padding: 0 1em !important;
+    padding: 0 2em !important;
   }
   .box-request-mail .change-mail a {
     font-size: 12px !important;
@@ -311,6 +382,11 @@ table {
   .specialty {
     margin: 0 1.2em 2em 1.2em !important;
     width: 95% !important;
+  }
+  .resumen-box .email {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
@@ -730,7 +806,7 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   width: 100%;
   background-color: #bbb;
   font-weight: 500;
-  margin: 2em 0;
+  margin: 3em 0 2em 0;
 }
 
 .navbar-bottom a {
@@ -1044,22 +1120,12 @@ a.btnLink:hover {
   cursor: pointer;
 }
 
-a.btnLink:focus {
-  background-color: #f0f8fd;
-  cursor: pointer;
-}
-
-a.btnLink:active {
-  background-color: #f0f8fd;
-  cursor: pointer;
-}
-
 .btn-active {
   background-color: #f0f8fd;
 }
 
 .menu-buttons-large {
-  padding-top: 1.5em;
+  padding-top: .5em;
 }
 
 .menu-buttons-large .menu-button {
@@ -1077,8 +1143,9 @@ a.btnLink:active {
 .terms-and-conditions {
   max-width: 41em;
   border-top: .5px solid #7fbce3;
-  padding: 1.5em 1em;
+  padding: 1.5em 1em 2.5em 1em;
   margin: auto;
+  text-align: center;
 }
 
 .terms-and-conditions .terms-title {
@@ -1177,7 +1244,6 @@ a.btnLink:active {
 }
 
 .carousel-users .carousel {
-  padding: .8em;
   margin: 0 auto;
   width: 22em;
 }
@@ -1210,20 +1276,20 @@ a.btnLink:active {
 }
 
 .carousel-users .carousel .item .img_user .icon-user {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 }
 
 .carousel-users .carousel .item .user-info {
   display: inline-block;
   text-align: left;
+  vertical-align: super;
 }
 
 .carousel-users .carousel .item .user-info .name {
   display: block;
   font-size: 14px;
   color: #4a4a4a;
-  margin-top: 1em;
 }
 
 .carousel-users .carousel .item .user-info .relation {
@@ -1239,7 +1305,7 @@ a.btnLink:active {
 .carousel-users .owl-nav .owl-prev {
   float: left;
   position: relative;
-  top: -2.5em;
+  top: -3.3em;
   background-image: url("../assets/icons/icon_chevron-left.svg") !important;
   background-position: center !important;
   background-size: cover !important;
@@ -1259,7 +1325,7 @@ a.btnLink:active {
   background-position: center !important;
   background-size: cover !important;
   background-color: #fff !important;
-  top: -2.5em;
+  top: -3.3em;
   width: .5em;
   height: 1em;
 }
@@ -1269,7 +1335,18 @@ a.btnLink:active {
 }
 
 #formReembolso .reembolso-info {
-  padding: 3em 0 1em 0;
+  padding: 3em 0 3em 0;
+}
+
+#formReembolso .reembolso-info #input-short-name {
+  width: 94.5%;
+  margin-right: 3%;
+}
+
+#formReembolso .form-title {
+  padding-bottom: .5em;
+  font-size: 18px;
+  color: #4a4a4a;
 }
 
 #formReembolso .specialty {
@@ -1280,13 +1357,6 @@ a.btnLink:active {
 
 #formReembolso .specialty .top {
   vertical-align: top !important;
-}
-
-#formReembolso .specialty .input-specialty {
-  background: url("../assets/icons/icon-arrow-bottom.svg");
-  background-repeat: no-repeat;
-  background-position-x: 97%;
-  background-position-y: 50%;
 }
 
 #formReembolso .specialty .specialty-input_desk {
@@ -1304,30 +1374,12 @@ a.btnLink:active {
   -webkit-appearance: none;
 }
 
-#formReembolso .form-title {
-  padding-bottom: .5em;
-  font-size: 18px;
-  color: #4a4a4a;
-}
-
-.btn-next {
-  margin-bottom: 1em;
-}
-
-.flujo-lg, .flujo-md {
-  padding-top: 2.5em;
-}
-
-.flujo-lg .section-subtitle, .flujo-md .section-subtitle {
-  padding-bottom: .5em;
-}
-
-.item-form {
+#formReembolso .item-form {
   text-align: left;
-  padding: 0 0 1em 0 !important;
+  padding: 0 !important;
 }
 
-.item-form .form-label {
+#formReembolso .item-form .form-label {
   font-size: 12px;
   color: #4a4a4a;
   margin-bottom: 0;
@@ -1335,13 +1387,23 @@ a.btnLink:active {
   padding-left: 1.3em;
 }
 
-.asterisc {
-  display: inline-block;
-  font-size: 25px;
-  color: #d81e05;
+#formReembolso .item-form .rut-container {
+  display: inline;
 }
 
-.input-form {
+#formReembolso .item-form #doctor {
+  margin-left: 1em;
+}
+
+#formReembolso .item-form .date-form input {
+  background: url("../assets/icons/icon-calendar.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  cursor: pointer;
+}
+
+#formReembolso .input-form {
   border: 1px solid #eeeeee;
   border-radius: 4px;
   width: 90%;
@@ -1350,60 +1412,63 @@ a.btnLink:active {
   padding: .65em 1em;
 }
 
-.input-form::-webkit-input-placeholder {
+#formReembolso .input-form::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #767676 !important;
 }
 
-.input-form::-moz-placeholder {
+#formReembolso .input-form::-moz-placeholder {
   /* Firefox */
   color: #767676 !important;
 }
 
-.input-form::-ms-input-placeholder {
+#formReembolso .input-form::-ms-input-placeholder {
   /* IE 10+ */
   color: #767676;
 }
 
-.date-form input {
-  background: url("../assets/icons/icon-calendar.svg");
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 50%;
+#formReembolso .btn-next {
+  margin-bottom: 1em;
 }
 
-a {
+#formReembolso .flujo-lg, #formReembolso .flujo-md {
+  padding-top: 2.5em;
+}
+
+#formReembolso .flujo-lg .section-subtitle, #formReembolso .flujo-md .section-subtitle {
+  padding-bottom: .5em;
+}
+
+#formReembolso .asterisc {
+  display: inline-block;
+  font-size: 25px;
+  color: #d81e05;
+}
+
+#formReembolso a {
   cursor: pointer;
 }
 
-a:hover {
+#formReembolso a:hover {
   background-color: transparent;
   text-decoration: none !important;
 }
 
-a:focus {
+#formReembolso a:focus {
   background-color: transparent;
   text-decoration: none !important;
   outline: none !important;
 }
 
-a .care {
-  padding: .5em 0 1em 0;
+#formReembolso a .care {
+  padding: .5em 0 1em 1em;
 }
 
-a .care span {
+#formReembolso a .care span {
   font-size: 11px;
   color: #00a8ff;
   font-style: italic;
-  padding-right: .5em;
-}
-
-.rut-container {
-  display: inline;
-}
-
-#doctor {
-  margin-left: 1em;
+  padding-left: .5em;
 }
 
 .ui-datepicker {
@@ -1472,6 +1537,7 @@ a .care span {
 .ui-datepicker .ui-datepicker-calendar thead tr th {
   font-weight: 400;
   text-align: center;
+  width: 14.2%;
 }
 
 .ui-datepicker .ui-datepicker-calendar tbody {
@@ -1490,11 +1556,15 @@ a .care span {
 }
 
 .attach-files .section-subtitle {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .attach-files .flujo-sm_attach, .attach-files .flujo-lg_attach, .attach-files .flujo-md_attach {
-  margin-top: 1em;
+  margin: 2em 0 4em 0;
+}
+
+.attach-files .flujo-sm_files, .attach-files .flujo-lg_files {
+  margin-top: -.5em;
 }
 
 .attach-files .row .box-dashed {
@@ -1514,10 +1584,6 @@ a .care span {
   padding: 0 .55em 1em;
 }
 
-.attach-files .alert-box .alert-text_up {
-  color: #4a4a4a !important;
-}
-
 .attach-files .alert-box .alert_sub {
   display: block;
 }
@@ -1525,14 +1591,19 @@ a .care span {
 .attach-files .alert-box .alert-text, .attach-files .alert-box .alert-text_up, .attach-files .alert-box .alert-text_down {
   display: inline-block;
   font-size: 12px;
-  color: #1697F3;
 }
 
 .attach-files .alert-box .alert-text_up {
+  color: #4a4a4a !important;
   margin-top: -2.2em;
 }
 
-.attach-files .alert-box img {
+.attach-files .alert-box .alert-text_down {
+  color: #1697F3;
+  padding-left: 1.3em;
+}
+
+.attach-files .alert-box .alert-text_down img {
   width: 1.5em;
   margin-left: .5em;
 }
@@ -1546,10 +1617,6 @@ a .care span {
   text-align: left;
 }
 
-.attach-files .document-charged .text-document p {
-  padding-top: .5em;
-}
-
 .attach-files .document-charged .delete-document {
   text-align: right;
 }
@@ -1561,12 +1628,9 @@ a .care span {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.attach-files button {
-  margin-top: 2em;
-}
-
 .msj-exito {
   text-align: center;
+  margin-top: -1em;
 }
 
 .msj-exito h4 {
@@ -1582,6 +1646,10 @@ a .care span {
   font-size: 14px;
   padding: 1.3em 3em 0 3em;
   font-weight: 300;
+}
+
+.reembolso-exito-main {
+  padding: 1em 0 4em;
 }
 
 .box-request {
@@ -1628,10 +1696,6 @@ a .care span {
   cursor: pointer;
 }
 
-.reembolso-exito-main {
-  padding: 1em 0 4em;
-}
-
 .resumen-box {
   padding: 0 1em;
   margin-bottom: 4em !important;
@@ -1639,7 +1703,7 @@ a .care span {
 
 .resumen-box .reembolso-resumen-main {
   background-color: #f5faff;
-  margin: 0 9.5em 4em;
+  margin: 0 9.5em 3em;
 }
 
 .resumen-box .reembolso-resumen-main h4 {
@@ -1671,6 +1735,7 @@ a .care span {
   font-size: 16px;
   font-weight: 400;
   color: #4a4a4a;
+  margin-bottom: 0 !important;
 }
 
 .resumen-box .reembolso-resumen-main .row .col-6 .resumen-celda .subtitulo {
@@ -1684,6 +1749,7 @@ a .care span {
 
 .resumen-box .reembolso-resumen-main .row .col-6 .archivos {
   padding-bottom: 0;
+  margin-top: -0.3em;
 }
 
 .resumen-box .reembolso-resumen-main .change-request {
@@ -1698,16 +1764,16 @@ a .care span {
   cursor: pointer;
 }
 
-.box-resumen {
+.resumen-box .box-resumen {
   text-align: left;
   padding-bottom: 3em;
 }
 
-.box-resumen h5 {
+.resumen-box .box-resumen h5 {
   font-size: 14px;
 }
 
-.box-resumen p {
+.resumen-box .box-resumen p {
   font-size: 12px;
   font-weight: 300;
   padding-bottom: 1em;
@@ -1961,9 +2027,13 @@ a .care span {
   text-align: left;
 }
 
+.excedentes-box .col-txt .term_txt {
+  display: block;
+}
+
 .excedentes-box .col-txt .exc {
   font-size: 14px;
-  color: #0079c7;
+  color: #00a8ff;
   margin-top: .5em;
   opacity: 0;
   -webkit-transition: opacity .5s ease-in-out;
@@ -2479,206 +2549,6 @@ header .header-mo .box-notification img {
   width: 23px;
 }
 
-.reembolso-form-mo {
-  text-align: left;
-}
-
-.reembolso-form-mo p, .reembolso-form-mo label {
-  font-size: 12px;
-}
-
-.reembolso-form-mo label {
-  margin-bottom: 0 !important;
-  color: #767676;
-  padding-bottom: .4em;
-}
-
-.reembolso-form-mo h4 {
-  font-size: 16px;
-  text-align: left;
-  font-weight: 400;
-  padding-bottom: .5em;
-}
-
-.reembolso-form-mo .cell {
-  padding-bottom: 1em;
-}
-
-.reembolso-form-mo .alert-asterisc {
-  color: #d81e05;
-  font-style: italic;
-  font-size: 10px;
-}
-
-.reembolso-form-mo .box-info_upper {
-  border-bottom: 1px solid #7fbce3;
-  padding: 0 1em 1.3em;
-}
-
-.reembolso-form-mo .box-info_middle {
-  border-bottom: 1px solid #7fbce3;
-  padding: 1em;
-}
-
-.reembolso-form-mo .box-info_middle select {
-  border: 1px solid #eeeeee;
-  border-radius: 4px;
-  width: 95.5%;
-  font-size: 14px;
-  color: #4a4a4a;
-  padding: .65em 1em;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-
-.reembolso-form-mo .box-info_middle .specialty select {
-  background: url("../assets/icons/icon-arrow-bottom.svg");
-  background-repeat: no-repeat;
-  background-position-x: 97%;
-  background-position-y: 50%;
-}
-
-.reembolso-form-mo .box-info_middle .date-form {
-  display: inline-block;
-  width: 60%;
-}
-
-.reembolso-form-mo .box-info_middle .date-form input {
-  background: url("../assets/icons/icon-calendar.svg");
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 50%;
-}
-
-.reembolso-form-mo .box-info_middle .alert-date {
-  display: inline-block;
-  width: 38%;
-}
-
-.reembolso-form-mo .box-info_middle .alert-date img {
-  vertical-align: super !important;
-}
-
-.reembolso-form-mo .box-info_middle .alert-date p {
-  display: inline-block;
-  width: 83%;
-  font-size: 11px !important;
-  vertical-align: middle;
-  color: #767676;
-  font-style: italic;
-}
-
-.reembolso-form-mo .box-info_middle .amount-form input {
-  width: 60%;
-}
-
-.reembolso-form-mo .box-info_down {
-  border-bottom: 1px solid #7fbce3;
-  padding: 1em;
-}
-
-.reembolso-form-mo .box-info_down a:hover {
-  background-color: transparent !important;
-}
-
-.reembolso-form-mo .box-info_down a .care {
-  padding: 0 0 .8em;
-  font-size: 11px;
-  color: #00a8ff;
-}
-
-.reembolso-form-mo .box-info_down a .care img {
-  width: 1.5em;
-}
-
-.reembolso-form-mo .box-info_down a .care span {
-  padding-left: .5em;
-  font-style: italic;
-}
-
-.reembolso-form-mo .box-attach {
-  width: 100%;
-  display: inline-block;
-  padding: 1em 1em .5em;
-}
-
-.reembolso-form-mo .box-attach .box-header {
-  margin-bottom: .5em;
-}
-
-.reembolso-form-mo .box-attach .box-header p {
-  display: inline-block;
-  font-size: 12px;
-}
-
-.reembolso-form-mo .box-attach .box-header img {
-  display: inline-block;
-  width: 1em;
-}
-
-.reembolso-form-mo .box-attach .box-header a {
-  display: inline-block;
-}
-
-.reembolso-form-mo .box-attach .box-header a p {
-  font-size: 11px;
-  color: #00a8ff;
-  font-style: italic;
-}
-
-.reembolso-form-mo .box-attach .box-header .text-attach {
-  width: 70%;
-}
-
-.reembolso-form-mo .box-attach .box-dashed {
-  padding: .8em 0 .4em;
-}
-
-.reembolso-form-mo .box-attach .box-dashed p {
-  padding: 2.5em;
-  border: 1px dashed #767676;
-  border-radius: 8px;
-  font-size: 14px;
-  text-align: center;
-  color: #767676;
-}
-
-.reembolso-form-mo .document-charged {
-  width: 100%;
-  padding: 1em 0;
-  background-color: #f7f7f7;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-  margin: .5em 0 1em;
-  display: none;
-}
-
-.reembolso-form-mo .document-charged .text-document {
-  text-align: left;
-  font-size: 14px;
-}
-
-.reembolso-form-mo .document-charged .delete-document {
-  text-align: right;
-}
-
-.reembolso-form-mo .instructions {
-  padding: 0 1em 3.5em 1em;
-}
-
-.reembolso-form-mo .instructions img {
-  vertical-align: super !important;
-}
-
-.reembolso-form-mo .instructions p {
-  display: inline-block;
-  width: 90%;
-  font-size: 11px !important;
-  vertical-align: middle;
-  font-style: italic;
-  color: #767676;
-}
-
 .breadcrumb-mo {
   text-align: left;
   padding-left: 1em;
@@ -2686,11 +2556,6 @@ header .header-mo .box-notification img {
 
 .feedback {
   padding: 1em;
-}
-
-.feedback .lefted {
-  text-align: left;
-  padding-bottom: 1em;
 }
 
 .feedback .select-element {
@@ -2726,7 +2591,7 @@ header .header-mo .box-notification img {
 
 .feedback .select-element .btn-text {
   display: inline-block;
-  padding: 0 .5em 1em .8em;
+  padding: 0 .5em 1em .5em;
   width: 82.5%;
   text-align: left;
 }
@@ -2745,73 +2610,6 @@ header .header-mo .box-notification img {
   font-weight: 300;
   line-height: 1.3em;
   color: #767676;
-}
-
-.box-term {
-  padding: 0 1em 1.5em;
-  border-top: 1px solid #7fbce3;
-  display: inline-block;
-  padding: 1em 0 0;
-}
-
-.box-term h3 {
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-.box-term .form-group {
-  position: relative;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-.box-term .form-group input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.box-term .form-group .checkmark {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border: 1px solid #1697f3;
-}
-
-.box-term .form-group .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.box-term .form-group .form-check-label input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.box-term .form-group .form-check-label .checkmark:after {
-  left: 6px;
-  bottom: 3px;
-  width: 7px;
-  height: 15px;
-  border: solid #1697f3;
-  border-width: 0 2.5px 2.5px 0;
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
-}
-
-.box-term .form-group label {
-  font-size: 12px;
-  color: #4a4a4a;
-  font-weight: 300;
-  padding: 0 1em 0 3em;
-  text-align: left;
 }
 
 body {

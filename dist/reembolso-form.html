@@ -130,9 +130,12 @@
               <div class="row">
                 <div class="col-md-6 col-sm-12 item-form">
                   <div class="date-form">
-                    <label class="form-label" for="date">Fecha de atención</label>
+                    <label class="form-label date-label" for="date">Fecha de atención</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" name="date" placeholder="dd/mm/aaaa" id="date"/>
+                    <div class="alert_date hide-md hide-lg"><img src="./assets/icons/icon-alert.svg"/>
+                      <p>Fecha máxima: 28/09/2017</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12 item-form">
@@ -145,14 +148,15 @@
                     <p class="info-obligatory-mo">* Son obligatorios</p>
                   </div>
                 </div>
-                <h4 class="section-subtitle hide-md hide-lg">Información consulta</h4>
+                <h4 class="section-subtitle hide-md hide-lg">Información consulta</h4><a class="verModal" data-toggle="modal" data-target="#boletaModalRut">
+                  <div class="care left hide-md hide-lg"><img src="./assets/icons/icon-ojo.svg"/><span>Ejemplo boleta de atención médica</span></div></a>
                 <div class="col-md-6 col-sm-12 item-form">
                   <div class="invoice-form">
                     <label class="form-label" for="invoice">Nº de boleta</label>
                     <p class="asterisc">*</p>
                     <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
                   </div><a class="verModal" data-toggle="modal" data-target="#boletaModalRut">
-                    <div class="care left"><span>Boleta de atención médica</span><img src="./assets/icons/icon-ojo.svg"/></div></a>
+                    <div class="care left hide-sm"><img src="./assets/icons/icon-ojo.svg"/><span>Boleta de atención médica</span></div></a>
                   <div class="modal fade" id="boletaModalRut" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -183,25 +187,25 @@
                     <input class="input-form input_rut" type="text" name="doctor" placeholder="8.770.764-5" id="doctor"/>
                   </div>
                 </div>
-                <div class="hide-lg hide-md">
-                  <p class="info-obligatory-mo">* Son obligatorios</p>
-                </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-12">
+              <div class="col-12 no-padding">
                 <div class="excedentes-box">
                   <div class="form-group">
                     <label class="form-check-label" for="excLg">
                       <div class="col-cbx">
                         <input class="form-check-input" type="checkbox" name="cbxExc" id="excLg" onchange="usarExcedentes(this);"/><span class="checkmark"></span>
                       </div>
-                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#">Términos y Condiciones</a>
+                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#" target="_blank">Términos y Condiciones</a>
                         <p class="excLgClass exc">Tienes <span class="strong">$60.000</span> disponibles en excedentes</p>
                       </div>
                     </label>
                   </div>
                 </div>
+              </div>
+              <div class="hide-lg hide-md">
+                <p class="info-obligatory-mo">* Son obligatorios</p>
               </div>
             </div>
             <div class="attach-files">
@@ -214,8 +218,8 @@
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar archivos</p>
-                    <div class="flujo-lg_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
-                    <div class="flujo-sm_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-lg_files hide"><a class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-sm_files hide"><a class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
@@ -226,9 +230,10 @@
                     <p>No hay archivos adjuntos</p>
                   </div>
                 </div>
+                <div class="alert_attach hide-md hide-lg"><img src="./assets/icons/icon-alert.svg"/><span>Puedes adjuntar la cantidad de archivos que necesites.</span></div>
                 <div class="flujo-lg_attach hide">
                   <div class="document-charged">
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -242,7 +247,7 @@
                 </div>
                 <div class="flujo-sm_attach hide">
                   <div class="document-charged">
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -252,7 +257,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -262,7 +267,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -280,19 +285,22 @@
           </div>
           <div class="specialty-box specialty-box_op2 hide">
             <div class="row">
-              <div class="col-12">
+              <div class="col-12 no-padding">
                 <div class="excedentes-box">
                   <div class="form-group">
                     <label class="form-check-label" for="excSm">
                       <div class="col-cbx">
                         <input class="form-check-input" type="checkbox" name="cbxExc" id="excSm" onchange="usarExcedentes(this);"/><span class="checkmark"></span>
                       </div>
-                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#">Términos y Condiciones</a>
+                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#" target="_blank">Términos y Condiciones</a>
                         <p class="excSmClass exc">Tienes <span class="strong">$60.000</span> disponibles en excedentes</p>
                       </div>
                     </label>
                   </div>
                 </div>
+              </div>
+              <div class="hide-lg hide-md">
+                <p class="info-obligatory-mo">* Son obligatorios</p>
               </div>
             </div>
             <div class="attach-files">
@@ -305,8 +313,8 @@
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar archivos</p>
-                    <div class="flujo-lg_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
-                    <div class="flujo-sm_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-lg_files hide"><a class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-sm_files hide"><a class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
@@ -317,9 +325,10 @@
                     <p>No hay archivos adjuntos</p>
                   </div>
                 </div>
+                <div class="alert_attach hide-md hide-lg"><img src="./assets/icons/icon-alert.svg"/><span>Puedes adjuntar la cantidad de archivos que necesites.</span></div>
                 <div class="flujo-lg_attach hide">
                   <div class="document-charged">
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -333,7 +342,7 @@
                 </div>
                 <div class="flujo-sm_attach hide">
                   <div class="document-charged">
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -343,7 +352,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -353,7 +362,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -383,19 +392,22 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12">
+              <div class="col-12 no-padding">
                 <div class="excedentes-box">
                   <div class="form-group">
                     <label class="form-check-label" for="excMd">
                       <div class="col-cbx">
                         <input class="form-check-input" type="checkbox" name="cbxExc" id="excMd" onchange="usarExcedentes(this);"/><span class="checkmark"></span>
                       </div>
-                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#">Términos y Condiciones</a>
+                      <div class="col-txt"> <span class="term_txt">Quiero usar mis excedentes para complementar mi reembolso </span><a class="termExc" href="#" target="_blank">Términos y Condiciones</a>
                         <p class="excMdClass exc">Tienes <span class="strong">$60.000</span> disponibles en excedentes</p>
                       </div>
                     </label>
                   </div>
                 </div>
+              </div>
+              <div class="hide-lg hide-md">
+                <p class="info-obligatory-mo">* Son obligatorios</p>
               </div>
             </div>
             <div class="attach-files">
@@ -408,8 +420,8 @@
                   <div class="alert-box left">
                     <p class="asterisc">*</p>
                     <p class="alert-text_up">Debes adjuntar archivos</p>
-                    <div class="flujo-lg_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
-                    <div class="flujo-sm_files hide"><a class="alert_sub" href="#"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub" href="#"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-lg_files hide"><a class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
+                    <div class="flujo-sm_files hide"><a class="alert_sub"><span class="alert-text_down">1. Boleta de atención médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub"><span class="alert-text_down">2. Informe médico<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a><a class="alert_sub"><span class="alert-text_down">3. Orden médica<img class="hide-md" src="./assets/icons/icon-ojo.svg"/></span></a></div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
@@ -420,9 +432,10 @@
                     <p>No hay archivos adjuntos</p>
                   </div>
                 </div>
+                <div class="alert_attach hide-md hide-lg"><img src="./assets/icons/icon-alert.svg"/><span>Puedes adjuntar la cantidad de archivos que necesites.</span></div>
                 <div class="flujo-lg_attach hide">
                   <div class="document-charged">
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -436,7 +449,7 @@
                 </div>
                 <div class="flujo-sm_attach hide">
                   <div class="document-charged">
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -446,7 +459,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">
@@ -456,7 +469,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
                           <div class="col-6 text-document">

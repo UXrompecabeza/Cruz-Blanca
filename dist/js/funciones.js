@@ -4,11 +4,48 @@ $(document).ready(function () {
     clean();
     limpiarVal();
     usarExcedentes();
+    focusBtn();
 });
 
-// Calendario
+// --------------- Inicializadores de plugins ------------- //
 
+//Calendario
+$("#date").datepicker();
+//Formato rut
+function initRut() {
+    $('.input_rut').rut();
+};
+//Datalist
+$('#input-specialty').selectize({
+    create: false,
+    sortField: {
+        field: 'text',
+        direction: 'asc'
+    },
+    dropdownParent: 'body'
+});
+// Carrusel usuario
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
 
+// --------------- Calendario ------------- //
+
+//Configuración en español
 $.datepicker.regional['es'] = {
     closeText: 'Cerrar',
     prevText: '< Ant',
@@ -28,8 +65,7 @@ $.datepicker.regional['es'] = {
 };
 $.datepicker.setDefaults($.datepicker.regional['es']);
 
-$("#date").datepicker();
-
+//Función formato fecha
 $("#date").keyup(function (event) {
     if (event.which != 8) {
         if ($(this).val().length == 2) {
@@ -41,71 +77,28 @@ $("#date").keyup(function (event) {
     }
 })
 
-//Datalist
-
-$('#input-specialty').selectize({
-    create: false,
-    sortField: {
-        field: 'text',
-        direction: 'asc'
-    },
-    dropdownParent: 'body'
-});
+// --------------- Funciones particulares ------------- //
 
 //Borrar documento adjunto
-
 $(".deleteDoc").click(function() {
-    $(this).parents(".document-charged").remove();
-})
-
-// Carrusel usuario
-
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    dots: false,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1000: {
-            items: 1
-        }
-    }
+    $(this).closest(".documentItem").remove();
 })
 
 // Funcion "adjunta" archivos
-
 $("#btnAdjuntarArchivos").click(function () {
     $(".document-charged").show();
     $(".box-dashed").hide();
 });
 
-// Focus elegido
-
+// Focus boton elegido
 function focusBtn() {
-    $(".btnLink").click(function () {
-        if ($('.btnLink').hasClass('btn-active')) {
-            $('.btnLink').removeClass('btn-active');
-        }
+    $( ".button-large" ).click(function() {
+        $('.button-large').removeClass('btn-active');
         $(this).addClass('btn-active');
     });
 }
 
-function focusBtnmo() { 
-    $( ".btn-large-mo" ).click(function() {
-        if ($('.btn-large-mo').hasClass('btn-active')) {
-            $('.btn-large-mo').removeClass('btn-active');
-        }
-        $(this).addClass('btn-active');
-    });
-}
-
-
+//Función efecto excedentes
 function usarExcedentes(checkbox) {
     if ($('.exc').hasClass('excSmClass')) {
         if(checkbox.checked == true){
@@ -130,9 +123,7 @@ function usarExcedentes(checkbox) {
     }
 };
 
-// Navegación
-
-
+// Navegación tabla
 $('.show-table').click(function () {
     $(this).next().toggleClass("no-view", 1000);
 
@@ -160,6 +151,7 @@ $('.btn-filter-desk').click(function () {
     $(this).toggleClass("active", 1000);
 });
 
+//Función formatea los input
 function clean() {
     var a = document.forms["formReembolso"]["especialidad"];
     var ax = document.forms["formReembolso"]["especialidad-mo"];
@@ -169,6 +161,7 @@ function clean() {
     b = "";
 }
 
+//Función peromite sólo números
 function validaNUM(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     //Tecla de retroceso para borrar, siempre la permite
@@ -181,6 +174,7 @@ function validaNUM(e) {
     return patron.test(tecla_final);
 };
 
+//Función limita caracteres entrantes
 function limitCaracters() {
     $('input#invoice').attr('maxLength', '10');
     $('input#date').attr('maxLength', '10');
@@ -189,7 +183,6 @@ function limitCaracters() {
 
 function validaTermCond() {
     var a = document.forms["formTermCond"]["cbxTerms"];
-
     if ($(a).is(':checked') == false) {
         $('#btnTerms').attr("disabled");
         return false;
@@ -198,11 +191,7 @@ function validaTermCond() {
     }
 };
 
-
-function initRut() {
-    $('.input_rut').rut();
-};
-
+//Agrega la clase de error al input y un mensaje de error bajo el boton que se encuentra deshabilitado hasta que complete todos los campos (Se dispara al apretar "Siguiente")
 function validaReemb() {
     var a = document.forms["formReembolso"]["especialidad"];
     var ax = document.forms["formReembolso"]["especialidad-mo"];
@@ -274,6 +263,7 @@ function validaReemb() {
     };
 }
 
+//Va removiendo las clases de error y los mensajes a medida que se va completando los campos obligatorios
 function limpiarVal() {
     var a = document.forms["formReembolso"]["especialidad"];
     var b = document.forms["formReembolso"]["inputShort"];
@@ -354,10 +344,11 @@ function limpiarVal() {
     });
 }
 
+//Esconde boton "MostrarCampos"
 $('#btnMostrarCampos').hide();
 
+//Muestra el botón "MostrarCampos" sólo sí el campo nombre corto y el campo especialidad estan llenos
 function test() {
-    // $(".key").on("click change paste keyup", function() {
     var c = document.forms["formReembolso"]["date"];
     var d = document.forms["formReembolso"]["invoice"];
     var e = document.forms["formReembolso"]["rut"];
@@ -366,7 +357,6 @@ function test() {
         $('.specialty-box').addClass('hide');
     }
     if ($('#input-short-name').val() != "" && ($('#input-specialty').val() != "" || $('#input-specialty-mo').val() != "")) {
-        console.log("mostrarBtn")
         $('#btnMostrarCampos').show();
     } else {
         $('#btnMostrarCampos').hide();
@@ -379,12 +369,15 @@ function test() {
     $(d).removeClass("error-box");
     $(e).removeClass("error-box");
     $(f).removeClass("error-box");
-    // })
+    $('.flujo-lg_attach').addClass('hide');
+    $('.flujo-lg_files').addClass('hide');
+    $('.flujo-sm_attach').addClass('hide');
+    $('.flujo-sm_files').addClass('hide');
 }
 
+//Formatea los campos en cada cambio de especialidad y muestra los campos correspondientes.
 $('#btnMostrarCampos').click(function () {
     $('#btnMostrarCampos').hide();
-    console.log("entraste nivel 1");
     $(".document-charged").hide();
     $(".box-dashed").show();
     var a = $('#input-specialty').val();
@@ -403,7 +396,6 @@ $('#btnMostrarCampos').click(function () {
         $('.specialty-box_op5').removeClass('hide');
 
     } else if (a == "Psicología" || a == "psicología" || a == "psicologia" || a == "sicología" || a == "sicologia" || ax == "Psicología") {
-        console.log("psicologia")
         if ($('.specialty-box').siblings().not('.hide')) {
             $('.specialty-box').addClass('hide');
         }
@@ -422,7 +414,6 @@ $('#btnMostrarCampos').click(function () {
         $('.flujo-lg_files').removeClass('hide');
 
     } else if (a == "Medicina general" || ax == "Medicina general") {
-        console.log("entraste nivel 2");
         if ($('.specialty-box').siblings().not('.hide')) {
             $('.specialty-box').addClass('hide');
         }
