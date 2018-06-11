@@ -119,7 +119,7 @@
                                   <p class="inf-txt">Eduardo Rojas Calderón Titular</p>
                                 </div>
                                 <div class="box-label">
-                                  <p class="label-grey">Monto solictado a reembolsar</p>
+                                  <p class="label-grey">Monto solicitado a reembolsar</p>
                                   <p class="inf-txt_strong">$ 22.450</p>
                                   <div class="box-messenge"><img src="assets/icons/icon-alert.svg" alt=""/>
                                     <p>Tu tope de reembolso por consulta es de $26.633 (1UF)</p>
@@ -161,13 +161,14 @@
           <table class="table" id="table-solicitud">
             <thead>
               <tr>
-                <th scope="col">Estado solicitud</th>
-                <th scope="col">Ingreso</th>
-                <th scope="col">Tipo reembolso</th>
-                <th scope="col">Nombre corto</th>
-                <th scope="col">Beneficiario</th>
-                <th scope="col">Solicitado</th>
-                <th scope="col">Reembolsado</th>
+                <th class="col_estado" scope="col">Estado solicitud</th>
+                <th class="col_ingreso" scope="col">Ingreso</th>
+                <th class="col_tipo" scope="col">Tipo reembolso</th>
+                <th class="col_nombre" scope="col">Nombre corto</th>
+                <th class="col_beneficiario" scope="col">Beneficiario</th>
+                <th class="col_solicitado" scope="col">Solicitado</th>
+                <th class="col_reembolsado" scope="col">Reembolsado</th>
+                <th class="col_icon" scope="col">&nbsp;</th>
               </tr>
             </thead>
             <tbody>
@@ -191,8 +192,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -230,7 +232,7 @@
                             <p>Aprobada</p>
                           </td>
                           <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantebono.svg" alt=""/>
                               <p>Comprobante bono</p></a>
                           </td>
                         </tr>
@@ -259,8 +261,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -275,8 +278,8 @@
                             <p>Ingreso de solicitud</p>
                           </td>
                           <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Modificar solicitud</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon_pencil.svg" alt=""/>
+                              <p>Modificar solicitud</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon_trash.svg" alt=""/>
                               <p>Eliminar solicitud </p></a>
                           </td>
                         </tr>
@@ -305,8 +308,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable3 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -344,7 +348,7 @@
                             <p>Rechazada</p>
                           </td>
                           <td>
-                            <p>La Boleta Nº 02536841 que adjuntaste no corresponde al prestador ingresado. Folio:  646464        Fecha recepción: 09/02/2018</p><a href="#"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>La Boleta Nº 02536841 que adjuntaste no corresponde al prestador ingresado. Folio:  646464        Fecha recepción: 09/02/2018</p><a href="#"><img src="assets/icons/icon-cartarechazo.svg" alt=""/>
                               <p>Carta de Rechazo</p></a>
                           </td>
                         </tr>
@@ -373,8 +377,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -426,7 +431,7 @@
                                         </div>
                                         <div class="modal-body">
                                           <div class="modal-title_serie">
-                                            <p>Boleta Centro Médico</p>
+                                            <p class="modal-subTitle">Boleta Centro Médico</p>
                                           </div>
                                           <div class="modal-info_boleta"><img src="assets/imgs/boleta.png" alt="hola"/></div>
                                         </div>
@@ -469,8 +474,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -508,8 +514,8 @@
                             <p>Pagada</p>
                           </td>
                           <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Comprobante bono</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantebono.svg" alt=""/>
+                              <p>Comprobante bono</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantereembolso.svg" alt=""/>
                               <p>Comprobante de reembolso</p></a>
                           </td>
                         </tr>
@@ -586,11 +592,11 @@
         <div class="flujo-progreso"> 
           <div class="demo"></div>
           <ul class="progress-tracker progress-tracker--vertical">
-            <li class="progress-step is-complete"><span class="progress-marker"></span><span class="progress-text">
+            <li class="progress-step is-complete"><span class="progress-marker"></span><span class="progress-text progress-text_noPadding">
                 <p class="step-date">12/03/2018</p>
                 <h4 class="progress-title">Ingreso de solicitud</h4>
-                <p class="step-content">Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a class="step-link" href="informe.html"><img class="step-img" src="assets/icons/icon-solicitud.svg" alt=""/><span>Modificar solicitud</span></a><a class="step-link" href="informe.html"><img class="step-img" src="assets/icons/icon-solicitud.svg" alt=""/><span>Eliminar solicitud </span></a></span></li>
-            <li class="progress-step is-complete"></li>
+                <p class="step-content">Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p></span></li>
+            <li class="progress-icons"><a class="step-link" href="informe.html"><img class="step-img" src="assets/icons/icon_pencil.svg" alt=""/><span>Modificar solicitud</span></a><a class="step-link" href="mensaje-consulta.html"><img class="step-img" src="assets/icons/icon_trash.svg" alt=""/><span>Eliminar solicitud </span></a></li>
           </ul>
         </div>
       </div>
@@ -606,6 +612,6 @@
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/owl.carousel.js"></script>
     <script src="js/libs/site.js"></script>
-    <script src="js/funciones.js"></script>
+    <script src="js/func-flujo_historico.js"></script>
   </body>
 </html>

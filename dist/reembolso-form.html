@@ -4,13 +4,13 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="css/styles.css"/>
     <link rel="stylesheet" href="css/libs/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/libs/owl.carousel.css"/>
     <link rel="stylesheet" href="css/libs/owl.theme.default.css"/>
     <link rel="stylesheet" href="css//libs/selectize.css"/>
     <link rel="stylesheet" href="css/libs/progress-tracker.css"/>
     <link rel="stylesheet" href="css/libs/site.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
     <title>Cruz Blanca</title>
   </head>
@@ -132,7 +132,8 @@
                   <div class="date-form">
                     <label class="form-label date-label" for="date">Fecha de atención</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" name="date" placeholder="dd/mm/aaaa" id="date"/>
+                    <input class="input-form input-date hide-sm input-validate" type="text" name="date" placeholder="dd/mm/aaaa" id="date"/>
+                    <input class="input-form input-date hide-md hide-lg input-validate" type="text" name="date-mo" placeholder="dd/mm/aaaa" id="date-mo"/>
                     <div class="alert_date hide-md hide-lg"><img src="./assets/icons/icon-alert.svg"/>
                       <p>Fecha máxima: 28/09/2017</p>
                     </div>
@@ -142,7 +143,7 @@
                   <div class="amount-form">
                     <label class="form-label" for="amount">Monto solicitado a reembolsar</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="amount" placeholder="$ 000.000" id="amount"/>
+                    <input class="input-form input-validate" type="text" onkeypress="return validaNUM(event)" name="amount" placeholder="$ 000.000" id="amount"/>
                   </div><br/>
                   <div class="hide-lg hide-md">
                     <p class="info-obligatory-mo">* Son obligatorios</p>
@@ -154,7 +155,7 @@
                   <div class="invoice-form">
                     <label class="form-label" for="invoice">Nº de boleta</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
+                    <input class="input-form input-validate" type="text" onkeypress="return validaNUM(event)" name="invoice" placeholder="Últimos 10 dígitos" id="invoice"/>
                   </div><a class="verModal" data-toggle="modal" data-target="#boletaModalRut">
                     <div class="care left hide-sm"><img src="./assets/icons/icon-ojo.svg"/><span>Boleta de atención médica</span></div></a>
                   <div class="modal fade" id="boletaModalRut" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
@@ -178,7 +179,7 @@
                   <div class="rut-form">
                     <label class="form-label" for="rut">RUT del prestador</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form input_rut" type="text" name="rut" placeholder="10.256.731-4" id="rut"/>
+                    <input class="input-form input_rut input-validate" type="text" name="rut" placeholder="10.256.731-4" id="rut"/>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12 item-form">
@@ -224,7 +225,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
                   <div class="box-files">
-                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target=".adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
+                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target="#adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
                   </div>
                   <div class="box-dashed">
                     <p>No hay archivos adjuntos</p>
@@ -236,10 +237,10 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -250,37 +251,37 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>2 | Informe médico.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>3 | Orden médica.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
+              <button class="btnForm btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal">Siguiente</button>
             </div>
           </div>
           <div class="specialty-box specialty-box_op2 hide">
@@ -319,7 +320,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
                   <div class="box-files">
-                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target=".adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
+                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target="#adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
                   </div>
                   <div class="box-dashed">
                     <p>No hay archivos adjuntos</p>
@@ -331,10 +332,10 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -345,37 +346,37 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>2 | Informe médico.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>3 | Orden médica.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
+              <button class="btnForm btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal">Siguiente</button>
             </div>
           </div>
           <div class="specialty-box specialty-box_op3 hide">
@@ -384,9 +385,9 @@
               <div class="row">
                 <div class="col-md-6 col-sm-12 item-form">
                   <div class="amount-form">
-                    <label class="form-label" for="amount">Monto solicitado a reembolsar</label>
+                    <label class="form-label" for="amount2">Monto solicitado a reembolsar</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form" type="text" onkeypress="return validaNUM(event)" name="amount2" placeholder="$ 000.000" id="amount2"/>
+                    <input class="input-form input-validate" type="text" onkeypress="return validaNUM(event)" name="amount2" placeholder="$ 000.000" id="amount2"/>
                   </div>
                 </div>
               </div>
@@ -426,7 +427,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 no-padding">
                   <div class="box-files">
-                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target=".adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
+                    <button class="btn-attach_big" type="button" data-toggle="modal" data-target="#adjuntosModal"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
                   </div>
                   <div class="box-dashed">
                     <p>No hay archivos adjuntos</p>
@@ -438,10 +439,10 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -452,37 +453,37 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>2 | Informe médico.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-6 text-document">
+                          <div class="col-md-6 col-10 text-document">
                             <p>3 | Orden médica.jpg</p>
                           </div>
-                          <div class="col-6 delete-document"><a href="#"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal" id="btnForm">Siguiente</button>
+              <button class="btnForm btn-next" type="submit" data-toggle="modal" data-target="#reembolsoModal">Siguiente</button>
             </div>
           </div>
         </div>
@@ -491,7 +492,7 @@
       <div class="validacion">
         <ul></ul>
       </div>
-      <div class="adjuntosModal modal fade" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
+      <div class="modal fade" id="adjuntosModal" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">

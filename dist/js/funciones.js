@@ -66,7 +66,7 @@ $.datepicker.regional['es'] = {
 $.datepicker.setDefaults($.datepicker.regional['es']);
 
 //Función formato fecha
-$("#date").keyup(function (event) {
+$(".input-date").keyup(function (event) {
     if (event.which != 8) {
         if ($(this).val().length == 2) {
             $(this).val($(this).val() + "/");
@@ -123,45 +123,12 @@ function usarExcedentes(checkbox) {
     }
 };
 
-// Navegación tabla
-$('.show-table').click(function () {
-    $(this).next().toggleClass("no-view", 1000);
-
-    if ($(this).hasClass('table-active_bg')) {
-        $(this).removeClass('table-active_bg');
-    } else {
-        $(this).addClass('table-active_bg');
-    }
-
-    if ($(this).children().children().children('.table-hide').hasClass('hide')) {
-        $(this).children().children().children('.table-hide').removeClass('hide');
-    } else {
-        $(this).children().children().children('.table-hide').addClass('hide');
-    }
-
-    if ($(this).children().children().children('.table-show').hasClass('hide')) {
-        $(this).children().children().children('.table-show').removeClass('hide');
-    } else {
-        $(this).children().children().children('.table-show').addClass('hide');
-    }
-});
-
-$('.btn-filter-desk').click(function () {
-    $(".box-filtro_campos").toggleClass("hide", 1000);
-    $(this).toggleClass("active", 1000);
-});
-
 //Función formatea los input
 function clean() {
-    var a = document.forms["formReembolso"]["especialidad"];
-    var ax = document.forms["formReembolso"]["especialidad-mo"];
-    var b = document.forms["formReembolso"]["inputShort"];
-    a = "";
-    ax = "";
-    b = "";
+    $(".input-form").val("");
 }
 
-//Función peromite sólo números
+//Función permite sólo números
 function validaNUM(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     //Tecla de retroceso para borrar, siempre la permite
@@ -178,16 +145,17 @@ function validaNUM(e) {
 function limitCaracters() {
     $('input#invoice').attr('maxLength', '10');
     $('input#date').attr('maxLength', '10');
+    $('input#date-mo').attr('maxLength', '10');
     $('input#input-short-name').attr('maxLength', '30');
 };
 
 function validaTermCond() {
     var a = document.forms["formTermCond"]["cbxTerms"];
     if ($(a).is(':checked') == false) {
-        $('#btnTerms').attr("disabled");
+        $('.btnTerms').attr("disabled");
         return false;
     } else {
-        $('#btnTerms').removeAttr("disabled");
+        $('.btnTerms').removeAttr("disabled");
     }
 };
 
@@ -205,15 +173,11 @@ function validaReemb() {
     var d1 = "<li class='error-mensaje d1'>Porfavor, elige nº de boleta.</li>";
     var e1 = "<li class='error-mensaje e1'>Porfavor, elige RUT del prestador.</li>";
     var f1 = "<li class='error-mensaje f1'>Porfavor, elige monto solicitado a reembolsar.</li>";
-    var z1 = "<li class='error-mensaje f1'>Porfavor, elige monto solicitado a reembolsar.</li>";
     var src = ".validacion ul";
 
     if ($(a).val() == "Medicina general" || $(a).val() == "medicina general" || $(ax).val() == "Medicina general") {
         if (c.value == "" && d.value == "" && e.value == "" && f.value == "") {
-            $(c).addClass("error-box");
-            $(d).addClass("error-box");
-            $(e).addClass("error-box");
-            $(f).addClass("error-box");
+            $(".input-validate").addClass("error-box");
             if (!($(".validacion ul").children().length == 4)) {
                 $(src).append(c1);
                 $(src).append(d1);
@@ -225,6 +189,7 @@ function validaReemb() {
 
         } else if (c.value == "") {
             $(c).addClass("error-box");
+            $("#date-mo").addClass("error-box");
             if (!($("li").hasClass(".c1"))) {
                 $(src).append(c1);
             }
@@ -260,7 +225,18 @@ function validaReemb() {
             $(".f1").hide();
             $('.btn-next').removeAttr("disabled");
         };
-    };
+    } else if ($(a).val() == "Ginecología" || $(a).val() == "ginecología" || $(a).val() == "ginecologia" || $(ax).val() == "Ginecología") {
+        if (z.value == "") {
+            $(".input-validate").addClass("error-box");
+            $(src).append(f1);
+            $('.btn-next').attr("disabled");
+            return false;
+        } else {
+            $(z).removeClass("error-box");
+            $(".f1").hide();
+            $('.btn-next').removeAttr("disabled");
+        };
+    }
 }
 
 //Va removiendo las clases de error y los mensajes a medida que se va completando los campos obligatorios
@@ -271,7 +247,7 @@ function limpiarVal() {
     var d = document.forms["formReembolso"]["invoice"];
     var e = document.forms["formReembolso"]["rut"];
     var f = document.forms["formReembolso"]["amount"];
-    var g = document.forms["formReembolso"]["invoice"];
+    var z = document.forms["formReembolso"]["amount2"];
     var a1 = "<li class='error-mensaje a1'>Porfavor, elige especialidad.</li>";
     var b1 = "<li class='error-mensaje b1'>Porfavor, agrega un nombre corto al reembolso.</li>";
     var c1 = "<li class='error-mensaje c1'>Porfavor, elige fecha de atención.</li>";
@@ -301,6 +277,7 @@ function limpiarVal() {
     $(c).on('keyup keydown keypress change paste', function () {
         if (c.value == "") {
             $(c).addClass("error-box");
+            $("#date-mo").addClass("error-box");
             if (!($("li").hasClass(".c1"))) {
                 $(src).append(c1);
             }
@@ -342,6 +319,17 @@ function limpiarVal() {
             $(".f1").remove();
         }
     });
+    $(z).on('keyup keydown keypress change paste', function () {
+        if (z.value == "") {
+            $(z).addClass("error-box");
+            if (!($("li").hasClass(".f1"))) {
+                $(src).append(f1);
+            }
+        } else {
+            $(z).removeClass("error-box");
+            $(".f1").remove();
+        }
+    });z
 }
 
 //Esconde boton "MostrarCampos"
@@ -349,10 +337,6 @@ $('#btnMostrarCampos').hide();
 
 //Muestra el botón "MostrarCampos" sólo sí el campo nombre corto y el campo especialidad estan llenos
 function test() {
-    var c = document.forms["formReembolso"]["date"];
-    var d = document.forms["formReembolso"]["invoice"];
-    var e = document.forms["formReembolso"]["rut"];
-    var f = document.forms["formReembolso"]["amount"];
     if ($('.specialty-box').siblings().not('.hide')) {
         $('.specialty-box').addClass('hide');
     }
@@ -361,14 +345,9 @@ function test() {
     } else {
         $('#btnMostrarCampos').hide();
     }
-    $(".c1").remove();
-    $(".d1").remove();
-    $(".e1").remove();
-    $(".f1").remove();
-    $(c).removeClass("error-box");
-    $(d).removeClass("error-box");
-    $(e).removeClass("error-box");
-    $(f).removeClass("error-box");
+    $(".error-mensaje").remove();
+    $(".input-form").removeClass("error-box");
+    $("#date-mo").removeClass("error-box");
     $('.flujo-lg_attach').addClass('hide');
     $('.flujo-lg_files').addClass('hide');
     $('.flujo-sm_attach').addClass('hide');
@@ -408,7 +387,8 @@ $('#btnMostrarCampos').click(function () {
         if ($('.specialty-box').siblings().not('.hide')) {
             $('.specialty-box').addClass('hide');
         }
-
+        
+        $(".btnForm").attr("disabled");
         $('.specialty-box_op3').removeClass('hide');
         $('.flujo-lg_attach').removeClass('hide');
         $('.flujo-lg_files').removeClass('hide');
@@ -426,5 +406,15 @@ $('#btnMostrarCampos').click(function () {
         if ($('.specialty-box').siblings().not('.hide')) {
             $('.specialty-box').addClass('hide');
         }
+    }
+})
+
+//Validador falso fecha movil
+$("#date-mo").on('keyup keydown keypress change paste', function () {
+    let dateMo = $("#date-mo").val();
+    $("#date").val(dateMo);
+    if($("#date-mo").val() !== "") {
+        $("#date-mo").removeClass("error-box");
+        $(".c1").remove();
     }
 })

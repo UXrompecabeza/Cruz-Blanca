@@ -120,7 +120,7 @@
                                   <p class="inf-txt">Eduardo Rojas Calderón Titular</p>
                                 </div>
                                 <div class="box-label">
-                                  <p class="label-grey">Monto solictado a reembolsar</p>
+                                  <p class="label-grey">Monto solicitado a reembolsar</p>
                                   <p class="inf-txt_strong">$ 22.450</p>
                                   <div class="box-messenge"><img src="assets/icons/icon-alert.svg" alt=""/>
                                     <p>Tu tope de reembolso por consulta es de $26.633 (1UF)</p>
@@ -162,13 +162,14 @@
           <table class="table" id="table-solicitud">
             <thead>
               <tr>
-                <th scope="col">Estado solicitud</th>
-                <th scope="col">Ingreso</th>
-                <th scope="col">Tipo reembolso</th>
-                <th scope="col">Nombre corto</th>
-                <th scope="col">Beneficiario</th>
-                <th scope="col">Solicitado</th>
-                <th scope="col">Reembolsado</th>
+                <th class="col_estado" scope="col">Estado solicitud</th>
+                <th class="col_ingreso" scope="col">Ingreso</th>
+                <th class="col_tipo" scope="col">Tipo reembolso</th>
+                <th class="col_nombre" scope="col">Nombre corto</th>
+                <th class="col_beneficiario" scope="col">Beneficiario</th>
+                <th class="col_solicitado" scope="col">Solicitado</th>
+                <th class="col_reembolsado" scope="col">Reembolsado</th>
+                <th class="col_icon" scope="col">&nbsp;</th>
               </tr>
             </thead>
             <tbody>
@@ -192,8 +193,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -231,7 +233,7 @@
                             <p>Aprobada</p>
                           </td>
                           <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantebono.svg" alt=""/>
                               <p>Comprobante bono</p></a>
                           </td>
                         </tr>
@@ -260,8 +262,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -276,8 +279,8 @@
                             <p>Ingreso de solicitud</p>
                           </td>
                           <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Modificar solicitud</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon_pencil.svg" alt=""/>
+                              <p>Modificar solicitud</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon_trash.svg" alt=""/>
                               <p>Eliminar solicitud </p></a>
                           </td>
                         </tr>
@@ -306,8 +309,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable3 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -345,7 +349,7 @@
                             <p>Rechazada</p>
                           </td>
                           <td>
-                            <p>La Boleta Nº 02536841 que adjuntaste no corresponde al prestador ingresado. Folio:  646464        Fecha recepción: 09/02/2018</p><a href="#"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>La Boleta Nº 02536841 que adjuntaste no corresponde al prestador ingresado. Folio:  646464        Fecha recepción: 09/02/2018</p><a href="#"><img src="assets/icons/icon-cartarechazo.svg" alt=""/>
                               <p>Carta de Rechazo</p></a>
                           </td>
                         </tr>
@@ -374,8 +378,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -427,7 +432,7 @@
                                         </div>
                                         <div class="modal-body">
                                           <div class="modal-title_serie">
-                                            <p>Boleta Centro Médico</p>
+                                            <p class="modal-subTitle">Boleta Centro Médico</p>
                                           </div>
                                           <div class="modal-info_boleta"><img src="assets/imgs/boleta.png" alt="hola"/></div>
                                         </div>
@@ -470,8 +475,9 @@
                   <p>$ 25.000</p>
                 </td>
                 <td>
-                  <p>$ 25.000</p><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a>
+                  <p>$ 25.000</p>
                 </td>
+                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
               </tr>
               <tr class="subtable-table_row subtable4 no-view">
                 <td class="subtable-table_item" colspan="8">
@@ -509,8 +515,8 @@
                             <p>Pagada</p>
                           </td>
                           <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Comprobante bono</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
+                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantebono.svg" alt=""/>
+                              <p>Comprobante bono</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantereembolso.svg" alt=""/>
                               <p>Comprobante de reembolso</p></a>
                           </td>
                         </tr>
@@ -568,47 +574,47 @@
               <div class="action-sheet modal fade hide-md hide-lg" id="calendar-modal" tabindex="-1" role="dialog" aria-labelledby="fechas-modalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
-                    <div class="modal-header center">
-                      <h5 class="modal-title" id="fechas-modalLabel">Calendario</h5>
-                      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                      <h5 class="modal-title_small" id="fechas-modalLabel">Calendario</h5>
                     </div>
                     <div class="modal-body">
                       <div id="accordion">
                         <div class="card">
-                          <div class="card-header" id="headingOne">
+                          <div class="card-header" id="headingOneCalendar">
                             <h5 class="mb-0">
-                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span>Todos los meses</span></button>
+                              <button class="btn btn-link active-item-accordion btn_month" data-toggle="collapse" data-target="#collapseOneCalendar" aria-expanded="false" aria-controls="collapseOneCalendar"><span>Todos los meses</span></button>
                             </h5>
                           </div>
                         </div>
                         <div class="card">
-                          <div class="card-header" id="headingTwo">
+                          <div class="card-header" id="headingTwoCalendar">
                             <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span>Mes en curso</span></button>
+                              <button class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseTwoCalendar" aria-expanded="false" aria-controls="collapseTwoCalendar"><span>Mes en curso</span></button>
                             </h5>
                           </div>
                         </div>
                         <div class="card">
-                          <div class="card-header" id="headingThree">
+                          <div class="card-header" id="headingThreeCalendar">
                             <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span>Mes</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
+                              <button class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseThreeCalendar" aria-expanded="false" aria-controls="collapseThreeCalendar"><span id="choosenMonth">Mes</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
                             </h5>
                           </div>
-                          <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="collapse" id="collapseThreeCalendar" aria-labelledby="headingThreeCalendar" data-parent="#accordion">
                             <div class="card-body">
                               <ul> 
-                                <li><a href="#">Enero</a></li>
-                                <li> <a href="#">Febrero</a></li>
-                                <li> <a href="#">Marzo</a></li>
-                                <li> <a href="#">Abril</a></li>
-                                <li> <a href="#">Mayo</a></li>
-                                <li> <a href="#">Junio</a></li>
-                                <li> <a href="#">Julio</a></li>
-                                <li> <a href="#"> Agosto</a></li>
-                                <li> <a href="#">Septiembre</a></li>
-                                <li> <a href="#">Octubre</a></li>
-                                <li> <a href="#">Noviembre</a></li>
-                                <li> <a href="#">Diciembre</a></li>
+                                <li><a class="month">Enero</a></li>
+                                <li> <a class="month">Febrero</a></li>
+                                <li> <a class="month">Marzo</a></li>
+                                <li> <a class="month">Abril</a></li>
+                                <li> <a class="month">Mayo</a></li>
+                                <li> <a class="month">Junio</a></li>
+                                <li> <a class="month">Julio</a></li>
+                                <li> <a class="month"> Agosto</a></li>
+                                <li> <a class="month">Septiembre</a></li>
+                                <li> <a class="month">Octubre</a></li>
+                                <li> <a class="month">Noviembre</a></li>
+                                <li> <a class="month">Diciembre</a></li>
                               </ul>
                             </div>
                           </div>
@@ -627,30 +633,32 @@
               <div class="action-sheet modal fade" id="filtros-modal" tabindex="-1" role="dialog" aria-labelledby="filtros-modalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
-                    <div class="modal-header center">
-                      <h5 class="modal-title" id="filtros-modalLabel">Filtros</h5>
-                      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                      <h5 class="modal-title_small" id="filtros-modalLabel">Filtros</h5>
                     </div>
                     <div class="modal-body">
                       <div id="accordion">
                         <div class="card">
                           <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span>Ver todo</span></button>
+                              <button class="btn btn-link btn_filter-all" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span>Ver todo</span></button>
                             </h5>
                           </div>
                         </div>
                         <div class="card">
                           <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span>Beneficiario</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
+                              <button class="btn btn-link collapsed btn_filter-acc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span id="choosenPacient">Beneficiario</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
                             </h5>
                           </div>
                           <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
                               <ul> 
-                                <li><a href="#">Paciente 1</a></li>
-                                <li> <a href="#">Paciente 2</a></li>
+                                <li><a class="pacient">Titular</a></li>
+                                <li> <a class="pacient">Paciente 1</a></li>
+                                <li> <a class="pacient">Paciente 2</a></li>
+                                <li> <a class="pacient">Paciente 3</a></li>
                               </ul>
                             </div>
                           </div>
@@ -658,17 +666,17 @@
                         <div class="card">
                           <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span>Estado Solicitud</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
+                              <button class="btn btn-link collapsed btn_filter-acc" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span id="choosenState">Estado Solicitud</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
                             </h5>
                           </div>
                           <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="card-body">
                               <ul> 
-                                <li><a href="#">Aprobada</a></li>
-                                <li> <a href="#">Pendiente</a></li>
-                                <li> <a href="#">Rechazada</a></li>
-                                <li> <a href="#">Devuelto</a></li>
-                                <li> <a href="#">Pagada</a></li>
+                                <li><a class="state">Aprobada</a></li>
+                                <li> <a class="state">Pendiente</a></li>
+                                <li> <a class="state">Rechazada</a></li>
+                                <li> <a class="state">Devuelto</a></li>
+                                <li> <a class="state">Pagada</a></li>
                               </ul>
                             </div>
                           </div>
@@ -684,6 +692,9 @@
             </div>
           </div>
         </div>
+        <div class="searchBar-movil"><img src="assets/icons/icon-search.svg" alt=""/>
+          <input type="text" placeholder="Buscar por nombre corto"/>
+        </div>
         <div class="body-box">
           <div class="item">
             <div class="row">
@@ -696,11 +707,11 @@
                 <div class="item-prices">
                   <div class="item-princes-col">
                     <p class="item-normal">Solicitado</p>
-                    <p class="value">$25.0000</p>
+                    <p class="value">$ 25.000</p>
                   </div>
                   <div class="item-princes-col border-col">
                     <p class="item-normal">Reembolsado</p>
-                    <p class="value">$25.0000</p>
+                    <p class="value">$ 25.000</p>
                   </div>
                 </div>
               </div>
@@ -723,11 +734,11 @@
                 <div class="item-prices">
                   <div class="item-princes-col">
                     <p class="item-normal">Solicitado</p>
-                    <p class="value">$45.0000</p>
+                    <p class="value">$ 45.000</p>
                   </div>
                   <div class="item-princes-col border-col">
                     <p class="item-normal">Reembolsado</p>
-                    <p class="value">$-</p>
+                    <p class="value">$ -</p>
                   </div>
                 </div>
               </div>
@@ -750,11 +761,11 @@
                 <div class="item-prices">
                   <div class="item-princes-col">
                     <p class="item-normal">Solicitado</p>
-                    <p class="value">$45.0000</p>
+                    <p class="value">$ 45.000</p>
                   </div>
                   <div class="item-princes-col border-col">
                     <p class="item-normal">Reembolsado</p>
-                    <p class="value">$0</p>
+                    <p class="value">$ 0</p>
                   </div>
                 </div>
               </div>
@@ -777,11 +788,11 @@
                 <div class="item-prices">
                   <div class="item-princes-col">
                     <p class="item-normal">Solicitado</p>
-                    <p class="value">$45.0000</p>
+                    <p class="value">$ 45.000</p>
                   </div>
                   <div class="item-princes-col border-col">
                     <p class="item-normal">Reembolsado</p>
-                    <p class="value">$0</p>
+                    <p class="value">$ 0</p>
                   </div>
                 </div>
               </div>
@@ -804,11 +815,11 @@
                 <div class="item-prices">
                   <div class="item-princes-col">
                     <p class="item-normal">Solicitado</p>
-                    <p class="value">$25.0000</p>
+                    <p class="value">$ 25.000</p>
                   </div>
                   <div class="item-princes-col border-col">
                     <p class="item-normal">Reembolsado</p>
-                    <p class="value">$20.000</p>
+                    <p class="value">$ 20.000</p>
                   </div>
                 </div>
               </div>
@@ -836,4 +847,4 @@
 <script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
 <script src="js/libs/site.js"></script>
-<script src="js/funciones.js"></script>
+<script src="js/func-flujo_historico.js"></script>
