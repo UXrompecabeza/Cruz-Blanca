@@ -127,8 +127,17 @@ table {
   #formReembolso .reembolso-main .reembolso-info {
     padding: 1em 0 !important;
   }
+  #formReembolso .reembolso-main .reembolso-info .short-name {
+    position: relative;
+  }
   #formReembolso .reembolso-main .reembolso-info .short-name .form-title {
-    margin-left: -1em;
+    margin-left: -6%;
+    margin-right: 4%;
+    width: 90%;
+  }
+  #formReembolso .reembolso-main .reembolso-info .short-name .asterisc {
+    position: absolute;
+    left: 0;
   }
   #formReembolso .specialty {
     width: 100% !important;
@@ -2745,7 +2754,7 @@ header .header-mo .box-notification img {
   width: 100%;
   border: none;
   border-bottom: 2px solid #7fbce3;
-  padding: .5em 1em .2em 3em;
+  padding: .5em 1em .2em 13%;
 }
 
 .searchBar-movil input::-webkit-input-placeholder {

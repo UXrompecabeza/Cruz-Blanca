@@ -161,14 +161,14 @@ function validaTermCond() {
 
 //Agrega la clase de error al input y un mensaje de error bajo el boton que se encuentra deshabilitado hasta que complete todos los campos (Se dispara al apretar "Siguiente")
 function validaReemb() {
-    var a = document.forms["formReembolso"]["especialidad"];
-    var ax = document.forms["formReembolso"]["especialidad-mo"];
-    var b = document.forms["formReembolso"]["inputShort"];
-    var c = document.forms["formReembolso"]["date"];
-    var d = document.forms["formReembolso"]["invoice"];
-    var e = document.forms["formReembolso"]["rut"];
-    var f = document.forms["formReembolso"]["amount"];
-    var z = document.forms["formReembolso"]["amount2"];
+    var a = $('#input-specialty');
+    var ax = $("input-specialty-mo");
+    var b = $("#input-short-name");
+    var c = $("#date");
+    var d = $("#invoice");
+    var e = $("#rut");
+    var f = $("#amount");
+    var z = $("#amount2");
     var c1 = "<li class='error-mensaje c1'>Porfavor, elige fecha de atención.</li>";
     var d1 = "<li class='error-mensaje d1'>Porfavor, elige nº de boleta.</li>";
     var e1 = "<li class='error-mensaje e1'>Porfavor, elige RUT del prestador.</li>";
@@ -176,7 +176,7 @@ function validaReemb() {
     var src = ".validacion ul";
 
     if ($(a).val() == "Medicina general" || $(a).val() == "medicina general" || $(ax).val() == "Medicina general") {
-        if (c.value == "" && d.value == "" && e.value == "" && f.value == "") {
+        if (c.val() == "" && d.val() == "" && e.val() == "" && f.val() == "") {
             $(".input-validate").addClass("error-box");
             if (!($(".validacion ul").children().length == 4)) {
                 $(src).append(c1);
@@ -187,7 +187,7 @@ function validaReemb() {
             $('.btn-next').attr("disabled");
             return false;
 
-        } else if (c.value == "") {
+        } else if (c.val() == "") {
             $(c).addClass("error-box");
             $("#date-mo").addClass("error-box");
             if (!($("li").hasClass(".c1"))) {
@@ -195,20 +195,20 @@ function validaReemb() {
             }
             return false;
 
-        } else if (d.value == "") {
+        } else if (d.val() == "") {
             $(d).addClass("error-box");
             if (!($("li").hasClass(".d1"))) {
                 $(src).append(d1);
             }
             return false;
 
-        } else if (e.value == "") {
+        } else if (e.val() == "") {
             $(e).addClass("error-box");
             if (!($("li").hasClass(".e1"))) {
                 $(src).append(e1);
             }
             return false;
-        } else if (f.value == "") {
+        } else if (f.val() == "") {
             $(f).addClass("error-box");
             if (!($("li").hasClass(".f1"))) {
                 $(src).append(f1);
@@ -226,7 +226,7 @@ function validaReemb() {
             $('.btn-next').removeAttr("disabled");
         };
     } else if ($(a).val() == "Ginecología" || $(a).val() == "ginecología" || $(a).val() == "ginecologia" || $(ax).val() == "Ginecología") {
-        if (z.value == "") {
+        if (z.val() == "") {
             $(".input-validate").addClass("error-box");
             $(src).append(f1);
             $('.btn-next').attr("disabled");
@@ -241,13 +241,13 @@ function validaReemb() {
 
 //Va removiendo las clases de error y los mensajes a medida que se va completando los campos obligatorios
 function limpiarVal() {
-    var a = document.forms["formReembolso"]["especialidad"];
-    var b = document.forms["formReembolso"]["inputShort"];
-    var c = document.forms["formReembolso"]["date"];
-    var d = document.forms["formReembolso"]["invoice"];
-    var e = document.forms["formReembolso"]["rut"];
-    var f = document.forms["formReembolso"]["amount"];
-    var z = document.forms["formReembolso"]["amount2"];
+    var a = $('#input-specialty');
+    var b = $("#input-short-name");
+    var c = $("#date");
+    var d = $("#invoice");
+    var e = $("#rut");
+    var f = $("#amount");
+    var z = $("#amount2");
     var a1 = "<li class='error-mensaje a1'>Porfavor, elige especialidad.</li>";
     var b1 = "<li class='error-mensaje b1'>Porfavor, agrega un nombre corto al reembolso.</li>";
     var c1 = "<li class='error-mensaje c1'>Porfavor, elige fecha de atención.</li>";
@@ -257,7 +257,7 @@ function limpiarVal() {
     var src = ".validacion ul";
 
     $(a).on('keyup keydown keypress change paste', function () {
-        if (a.value == "") {
+        if (a.val() == "") {
             $(a).addClass("error-box");
         } else {
             $(a).removeClass("error-box");
@@ -268,14 +268,14 @@ function limpiarVal() {
         }
     });
     $(b).on('keyup keydown keypress change paste', function () {
-        if (b.value == "") {
+        if (b.val() == "") {
             $(b).addClass("error-box");
         } else {
             $(b).removeClass("error-box");
         }
     });
     $(c).on('keyup keydown keypress change paste', function () {
-        if (c.value == "") {
+        if (c.val() == "") {
             $(c).addClass("error-box");
             $("#date-mo").addClass("error-box");
             if (!($("li").hasClass(".c1"))) {
@@ -287,7 +287,7 @@ function limpiarVal() {
         }
     });
     $(d).on('keyup keydown keypress change paste', function () {
-        if (d.value == "") {
+        if (d.val() == "") {
             $(d).addClass("error-box");
             if (!($("li").hasClass(".d1"))) {
                 $(src).append(d1);
@@ -298,7 +298,7 @@ function limpiarVal() {
         }
     });
     $(e).on('keyup keydown keypress change paste', function () {
-        if (e.value == "") {
+        if (e.val() == "") {
             $(e).addClass("error-box");
             if (!($("li").hasClass(".e1"))) {
                 $(src).append(e1);
@@ -309,7 +309,7 @@ function limpiarVal() {
         }
     });
     $(f).on('keyup keydown keypress change paste', function () {
-        if (f.value == "") {
+        if (f.val() == "") {
             $(f).addClass("error-box");
             if (!($("li").hasClass(".f1"))) {
                 $(src).append(f1);
@@ -320,7 +320,7 @@ function limpiarVal() {
         }
     });
     $(z).on('keyup keydown keypress change paste', function () {
-        if (z.value == "") {
+        if (z.val() == "") {
             $(z).addClass("error-box");
             if (!($("li").hasClass(".f1"))) {
                 $(src).append(f1);
