@@ -7,6 +7,21 @@ $(document).ready(function () {
     focusBtn();
 });
 
+// --------------- Validaciones ------------------//
+
+$("#checkTerms").click(function() {
+    if($(this).is(':checked')) {  
+        $(".btnTerms").removeAttr("disabled") 
+    } 
+    if (!$(this).is(':checked')){
+        $(".btnTerms").attr("disabled", true);
+    }
+})
+
+$(".btnForm").mousemove(function() {
+    validaReemb();
+})
+
 // --------------- Inicializadores de plugins ------------- //
 
 //Calendario
@@ -149,16 +164,6 @@ function limitCaracters() {
     $('input#input-short-name').attr('maxLength', '30');
 };
 
-function validaTermCond() {
-    var a = document.forms["formTermCond"]["cbxTerms"];
-    if ($(a).is(':checked') == false) {
-        $('.btnTerms').attr("disabled");
-        return false;
-    } else {
-        $('.btnTerms').removeAttr("disabled");
-    }
-};
-
 //Agrega la clase de error al input y un mensaje de error bajo el boton que se encuentra deshabilitado hasta que complete todos los campos (Se dispara al apretar "Siguiente")
 function validaReemb() {
     var a = $('#input-specialty');
@@ -184,7 +189,7 @@ function validaReemb() {
                 $(src).append(e1);
                 $(src).append(f1);
             }
-            $('.btn-next').attr("disabled");
+            $('.btnForm').attr("disabled");
             return false;
 
         } else if (c.val() == "") {
@@ -223,20 +228,22 @@ function validaReemb() {
             $(".d1").hide();
             $(".e1").hide();
             $(".f1").hide();
-            $('.btn-next').removeAttr("disabled");
+            $('.btnForm').removeAttr("disabled");
         };
     } else if ($(a).val() == "Ginecología" || $(a).val() == "ginecología" || $(a).val() == "ginecologia" || $(ax).val() == "Ginecología") {
         if (z.val() == "") {
             $(".input-validate").addClass("error-box");
-            $(src).append(f1);
-            $('.btn-next').attr("disabled");
+            $('.btnForm').attr("disabled");
+            if ($(src).find('.f1').length == 0) {
+                $(src).append(f1);
+            }
             return false;
         } else {
             $(z).removeClass("error-box");
             $(".f1").hide();
-            $('.btn-next').removeAttr("disabled");
+            $('.btnForm').removeAttr("disabled");
         };
-    }
+    } 
 }
 
 //Va removiendo las clases de error y los mensajes a medida que se va completando los campos obligatorios
@@ -278,7 +285,7 @@ function limpiarVal() {
         if (c.val() == "") {
             $(c).addClass("error-box");
             $("#date-mo").addClass("error-box");
-            if (!($("li").hasClass(".c1"))) {
+            if ($(src).find('.c1').length == 0 && !($("li").hasClass(".c1"))) {
                 $(src).append(c1);
             }
         } else {
@@ -289,7 +296,7 @@ function limpiarVal() {
     $(d).on('keyup keydown keypress change paste', function () {
         if (d.val() == "") {
             $(d).addClass("error-box");
-            if (!($("li").hasClass(".d1"))) {
+            if ($(src).find('.d1').length == 0 && !($("li").hasClass(".d1"))) {
                 $(src).append(d1);
             }
         } else {
@@ -300,7 +307,7 @@ function limpiarVal() {
     $(e).on('keyup keydown keypress change paste', function () {
         if (e.val() == "") {
             $(e).addClass("error-box");
-            if (!($("li").hasClass(".e1"))) {
+            if ($(src).find('.e1').length == 0 && !($("li").hasClass(".e1"))) {
                 $(src).append(e1);
             }
         } else {
@@ -311,7 +318,7 @@ function limpiarVal() {
     $(f).on('keyup keydown keypress change paste', function () {
         if (f.val() == "") {
             $(f).addClass("error-box");
-            if (!($("li").hasClass(".f1"))) {
+            if ($(src).find('.f1').length == 0 && !($("li").hasClass(".f1"))) {
                 $(src).append(f1);
             }
         } else {
@@ -322,7 +329,7 @@ function limpiarVal() {
     $(z).on('keyup keydown keypress change paste', function () {
         if (z.val() == "") {
             $(z).addClass("error-box");
-            if (!($("li").hasClass(".f1"))) {
+            if ($(src).find('.d1').length == 0 && !$("li").hasClass(".f1")) {
                 $(src).append(f1);
             }
         } else {
@@ -352,6 +359,7 @@ function test() {
     $('.flujo-lg_files').addClass('hide');
     $('.flujo-sm_attach').addClass('hide');
     $('.flujo-sm_files').addClass('hide');
+    $(".btnForm").attr("disabled", true);
 }
 
 //Formatea los campos en cada cambio de especialidad y muestra los campos correspondientes.
@@ -375,6 +383,7 @@ $('#btnMostrarCampos').click(function () {
         $('.specialty-box_op5').removeClass('hide');
 
     } else if (a == "Psicología" || a == "psicología" || a == "psicologia" || a == "sicología" || a == "sicologia" || ax == "Psicología") {
+        $('.btnForm').removeAttr("disabled");
         if ($('.specialty-box').siblings().not('.hide')) {
             $('.specialty-box').addClass('hide');
         }
