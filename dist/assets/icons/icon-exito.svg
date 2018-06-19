@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 3</title>
+<svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M30,0 C13.4674923,0 0,13.4674923 0,30 C0,46.5325077 13.4674923,60 30,60 C46.5325077,60 60,46.5325077 60,30 C60,13.4674923 46.5325077,0 30,0 Z M30,55.9133127 C15.6965944,55.9133127 4.08668731,44.3034056 4.08668731,30 C4.08668731,15.6965944 15.6965944,4.08668731 30,4.08668731 C44.3034056,4.08668731 55.9133127,15.6965944 55.9133127,30 C55.9133127,44.3034056 44.3034056,55.9133127 30,55.9133127 Z" id="path-1"></path>
-    </defs>
-    <g id="01_REEM_Historico" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="012_RH" transform="translate(-131.000000, -158.000000)">
-            <g id="Group-3" transform="translate(131.000000, 158.000000)">
-                <polyline id="Path-6" stroke="#79B443" stroke-width="6" points="12 30.6863596 23.3136404 42 47.3136404 18"></polyline>
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="Mask" fill="#79B443" fill-rule="nonzero" xlink:href="#path-1"></use>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ico/exito">
+            <g id="Group">
+                <circle id="Oval" fill="#86BB53" cx="42" cy="42" r="42"></circle>
+                <polyline id="Path-6" stroke="#FFFFFF" stroke-width="6" points="22 42.3275798 34.7772734 55.1048532 61.8821265 28"></polyline>
             </g>
         </g>
     </g>

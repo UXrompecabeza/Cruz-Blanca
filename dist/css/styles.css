@@ -82,27 +82,27 @@ table {
     width: 100% !important;
     padding: 0;
   }
-  #formReembolso .flujo-lg, #formReembolso .flujo-md {
+  .reembolso-form .flujo-lg, .reembolso-form .flujo-md {
     padding-top: .5em !important;
   }
-  #formReembolso .flujo-lg .input-form, #formReembolso .flujo-md .input-form {
+  .reembolso-form .flujo-lg .input-form, .reembolso-form .flujo-md .input-form {
     width: 100%;
   }
-  #formReembolso .flujo-lg .form-label, #formReembolso .flujo-md .form-label {
+  .reembolso-form .flujo-lg .form-label, .reembolso-form .flujo-md .form-label {
     margin-bottom: .5em !important;
     display: inline-block !important;
     padding-left: 1em !important;
   }
-  #formReembolso .flujo-lg .alert_date, #formReembolso .flujo-md .alert_date {
+  .reembolso-form .flujo-lg .alert_date, .reembolso-form .flujo-md .alert_date {
     display: inline-block;
     width: 38%;
     padding-left: .3em;
   }
-  #formReembolso .flujo-lg .alert_date img, #formReembolso .flujo-md .alert_date img {
+  .reembolso-form .flujo-lg .alert_date img, .reembolso-form .flujo-md .alert_date img {
     width: 15px;
     vertical-align: top;
   }
-  #formReembolso .flujo-lg .alert_date p, #formReembolso .flujo-md .alert_date p {
+  .reembolso-form .flujo-lg .alert_date p, .reembolso-form .flujo-md .alert_date p {
     display: inline-block;
     font-size: 11px;
     color: #767676;
@@ -110,77 +110,77 @@ table {
     font-style: italic;
     padding-left: .3em;
   }
-  #formReembolso .reembolso-main {
+  .reembolso-form .reembolso-main {
     padding-bottom: 0 !important;
   }
-  #formReembolso .reembolso-main h1 {
+  .reembolso-form .reembolso-main h1 {
     font-size: 16px !important;
     text-align: left;
     margin: 0 !important;
   }
-  #formReembolso .reembolso-main h4 {
+  .reembolso-form .reembolso-main h4 {
     font-size: 16px;
     text-align: left;
     font-weight: 400 !important;
     padding-top: .3em;
   }
-  #formReembolso .reembolso-main .reembolso-info {
+  .reembolso-form .reembolso-main .reembolso-info {
     padding: 1em 0 !important;
   }
-  #formReembolso .reembolso-main .reembolso-info .short-name {
+  .reembolso-form .reembolso-main .reembolso-info .short-name {
     position: relative;
   }
-  #formReembolso .reembolso-main .reembolso-info .short-name .form-title {
+  .reembolso-form .reembolso-main .reembolso-info .short-name .form-title {
     margin-left: -6%;
     margin-right: 4%;
     width: 90%;
   }
-  #formReembolso .reembolso-main .reembolso-info .short-name .asterisc {
+  .reembolso-form .reembolso-main .reembolso-info .short-name .asterisc {
     position: absolute;
     left: 0;
   }
-  #formReembolso .specialty {
+  .reembolso-form .specialty {
     width: 100% !important;
     text-align: left !important;
   }
-  #formReembolso .specialty select {
+  .reembolso-form .specialty select {
     width: 100% !important;
     background: url("../assets/icons/icon-arrow-bottom.svg");
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: 50%;
   }
-  #formReembolso .specialty .specialty-box .attach-files {
+  .reembolso-form .specialty .specialty-box .attach-files {
     padding: 0 !important;
   }
-  #formReembolso .specialty .specialty-box .attach-files .row {
+  .reembolso-form .specialty .specialty-box .attach-files .row {
     margin: 0 !important;
   }
-  #formReembolso .specialty .specialty-box .attach-files .row .box-dashed {
+  .reembolso-form .specialty .specialty-box .attach-files .row .box-dashed {
     margin: 1em auto 0 auto !important;
   }
-  #formReembolso .specialty .specialty-box .attach-files .alert-box .alert-text_up {
+  .reembolso-form .specialty .specialty-box .attach-files .alert-box .alert-text_up {
     padding-left: 1.2em;
     margin-top: 0 !important;
   }
-  #formReembolso .specialty .specialty-box .attach-files .flujo-lg_files, #formReembolso .specialty .specialty-box .attach-files .flujo-sm_files {
+  .reembolso-form .specialty .specialty-box .attach-files .flujo-lg_files, .reembolso-form .specialty .specialty-box .attach-files .flujo-sm_files {
     margin: 0 !important;
   }
-  #formReembolso .specialty .specialty-box .attach-files .flujo-sm_attach, #formReembolso .specialty .specialty-box .attach-files .flujo-md_attach, #formReembolso .specialty .specialty-box .attach-files .flujo-lg_attach {
+  .reembolso-form .specialty .specialty-box .attach-files .flujo-sm_attach, .reembolso-form .specialty .specialty-box .attach-files .flujo-md_attach, .reembolso-form .specialty .specialty-box .attach-files .flujo-lg_attach {
     margin: 0 !important;
     padding-bottom: 3em;
   }
-  #formReembolso .specialty .specialty-box .attach-files .alert_attach {
+  .reembolso-form .specialty .specialty-box .attach-files .alert_attach {
     margin: 1em 0;
   }
-  #formReembolso .specialty .specialty-box .attach-files .alert_attach span {
+  .reembolso-form .specialty .specialty-box .attach-files .alert_attach span {
     font-size: 11px;
     color: #4a4a4a;
     font-weight: 300;
     font-style: italic;
     padding-left: .5em;
   }
-  #formReembolso .form-title {
+  .reembolso-form .form-title {
     font-size: 12px !important;
     display: inline-block;
     padding-left: 1em;
@@ -189,21 +189,21 @@ table {
     font-weight: 400 !important;
     padding-top: .3em;
   }
-  #formReembolso .date-form label {
+  .reembolso-form .date-form label {
     width: 85%;
   }
-  #formReembolso .date-form input {
+  .reembolso-form .date-form input {
     width: 60% !important;
     cursor: text !important;
   }
-  #formReembolso .input-form {
+  .reembolso-form .input-form {
     color: #4a4a4a;
     width: 100% !important;
   }
-  #formReembolso #doctor {
+  .reembolso-form #doctor {
     margin-left: 0 !important;
   }
-  #formReembolso .asterisc {
+  .reembolso-form .asterisc {
     display: inline-block;
     text-align: left;
     float: left;
@@ -213,16 +213,16 @@ table {
     position: relative;
     top: -3px;
   }
-  #formReembolso .section-subtitle {
+  .reembolso-form .section-subtitle {
     font-size: 16px;
     margin: 1em 0 1.5em 0;
     padding: 0 !important;
   }
-  #formReembolso .item-form {
+  .reembolso-form .item-form {
     margin: .5em 0;
     display: inline-block;
   }
-  #formReembolso a .care {
+  .reembolso-form a .care {
     padding: 0 !important;
   }
   .resumen-box h1 {
@@ -1210,6 +1210,7 @@ a.btnLink:hover {
 
 .btn-active {
   background-color: #f0f8fd;
+  border-color: #1697f3 !important;
 }
 
 .menu-buttons-large {
@@ -1357,11 +1358,7 @@ a.btnLink:hover {
 
 .carousel-users .carousel .item .img_user {
   display: inline-block;
-  background-color: #0079c8;
-  padding: .5em;
-  border-radius: 50%;
-  margin-bottom: -0.5em;
-  margin-right: .3em;
+  padding-right: 1em;
 }
 
 .carousel-users .carousel .item .img_user .icon-user {
@@ -1558,7 +1555,7 @@ a.btnLink:hover {
   font-size: 11px;
   color: #00a8ff;
   font-style: italic;
-  padding-left: .5em;
+  padding-right: .6em;
 }
 
 .ui-datepicker {
@@ -1887,6 +1884,10 @@ a.btnLink:hover {
   padding: .8em 0 .5em 0;
 }
 
+#adjuntosModal .modal-dialog .modal-content .modal-header .close {
+  font-size: 35px;
+}
+
 #adjuntosModal .modal-dialog .modal-content .modal-body {
   padding-top: 0 !important;
 }
@@ -1946,6 +1947,10 @@ a.btnLink:hover {
   padding-top: 1em;
   font-size: 16px;
   font-weight: 500;
+}
+
+#boletaModalRut .modal-dialog .modal-content .modal-header .close {
+  font-size: 35px;
 }
 
 #boletaModalRut .modal-dialog .modal-content .modal-body {
@@ -2142,7 +2147,6 @@ a.btnLink:hover {
 
 .excedentes-box .col-txt .exc {
   font-size: 14px;
-  color: #00a8ff;
   margin-top: .5em;
   opacity: 0;
   -webkit-transition: opacity .5s ease-in-out;
@@ -2151,6 +2155,7 @@ a.btnLink:hover {
 
 .excedentes-box .col-txt .strong {
   font-weight: 600;
+  color: #00a8ff;
 }
 
 .show-exc {
@@ -2686,7 +2691,7 @@ header .header-mo .box-notification img {
 }
 
 .botonera-movil .select-element {
-  border: 2px solid #1697f3;
+  border: 2px solid #0079c7;
   border-radius: 5px;
   display: inline-block;
   margin-top: 5px;
@@ -9980,6 +9985,7 @@ button.close {
 
 .modal-header .close {
   margin-top: -2px;
+  font-size: 35px;
 }
 
 .modal-title {

@@ -19,6 +19,7 @@ $("#checkTerms").click(function() {
 })
 
 $(".btnForm").mousemove(function() {
+    console.log("ckvokvofmvd")
     validaReemb();
 })
 
