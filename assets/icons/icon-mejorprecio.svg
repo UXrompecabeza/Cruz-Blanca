@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Star</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="199 437.754413 192.81966 441 194 434.125735 189 429.257354 195.90983 428.254413 199 422 202.09017 428.254413 209 429.257354 204 434.125735 205.18034 441"></polygon>
+    </defs>
+    <g id="BONOS-&gt;-CARO-2*****" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-Consulta-Médica-por-centro-médico-3" transform="translate(-189.000000, -422.000000)">
+            <g id="Star">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <path stroke="#FB7C40" stroke-width="2" d="M203.851988,439.172916 L202.925375,433.776349 L206.849345,429.955672 L201.426428,429.168551 L199,424.257533 L196.573572,429.168551 L191.150655,429.955672 L195.074625,433.776349 L194.148012,439.172916 L199,436.624908 L203.851988,439.172916 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
