@@ -35,21 +35,21 @@ $('.selectStyle').each(function(){
   
     $styledSelect.click(function(e) {
         e.stopPropagation();
-        $('div.select-styled.active').not(this).each(function(){
-            $(this).removeClass('active').next('ul.select-options').hide();
+        $('div.select-styled.activeb').not(this).each(function(){
+            $(this).removeClass('activeb').next('ul.select-options').hide();
         });
-        $(this).toggleClass('active').next('ul.select-options').toggle();
+        $(this).toggleClass('activeb').next('ul.select-options').toggle();
     });
   
     $listItems.click(function(e) {
         e.stopPropagation();
-        $styledSelect.text($(this).text()).removeClass('active');
+        $styledSelect.text($(this).text()).removeClass('activeb');
         $this.val($(this).attr('rel'));
         $list.hide();
     });
   
     $(document).click(function() {
-        $styledSelect.removeClass('active');
+        $styledSelect.removeClass('activeb');
         $list.hide();
     });
 });
@@ -386,4 +386,5 @@ $('#medioReg').selectize({});
 $('#espeCiudad').selectize({
     maxItems: 3
 });
+
 

@@ -5,556 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon/favicon-bupa.png"/>
-    <link rel="stylesheet" href="css/styles.css"/>
     <link rel="stylesheet" href="css/libs/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/libs/owl.carousel.css"/>
-    <link rel="stylesheet" href="css/libs/owl.theme.default.css"/>
-    <link rel="stylesheet" href="css/libs/progress-tracker.css"/>
-    <link rel="stylesheet" href="css/libs/site.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css"/>
     <title>Cruz Blanca</title>
   </head>
   <body>
-    <div class="desktop-view hide-sm">
-      <div class="main-container">
-        <header>
-          <div class="header-desk">
-            <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-cb.png" alt=""/></div>
-            <div class="header-box-sesion">
-              <div class="sesion-alert"><img src="assets/imgs/icon-bell.png" alt=""/></div>
-              <div class="sesion-inbox"><img src="assets/imgs/icon-notification.png" alt=""/></div>
-              <div class="sesion-user-data_avatar"><img src="assets/imgs/user-profile.png" alt=""/></div>
-              <div class="sesion-user-data">
-                <div class="sesion-user-data_name">
-                  <p class="data-txt">Bienvenida</p>
-                  <p class="user-name">andrea lagos</p>
-                </div>
-                <div class="sesion-user-data-menu"><img src="assets/icons/icon-question.svg" alt=""/></div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <nav class="menu-navbar hide-sm">
-          <ul>
-            <li><a class="active" href="#">Inicio</a></li>
-            <li><a href="#">Plan de Salud</a></li>
-            <li><a href="#">Cotizaciones</a></li>
-            <li><a href="#">Bonos</a></li>
-            <li><a href="#">Reembolsos</a></li>
-            <li><a href="#">Presupuetos</a></li>
-            <li><a href="#">Licencias médicas</a></li>
-            <li><a href="#">Ges/Caec</a></li>
-          </ul>
-        </nav>
-        <div class="breadcrumb">
-          <ul>
-            <li><a class="txt-black" href="#">Inicio /</a></li>
-            <li><a class="txt-grey" href="#">Reembolso en linea /</a></li>
-            <li><a class="txt-blue" href="#">Mis Solicitudes</a></li>
-          </ul>
+    <header class="hide-md hide-lg">
+      <div class="header-mo">
+        <div class="row">
+          <div class="box-icon_menu col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/icons/icon-menu.svg" alt=""/></a></div>
+          <div class="box-logo col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="#"><img src="assets/imgs/logo-cb.png" alt=""/></a></div>
+          <div class="box-notification col-lg-3 col-md-3 col-sm-3 col-xs-3 center"><a href="#"><img src="assets/icons/icon-smsmovil.svg" alt=""/></a></div>
         </div>
-        <section>
-          <h1 class="section-title section-title_desk"> Reembolso en línea</h1>
-        </section>
-        <div class="filtros hide-sm">
-          <div class="row">
-            <div class="col-sm-8 no-padding">
-              <div class="box-filtro btn-filter-desk"><img src="assets/icons/icon-filter.svg" alt=""/>
-                <p>Filtrar listado</p>
-              </div>
-              <div class="box-filtro_campos hide">
-                <select class="filtroEstado" name="estado">
-                  <option value="Estado de reembolso">Estado de solicitud</option>
-                  <option value="option 1">Aprobado</option>
-                  <option value="option 2">Rechazada</option>
-                  <option value="option 3">Devuelto</option>
-                  <option value="option 4">Pendiente</option>
-                  <option value="option 5">Pagada</option>
-                </select>
-                <select class="filtroMes" name="mes">
-                  <option value="Mes">Mes</option>
-                  <option value="option 1">Enero</option>
-                  <option value="option 2">Febrero</option>
-                  <option value="option 2">Marzo</option>
-                  <option value="option 2">Abril</option>
-                  <option value="option 2">Mayo</option>
-                  <option value="option 2">Junio</option>
-                  <option value="option 2">Julio</option>
-                  <option value="option 2">Agosto</option>
-                  <option value="option 2">Septiembre</option>
-                  <option value="option 2">Octubre</option>
-                  <option value="option 2">Noviembre</option>
-                  <option value="option 2">Diciembre</option>
-                </select>
-                <select class="filtroAnno" name="anno">
-                  <option value="Año">Año</option>
-                  <option value="option 1">2018</option>
-                  <option value="option 2">2017</option>
-                </select>
-                <select class="filtroPaciente" name="beneficiario">
-                  <option value="Paciente">Beneficiario</option>
-                  <option value="Option 1">option 2</option>
-                  <option value="Option 2">option 2</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-sm-4 no-padding">
-              <div class="box-reembolso">
-                <button class="btn-blue" type="button" data-toggle="modal" data-target="#reembolsoModal">Solicitar reembolso</button>
-                <div class="modales modal fade" id="reembolsoModal" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="reembolsoModalLabel">Solicitud reembolso</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modal-title_serie">
-                          <p>Nº solicitud: 34739743</p>
-                        </div>
-                        <div class="modal-info_reembolso">
-                          <div class="box-informe">
-                            <div class="row">
-                              <div class="col-4">
-                                <div class="box-label">
-                                  <p class="label-grey">Beneficiario</p>
-                                  <p class="inf-txt">Eduardo Rojas Calderón Titular</p>
-                                </div>
-                                <div class="box-label">
-                                  <p class="label-grey">Monto solicitado a reembolsar</p>
-                                  <p class="inf-txt_strong">$ 22.450</p>
-                                  <div class="box-messenge"><img src="assets/icons/icon-alert.svg" alt=""/>
-                                    <p>Tu tope de reembolso por consulta es de $26.633 (1UF)</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-4">
-                                <div class="box-label"> 
-                                  <p class="label-grey">Nombre corto del reembolso</p>
-                                  <p class="inf-txt">Resfrío Martín</p>
-                                </div>
-                                <div class="box-label">
-                                  <p class="label-grey">Archivos Adjuntos</p><a href="#" download="download">
-                                    <p class="inf-txt">1 |  Boleta Nº 923812093102</p></a><a href="#" download="download">
-                                    <p class="inf-txt">2 | Lorem ipsum</p></a>
-                                </div>
-                              </div>
-                              <div class="col-4">
-                                <div class="box-label">
-                                  <p class="label-grey">Fecha de atención</p>
-                                  <p class="inf-txt">22/10/2017</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer center">
-                        <button class="btn-blue" type="button" data-dismiss="modal">Cerrar Ventana</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="table-area">
-          <table class="table" id="table-solicitud">
-            <thead>
-              <tr>
-                <th class="col_estado" scope="col">Estado solicitud</th>
-                <th class="col_ingreso" scope="col">Ingreso</th>
-                <th class="col_tipo" scope="col">Tipo reembolso</th>
-                <th class="col_nombre" scope="col">Nombre corto</th>
-                <th class="col_beneficiario" scope="col">Beneficiario</th>
-                <th class="col_solicitado" scope="col">Solicitado</th>
-                <th class="col_reembolsado" scope="col">Reembolsado</th>
-                <th class="col_icon" scope="col">&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="show-table">
-                <td class="item_check"><img src="assets/icons/icon-aprobado.svg" alt=""/>
-                  <p>Aprobada</p>
-                </td>
-                <td>
-                  <p>15 Jun 2018</p>
-                </td>
-                <td>
-                  <p>Consulta médica y exámenes</p>
-                </td>
-                <td>
-                  <p>Reembolso Nicolas</p>
-                </td>
-                <td>
-                  <p>Nicolás Rojas Celedón Beneficiario</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
-              </tr>
-              <tr class="subtable-table_row subtable4 no-view">
-                <td class="subtable-table_item" colspan="8">
-                  <div class="subtable-table_box">
-                    <table class="subtable-table_table">
-                      <tbody>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Ingreso de solicitud</p>
-                          </td>
-                          <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Solicitud </p></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Solicitud en revisión</p>
-                          </td>
-                          <td> 
-                            <p>Estamos revisando la documentación que adjuntaste.</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td> <img src="assets/icons/icon-aprobado.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td class="item_check">
-                            <p>Aprobada</p>
-                          </td>
-                          <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantebono.svg" alt=""/>
-                              <p>Comprobante bono</p></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-              <tr class="show-table">
-                <td class="item_standby"> <img src="assets/icons/icon-pendiente.svg" alt=""/>
-                  <p>Pendiente</p>
-                </td>
-                <td>
-                  <p>15 Jun 2018</p>
-                </td>
-                <td>
-                  <p>Consulta médica y exámenes</p>
-                </td>
-                <td>
-                  <p>Reembolso Nicolas</p>
-                </td>
-                <td>
-                  <p>Nicolás Rojas Celedón Beneficiario</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
-              </tr>
-              <tr class="subtable-table_row subtable4 no-view">
-                <td class="subtable-table_item" colspan="8">
-                  <div class="subtable-table_box">
-                    <table class="subtable-table_table">
-                      <tbody>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Ingreso de solicitud</p>
-                          </td>
-                          <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon_pencil.svg" alt=""/>
-                              <p>Modificar solicitud</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon_trash.svg" alt=""/>
-                              <p>Eliminar solicitud </p></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-              <tr class="show-table">
-                <td class="item_denied"> <img src="assets/icons/icon-rechazado.svg" alt=""/>
-                  <p>Rechazada</p>
-                </td>
-                <td>
-                  <p>15 Jun 2018</p>
-                </td>
-                <td>
-                  <p>Consulta médica y exámenes</p>
-                </td>
-                <td>
-                  <p>Reembolso Nicolas</p>
-                </td>
-                <td>
-                  <p>Nicolás Rojas Celedón Beneficiario</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
-              </tr>
-              <tr class="subtable-table_row subtable3 no-view">
-                <td class="subtable-table_item" colspan="8">
-                  <div class="subtable-table_box">
-                    <table class="subtable-table_table">
-                      <tbody>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Ingreso de solicitud</p>
-                          </td>
-                          <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Solicitud</p></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Solicitud en revisión</p>
-                          </td>
-                          <td>
-                            <p>Estamos revisando la documentación que adjuntaste.</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td> <img src="assets/icons/icon-rechazado.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td class="item_denied">
-                            <p>Rechazada</p>
-                          </td>
-                          <td>
-                            <p>La Boleta Nº 02536841 que adjuntaste no corresponde al prestador ingresado. Folio:  646464        Fecha recepción: 09/02/2018</p><a href="#"><img src="assets/icons/icon-cartarechazo.svg" alt=""/>
-                              <p>Carta de Rechazo</p></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-              <tr class="show-table">
-                <td class="item_return"><img src="assets/icons/icon-devuelto.svg" alt=""/>
-                  <p>Devuelto</p>
-                </td>
-                <td>
-                  <p>15 Jun 2018</p>
-                </td>
-                <td>
-                  <p>Consulta médica y exámenes</p>
-                </td>
-                <td>
-                  <p>Reembolso Nicolas</p>
-                </td>
-                <td>
-                  <p>Nicolás Rojas Celedón Beneficiario</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
-              </tr>
-              <tr class="subtable-table_row subtable4 no-view">
-                <td class="subtable-table_item" colspan="8">
-                  <div class="subtable-table_box">
-                    <table class="subtable-table_table">
-                      <tbody>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Ingreso de solicitud</p>
-                          </td>
-                          <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Solicitud</p></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Solicitud en revisión</p>
-                          </td>
-                          <td> 
-                            <p>Estamos revisando la documentación que adjuntaste.</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="assets/icons/icon-devuelto.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td class="item_return">
-                            <p>Devuelto</p>
-                          </td>
-                          <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p>
-                            <div class="box">
-                              <div class="button-attach">
-                                <div class="box-header"><a href="#" data-toggle="modal" data-target="#boletaModal"><img src="assets/icons/icon-ojo.svg" alt=""/>
-                                    <p>Adjuntar orden médica</p></a>
-                                  <div class="modales modal fade" id="boletaModal" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h5 class="modal-title" id="reembolsoModalLabel">Ejemplo Boleta</h5>
-                                          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                        </div>
-                                        <div class="modal-body">
-                                          <div class="modal-title_serie">
-                                            <p class="modal-subTitle">Boleta Centro Médico</p>
-                                          </div>
-                                          <div class="modal-info_boleta"><img src="assets/imgs/boleta.png" alt="hola"/></div>
-                                        </div>
-                                        <div class="modal-footer center">
-                                          <button class="btn-blue" type="button" data-dismiss="modal">Cerrar Ventana</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="button-attach-only">
-                                  <button class="btn-outline-icon"><img src="assets/icons/icon-camara.svg" alt=""/><span> Adjuntar</span></button>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-              <tr class="show-table">
-                <td class="item_check"><img src="assets/icons/icon-pagada.svg" alt=""/>
-                  <p>Pagada</p><span class="item-date">el 26 de Abril de 2017</span>
-                </td>
-                <td>
-                  <p>15 Jun 2018</p>
-                </td>
-                <td>
-                  <p>Consulta médica y exámenes</p>
-                </td>
-                <td>
-                  <p>Reembolso Nicolas</p>
-                </td>
-                <td>
-                  <p>Nicolás Rojas Celedón Beneficiario</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td>
-                  <p>$ 25.000</p>
-                </td>
-                <td><a href="javascript:void(0)"><img class="table-show" src="assets/icons/icon-more.svg" alt=""/><img class="table-hide hide" src="assets/icons/icon-menos.svg" alt=""/></a></td>
-              </tr>
-              <tr class="subtable-table_row subtable4 no-view">
-                <td class="subtable-table_item" colspan="8">
-                  <div class="subtable-table_box">
-                    <table class="subtable-table_table">
-                      <tbody>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Ingreso de solicitud</p>
-                          </td>
-                          <td> 
-                            <p>Evaluaremos la información que nos enviaste y te notificaremos en pocos días.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-solicitud.svg" alt=""/>
-                              <p>Solicitud</p></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="assets/icons/icon-circle-step.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td>
-                            <p>Solicitud en revisión</p>
-                          </td>
-                          <td> 
-                            <p>Estamos revisando la documentación que adjuntaste.</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img src="assets/icons/icon-pagada.svg" alt=""/>
-                            <p>12/03/2018</p>
-                          </td>
-                          <td class="item_return">
-                            <p>Pagada</p>
-                          </td>
-                          <td> 
-                            <p>La solicitud Nº 02536841 que adjuntaste fue devuelta por faltar orden médica.</p><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantebono.svg" alt=""/>
-                              <p>Comprobante bono</p></a><a href="#" data-toggle="modal" data-target="#reembolsoModal"><img src="assets/icons/icon-comprobantereembolso.svg" alt=""/>
-                              <p>Comprobante de reembolso</p></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="pagination center">
-          <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">Página siguiente</a></li>
-          </ul>
-        </div>
-        <div class="navbar-bottom"><a href="#">
-            <div class="navbar-bottom-return"><img src="assets/icons/icon-volverizq.svg" alt=""/>
-              <p>Volver</p>
-            </div></a></div>
       </div>
-    </div>
-    <div class="mobil-view hide-lg hide-md show-sm">
-      <header class="hide-md hide-lg">
-        <div class="header-mo">
-          <div class="row">
-            <div class="box-icon_menu col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#"><img src="assets/icons/icon-menu.svg" alt=""/></a></div>
-            <div class="box-logo col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="#"><img src="assets/imgs/logo-cb.png" alt=""/></a></div>
-            <div class="box-notification col-lg-3 col-md-3 col-sm-3 col-xs-3 center"><a href="#"><img src="assets/icons/icon-smsmovil.svg" alt=""/></a></div>
+    </header>
+    <div class="main-container">
+      <header class="hide-sm">
+        <div class="header-desk">
+          <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-cb.png" alt=""/></div>
+          <div class="header-box-sesion">
+            <div class="sesion-alert"><img src="assets/imgs/icon-bell.png" alt=""/></div>
+            <div class="sesion-inbox"><img src="assets/imgs/icon-notification.png" alt=""/></div>
+            <div class="sesion-user-data_avatar"><img src="assets/imgs/user-profile.png" alt=""/></div>
+            <div class="sesion-user-data">
+              <div class="sesion-user-data_name">
+                <p class="data-txt">Bienvenida</p>
+                <p class="user-name">andrea lagos</p>
+              </div>
+              <div class="sesion-user-data-menu"><img src="assets/icons/icon-question.svg" alt=""/></div>
+            </div>
           </div>
         </div>
       </header>
-      <div class="main-container">
+      <nav class="menu-navbar hide-sm">
+        <ul>
+          <li><a class="active" href="#">Inicio</a></li>
+          <li><a href="#">Plan de Salud</a></li>
+          <li><a href="#">Cotizaciones</a></li>
+          <li><a href="#">Bonos</a></li>
+          <li><a href="#">Reembolsos</a></li>
+          <li><a href="#">Presupuetos</a></li>
+          <li><a href="#">Licencias médicas</a></li>
+          <li><a href="#">Ges/Caec</a></li>
+        </ul>
+      </nav>
+      <div class="breadcrumb hide-sm">
+        <ul>
+          <li><a class="txt-black" href="#">Inicio /</a></li>
+          <li><a class="txt-grey" href="#">Reembolso en linea /</a></li>
+          <li><a class="txt-blue" href="#">Mis Solicitudes</a></li>
+        </ul>
+      </div>
+      <section>
+        <h1 class="section-title section-title_desk hide-sm"> Reembolso en línea</h1>
+      </section>
+      <div class="hide-md hide-lg">
         <div class="informes"> 
           <div class="box-header">
             <h2>Reembolso en línea</h2><span></span>
@@ -563,288 +69,505 @@
             <p>Reembolsa tus consultas médicas, exámenes, lentes ópticos, urgencias y procedimientos.</p>
           </div>
           <div class="box-footer center">
-            <button class="btn-blue">Solicitar reembolso</button>
+            <button class="btn-blue" onclick="window.location.href='index.html'">Solicitar reembolso</button>
           </div>
         </div>
       </div>
-      <div class="list-item">
-        <div class="header-box">
-          <div class="row">
-            <div class="item-date col-lg-3 col-md-3 col-sm-3 col-sm-3"><a href="#" data-toggle="modal" data-target="#calendar-modal"><img src="assets/icons/icon-calendar.svg" alt=""/></a>
-              <div class="action-sheet modal fade hide-md hide-lg" id="calendar-modal" tabindex="-1" role="dialog" aria-labelledby="fechas-modalLabel" aria-hidden="true">
+    </div>
+    <div class="list-item hide-md hide-lg">
+      <div class="header-box">
+        <div class="row">
+          <div class="item-date col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#" data-toggle="modal" data-target="#calendar-modal"><img src="assets/icons/icon-calendar.svg" alt=""/></a>
+            <div class="action-sheet modal fade hide-md hide-lg" id="calendar-modal" tabindex="-1" role="dialog" aria-labelledby="fechas-modalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h5 class="modal-title_small" id="fechas-modalLabel">Calendario</h5>
+                  </div>
+                  <div class="modal-body">
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-header" id="headingOneCalendar">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link active-item-accordion btn_month" data-toggle="collapse" data-target="#collapseOneCalendar" aria-expanded="false" aria-controls="collapseOneCalendar"><span>Todos los meses</span></button>
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwoCalendar">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseTwoCalendar" aria-expanded="false" aria-controls="collapseTwoCalendar"><span>Mes en curso</span></button>
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThreeCalendar">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseThreeCalendar" aria-expanded="false" aria-controls="collapseThreeCalendar"><span id="choosenMonth">Mes</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
+                          </h5>
+                        </div>
+                        <div class="collapse" id="collapseThreeCalendar" aria-labelledby="headingThreeCalendar" data-parent="#accordion">
+                          <div class="card-body">
+                            <ul> 
+                              <li><a class="month">Enero</a></li>
+                              <li> <a class="month">Febrero</a></li>
+                              <li> <a class="month">Marzo</a></li>
+                              <li> <a class="month">Abril</a></li>
+                              <li> <a class="month">Mayo</a></li>
+                              <li> <a class="month">Junio</a></li>
+                              <li> <a class="month">Julio</a></li>
+                              <li> <a class="month"> Agosto</a></li>
+                              <li> <a class="month">Septiembre</a></li>
+                              <li> <a class="month">Octubre</a></li>
+                              <li> <a class="month">Noviembre</a></li>
+                              <li> <a class="month">Diciembre</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer center">
+                    <button class="btn-blue" type="button" data-dismiss="modal" aria-label="Close">Filtrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-year col-lg-6 col-md-6 col-sm-6 col-xs-6 center">
+            <div class="carousel-container">
+              <div class="carousel-year">
+                <div class="carousel owl-carousel owl-theme">
+                  <div class="item"><span class="year">2018</span></div>
+                  <div class="item"><span class="year">2019</span></div>
+                  <div class="item"><span class="year">2020</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-filter col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#" data-toggle="modal" data-target="#filtros-modal"><img src="assets/icons/icon-filter.svg" alt=""/></a>
+            <div class="action-sheet modal fade" id="filtros-modal" tabindex="-1" role="dialog" aria-labelledby="filtros-modalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h5 class="modal-title_small" id="filtros-modalLabel">Filtros</h5>
+                  </div>
+                  <div class="modal-body">
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link btn_filter-all" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span>Ver todo</span></button>
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed btn_filter-acc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span id="choosenPacient">Beneficiario</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
+                          </h5>
+                        </div>
+                        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                            <ul> 
+                              <li><a class="pacient">Titular</a></li>
+                              <li> <a class="pacient">Paciente 1</a></li>
+                              <li> <a class="pacient">Paciente 2</a></li>
+                              <li> <a class="pacient">Paciente 3</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed btn_filter-acc" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span id="choosenState">Estado Solicitud</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
+                          </h5>
+                        </div>
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body">
+                            <ul> 
+                              <li><a class="state">Aprobada</a></li>
+                              <li> <a class="state">Pendiente</a></li>
+                              <li> <a class="state">Rechazada</a></li>
+                              <li> <a class="state">Devuelto</a></li>
+                              <li> <a class="state">Pagada</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer center">
+                    <button class="btn-blue" type="button" data-dismiss="modal" aria-label="Close">Filtrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="searchBar-movil"><img src="assets/icons/icon-search.svg" alt=""/>
+        <input type="text" placeholder="Buscar por nombre corto"/>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="filtros hide-sm">
+        <div class="row">
+          <div class="col-sm-9 no-padding">
+            <div class="box-filtro btn-filter-desk"><img src="assets/icons/icon-filter.svg" alt=""/>
+              <p>Filtrar listado</p>
+            </div>
+            <div class="box-filtro_campos hide">
+              <select class="selectStyle">
+                <option value="Estado de reembolso">Estado solicitud</option>
+                <option value="option 1">Aprobado</option>
+                <option value="option 2">Rechazada</option>
+                <option value="option 3">Devuelto</option>
+                <option value="option 4">Pendiente</option>
+                <option value="option 5">Pagada</option>
+              </select>
+              <select class="selectStyle">
+                <option value="Mes">Mes</option>
+                <option value="option 1">Enero</option>
+                <option value="option 2">Febrero</option>
+                <option value="option 2">Marzo</option>
+                <option value="option 2">Abril</option>
+                <option value="option 2">Mayo</option>
+                <option value="option 2">Junio</option>
+                <option value="option 2">Julio</option>
+                <option value="option 2">Agosto</option>
+                <option value="option 2">Septiembre</option>
+                <option value="option 2">Octubre</option>
+                <option value="option 2">Noviembre</option>
+                <option value="option 2">Diciembre</option>
+              </select>
+              <select class="selectStyle">
+                <option value="Año">Año</option>
+                <option value="option 1">2018</option>
+                <option value="option 2">2017</option>
+              </select>
+              <select class="selectStyle">
+                <option value="Paciente">Beneficiario</option>
+                <option value="Option 1">option 2</option>
+                <option value="Option 2">option 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3 no-padding">
+            <div class="box-reembolso">
+              <button class="btn-blue" type="button" data-toggle="modal" data-target="#reembolsoModal">Solicitar reembolso</button>
+              <div class="modales modal fade" id="reembolsoModal" tabindex="-1" role="dialog" aria-labelledby="reembolsoModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                      <h5 class="modal-title_small" id="fechas-modalLabel">Calendario</h5>
+                      <h5 class="modal-title" id="reembolsoModalLabel">Solicitud reembolso</h5>
+                      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body">
-                      <div id="accordion">
-                        <div class="card">
-                          <div class="card-header" id="headingOneCalendar">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link active-item-accordion btn_month" data-toggle="collapse" data-target="#collapseOneCalendar" aria-expanded="false" aria-controls="collapseOneCalendar"><span>Todos los meses</span></button>
-                            </h5>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingTwoCalendar">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseTwoCalendar" aria-expanded="false" aria-controls="collapseTwoCalendar"><span>Mes en curso</span></button>
-                            </h5>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingThreeCalendar">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed btn_month" data-toggle="collapse" data-target="#collapseThreeCalendar" aria-expanded="false" aria-controls="collapseThreeCalendar"><span id="choosenMonth">Mes</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
-                            </h5>
-                          </div>
-                          <div class="collapse" id="collapseThreeCalendar" aria-labelledby="headingThreeCalendar" data-parent="#accordion">
-                            <div class="card-body">
-                              <ul> 
-                                <li><a class="month">Enero</a></li>
-                                <li> <a class="month">Febrero</a></li>
-                                <li> <a class="month">Marzo</a></li>
-                                <li> <a class="month">Abril</a></li>
-                                <li> <a class="month">Mayo</a></li>
-                                <li> <a class="month">Junio</a></li>
-                                <li> <a class="month">Julio</a></li>
-                                <li> <a class="month"> Agosto</a></li>
-                                <li> <a class="month">Septiembre</a></li>
-                                <li> <a class="month">Octubre</a></li>
-                                <li> <a class="month">Noviembre</a></li>
-                                <li> <a class="month">Diciembre</a></li>
-                              </ul>
+                      <div class="modal-title_serie">
+                        <p>Nº solicitud: 34739743</p>
+                      </div>
+                      <div class="modal-info_reembolso">
+                        <div class="box-informe">
+                          <div class="row">
+                            <div class="col-4">
+                              <div class="box-label">
+                                <p class="label-grey">Beneficiario</p>
+                                <p class="inf-txt">Eduardo Rojas Calderón Titular</p>
+                              </div>
+                              <div class="box-label">
+                                <p class="label-grey">Monto solicitado a reembolsar</p>
+                                <p class="inf-txt_strong">$ 22.450</p>
+                                <div class="box-messenge"><img src="assets/icons/icon-alert.svg" alt=""/>
+                                  <p>Tu tope de reembolso por consulta es de $26.633 (1UF)</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="box-label"> 
+                                <p class="label-grey">Nombre corto del reembolso</p>
+                                <p class="inf-txt">Resfrío Martín</p>
+                              </div>
+                              <div class="box-label">
+                                <p class="label-grey">Archivos Adjuntos</p><a href="#" download="download">
+                                  <p class="inf-txt">1 |  Boleta Nº 923812093102</p></a><a href="#" download="download">
+                                  <p class="inf-txt">2 | Lorem ipsum</p></a>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="box-label">
+                                <p class="label-grey">Fecha de atención</p>
+                                <p class="inf-txt">22/10/2017</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer center">
-                      <button class="btn-blue" type="button" data-dismiss="modal" aria-label="Close">Filtrar</button>
+                      <button class="btn-blue" type="button" data-dismiss="modal">Cerrar Ventana</button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="item-year col-lg-6 col-md-6 col-sm-6 col-xs-6 center"><img class="yearBack" src="assets/icons/icon-arrow-left.svg" alt=""/><span class="yearText">2017</span><img class="yearFoward" src="assets/icons/icon-arrow-right.svg" alt=""/></div>
-            <div class="item-filter col-lg-3 col-md-3 col-sm-3 col-sm-3"><a href="#" data-toggle="modal" data-target="#filtros-modal"><img src="assets/icons/icon-filter.svg" alt=""/></a>
-              <div class="action-sheet modal fade" id="filtros-modal" tabindex="-1" role="dialog" aria-labelledby="filtros-modalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                      <h5 class="modal-title_small" id="filtros-modalLabel">Filtros</h5>
-                    </div>
-                    <div class="modal-body">
-                      <div id="accordion">
-                        <div class="card">
-                          <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link btn_filter-all" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span>Ver todo</span></button>
-                            </h5>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed btn_filter-acc" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span id="choosenPacient">Beneficiario</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
-                            </h5>
-                          </div>
-                          <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                              <ul> 
-                                <li><a class="pacient">Titular</a></li>
-                                <li> <a class="pacient">Paciente 1</a></li>
-                                <li> <a class="pacient">Paciente 2</a></li>
-                                <li> <a class="pacient">Paciente 3</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed btn_filter-acc" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span id="choosenState">Estado Solicitud</span><img src="assets/icons/icon-arrow-bottom.svg" alt=""/></button>
-                            </h5>
-                          </div>
-                          <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                              <ul> 
-                                <li><a class="state">Aprobada</a></li>
-                                <li> <a class="state">Pendiente</a></li>
-                                <li> <a class="state">Rechazada</a></li>
-                                <li> <a class="state">Devuelto</a></li>
-                                <li> <a class="state">Pagada</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer center">
-                      <button class="btn-blue" type="button" data-dismiss="modal" aria-label="Close">Filtrar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="searchBar-movil"><img src="assets/icons/icon-search.svg" alt=""/>
-          <input type="text" placeholder="Buscar por nombre corto"/>
-        </div>
-        <div class="body-box">
-          <div class="item">
-            <div class="row">
-              <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding"><img src="assets/icons/icon-aprobado.svg"/></div>
-              <div class="item-info col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <h3 class="item-info_title item_check">Solicitud aprobada</h3>
-                <p class="item-info_servicio item_light">Consulta médica y exámenes</p>
-                <p class="item-info_asunto item-normal_strong">Reembolso Nicolas</p>
-                <p class="item-info_user item_light">Nicolás Rojas Celedón - Beneficiario</p>
-                <div class="item-prices">
-                  <div class="item-princes-col">
-                    <p class="item-normal">Solicitado</p>
-                    <p class="value">$ 25.000</p>
-                  </div>
-                  <div class="item-princes-col border-col">
-                    <p class="item-normal">Reembolsado</p>
-                    <p class="value">$ 25.000</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="item-details-date">
-                  <p class="item_light">15 Jun</p>
-                </div>
-                <div class="item-details-img"><a href="historico-aprobado.html"><img src="assets/icons/icon-arrow-right.svg" alt=""/></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="row">
-              <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding"><img src="assets/icons/icon-pendiente.svg"/></div>
-              <div class="item-info col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <h3 class="item-info_title item_standby">Pendiente</h3>
-                <p class="item-info_servicio item_light">Exámenes y procedimientos</p>
-                <p class="item-info_asunto item-normal_strong">Lesión rodilla</p>
-                <p class="item-info_user item_light">Juanita Rojas Celedón - Beneficiario</p>
-                <div class="item-prices">
-                  <div class="item-princes-col">
-                    <p class="item-normal">Solicitado</p>
-                    <p class="value">$ 45.000</p>
-                  </div>
-                  <div class="item-princes-col border-col">
-                    <p class="item-normal">Reembolsado</p>
-                    <p class="value">$ -</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="item-details-date">
-                  <p class="item_light">13 Mar</p>
-                </div>
-                <div class="item-details-img"><a href="historico-pendiente.html"><img src="assets/icons/icon-arrow-right.svg" alt=""/></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="row">
-              <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding"><img src="assets/icons/icon-rechazado.svg"/></div>
-              <div class="item-info col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <h3 class="item-info_title item_denied">Rechazada</h3>
-                <p class="item-info_servicio item_light">Medicamentos</p>
-                <p class="item-info_asunto item-normal_strong">Medicamentos mios</p>
-                <p class="item-info_user item_light">Eduardo Rojas Corrales  - Beneficiario</p>
-                <div class="item-prices">
-                  <div class="item-princes-col">
-                    <p class="item-normal">Solicitado</p>
-                    <p class="value">$ 45.000</p>
-                  </div>
-                  <div class="item-princes-col border-col">
-                    <p class="item-normal">Reembolsado</p>
-                    <p class="value">$ 0</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="item-details-date">
-                  <p class="item_light">2 Abr</p>
-                </div>
-                <div class="item-details-img"><a href="historico-rechazada.html"><img src="assets/icons/icon-arrow-right.svg" alt=""/></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="row">
-              <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding"><img src="assets/icons/icon-devuelto.svg"/></div>
-              <div class="item-info col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <h3 class="item-info_title item_return">Devuelto</h3>
-                <p class="item-info_servicio item_light">Exámenes y procedimientos</p>
-                <p class="item-info_asunto item-normal_strong">Lesión costilla</p>
-                <p class="item-info_user item_light">Eduardo Rojas Corrales  - Titular</p>
-                <div class="item-prices">
-                  <div class="item-princes-col">
-                    <p class="item-normal">Solicitado</p>
-                    <p class="value">$ 45.000</p>
-                  </div>
-                  <div class="item-princes-col border-col">
-                    <p class="item-normal">Reembolsado</p>
-                    <p class="value">$ 0</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="item-details-date">
-                  <p class="item_light">2 Abr</p>
-                </div>
-                <div class="item-details-img"><a href="historico-devuelto.html"><img src="assets/icons/icon-arrow-right.svg" alt=""/></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="row">
-              <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding"><img src="assets/icons/icon-pagada.svg"/></div>
-              <div class="item-info col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                <h3 class="item-info_title item_check">Pagada</h3>
-                <p class="item-info_servicio item_light">Consulta médica y exámenes</p>
-                <p class="item-info_asunto item-normal_strong">Consulta médica y exámenes</p>
-                <p class="item-info_user item_light">Nicolás Rojas Celedón - Beneficiario</p>
-                <div class="item-prices">
-                  <div class="item-princes-col">
-                    <p class="item-normal">Solicitado</p>
-                    <p class="value">$ 25.000</p>
-                  </div>
-                  <div class="item-princes-col border-col">
-                    <p class="item-normal">Reembolsado</p>
-                    <p class="value">$ 20.000</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <div class="item-details-date">
-                  <p class="item_light">15 Jun</p>
-                </div>
-                <div class="item-details-img"><a href="historico-pagada.html"><img src="assets/icons/icon-arrow-right.svg" alt=""/></a></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="hide-md hide-lg">
-        <div class="footer-floating-option"><img src="assets/icons/icon-asistente.svg" alt=""/></div>
-        <footer class="footer-mo">
-          <div class="footer-brand-logo"><img src="assets/imgs/logo-cb-footer.png" alt=""/></div>
-          <div class="footer-comunication"><a class="phone" href="#"><img src="assets/imgs/phone.png" alt=""/></a><a class="whatsapp" href="#"><img src="assets/imgs/wsp.png" alt=""/></a><a class="location" href="#"><img src="assets/imgs/location.png" alt=""/></a></div>
-        </footer>
+      <div class="table-area">
+        <table class="table" id="table-solicitud">
+          <thead class="hide-sm">
+            <tr>
+              <th class="col_estado" scope="col">Estado solicitud</th>
+              <th class="col_ingreso" scope="col">Ingreso</th>
+              <th class="col_tipo" scope="col">Tipo reembolso</th>
+              <th class="col_nombre" scope="col">Nombre corto</th>
+              <th class="col_beneficiario" scope="col">Beneficiario</th>
+              <th class="col_solicitado" scope="col">Solicitado</th>
+              <th class="col_reembolsado" scope="col">Reembolsado</th>
+              <th class="col_icon" scope="col">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="show-table">
+              <td>
+                <p class="item_check"><img src="assets/icons/icon-aprobado.svg" alt=""/><span>Aprobada</span></p>
+                <p class="tipo hide-md hide-lg">Consulta médica y exámenes</p>
+                <p class="nombre hide-md hide-lg">Reembolso Nicolas</p>
+                <p class="tipo hide-md hide-lg">Nicolás Rojas Celedón - Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>15 Jun 2018</p>
+              </td>
+              <td class="hide-sm">
+                <p>Consulta médica y exámenes</p>
+              </td>
+              <td class="hide-sm">
+                <p>Reembolso Nicolas</p>
+              </td>
+              <td class="hide-sm">
+                <p>Nicolás Rojas Celedón Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="right next-col">
+                <p class="fecha hide-md hide-lg">6 Jun</p><a href="historico-aprobado.html"><img class="icon-arrow" src="assets/icons/icon-arrow-right.svg"/></a>
+              </td>
+            </tr>
+            <tr class="hide-md hide-lg">
+              <td class="days-row" colspan="2">
+                <div class="dias-solicitados">
+                  <p class="dias_grey">Solicitado</p>
+                  <p class="n-dias_grey">$20.000</p>
+                </div>
+                <div class="dias-autorizados">
+                  <p class="dias_black">Reembolsado</p>
+                  <p class="n-dias_black">$20.000</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="show-table">
+              <td>
+                <p class="item_standby"><img src="assets/icons/icon-pendiente.svg" alt=""/><span>Pendiente</span></p>
+                <p class="tipo hide-md hide-lg">Exámenes y procedimientos</p>
+                <p class="nombre hide-md hide-lg">Lesión rodilla</p>
+                <p class="tipo hide-md hide-lg">Juanita Rojas Celedón - Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>15 Jun 2018</p>
+              </td>
+              <td class="hide-sm">
+                <p>Consulta médica y exámenes</p>
+              </td>
+              <td class="hide-sm">
+                <p>Reembolso Nicolas</p>
+              </td>
+              <td class="hide-sm">
+                <p>Nicolás Rojas Celedón Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="right next-col">
+                <p class="fecha hide-md hide-lg">6 Jun</p><a href="historico-pendiente.html"><img class="icon-arrow" src="assets/icons/icon-arrow-right.svg"/></a>
+              </td>
+            </tr>
+            <tr class="hide-md hide-lg">
+              <td class="days-row" colspan="2">
+                <div class="dias-solicitados">
+                  <p class="dias_grey">Solicitado</p>
+                  <p class="n-dias_grey">$20.000</p>
+                </div>
+                <div class="dias-autorizados">
+                  <p class="dias_black">Reembolsado</p>
+                  <p class="n-dias_black">$20.000</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="show-table">
+              <td>
+                <p class="item_denied"><img src="assets/icons/icon-rechazado.svg" alt=""/><span>Rechazada</span></p>
+                <p class="tipo hide-md hide-lg">Exámenes y procedimientos</p>
+                <p class="nombre hide-md hide-lg">Lesión rodilla</p>
+                <p class="tipo hide-md hide-lg">Juanita Rojas Celedón - Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>15 Jun 2018</p>
+              </td>
+              <td class="hide-sm">
+                <p>Consulta médica y exámenes</p>
+              </td>
+              <td class="hide-sm">
+                <p>Reembolso Nicolas</p>
+              </td>
+              <td class="hide-sm">
+                <p>Nicolás Rojas Celedón Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="right next-col">
+                <p class="fecha hide-md hide-lg">6 Jun</p><a href="historico-rechazada.html"><img class="icon-arrow" src="assets/icons/icon-arrow-right.svg"/></a>
+              </td>
+            </tr>
+            <tr class="hide-md hide-lg">
+              <td class="days-row" colspan="2">
+                <div class="dias-solicitados">
+                  <p class="dias_grey">Solicitado</p>
+                  <p class="n-dias_grey">$20.000</p>
+                </div>
+                <div class="dias-autorizados">
+                  <p class="dias_black">Reembolsado</p>
+                  <p class="n-dias_black">$20.000</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="show-table">
+              <td>
+                <p class="item_return"><img src="assets/icons/icon-devuelto.svg" alt=""/><span>Devuelto</span></p>
+                <p class="tipo hide-md hide-lg">Exámenes y procedimientos</p>
+                <p class="nombre hide-md hide-lg">Lesión rodilla</p>
+                <p class="tipo hide-md hide-lg">Juanita Rojas Celedón - Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>15 Jun 2018</p>
+              </td>
+              <td class="hide-sm">
+                <p>Consulta médica y exámenes</p>
+              </td>
+              <td class="hide-sm">
+                <p>Reembolso Nicolas</p>
+              </td>
+              <td class="hide-sm">
+                <p>Nicolás Rojas Celedón Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="right next-col">
+                <p class="fecha hide-md hide-lg">6 Jun</p><a href="historico-devuelto.html"><img class="icon-arrow" src="assets/icons/icon-arrow-right.svg"/></a>
+              </td>
+            </tr>
+            <tr class="hide-md hide-lg">
+              <td class="days-row" colspan="2">
+                <div class="dias-solicitados">
+                  <p class="dias_grey">Solicitado</p>
+                  <p class="n-dias_grey">$20.000</p>
+                </div>
+                <div class="dias-autorizados">
+                  <p class="dias_black">Reembolsado</p>
+                  <p class="n-dias_black">$20.000</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="show-table">
+              <td>
+                <p class="item_check"><img src="assets/icons/icon-pagada.svg" alt=""/><span>Pagada</span></p>
+                <p class="tipo hide-md hide-lg">Exámenes y procedimientos</p>
+                <p class="nombre hide-md hide-lg">Lesión rodilla</p>
+                <p class="tipo hide-md hide-lg">Juanita Rojas Celedón - Beneficiario</p><span class="item-date hide-sm">el 26 de Abril de 2017</span>
+              </td>
+              <td class="hide-sm">
+                <p>15 Jun 2018</p>
+              </td>
+              <td class="hide-sm">
+                <p>Consulta médica y exámenes</p>
+              </td>
+              <td class="hide-sm">
+                <p>Reembolso Nicolas</p>
+              </td>
+              <td class="hide-sm">
+                <p>Nicolás Rojas Celedón Beneficiario</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="hide-sm">
+                <p>$ 25.000</p>
+              </td>
+              <td class="right next-col">
+                <p class="fecha hide-md hide-lg">6 Jun</p><a href="historico-pagada.html"><img class="icon-arrow" src="assets/icons/icon-arrow-right.svg"/></a>
+              </td>
+            </tr>
+            <tr class="hide-md hide-lg">
+              <td class="days-row" colspan="2">
+                <div class="dias-solicitados">
+                  <p class="dias_grey">Solicitado</p>
+                  <p class="n-dias_grey">$20.000</p>
+                </div>
+                <div class="dias-autorizados">
+                  <p class="dias_black">Reembolsado</p>
+                  <p class="n-dias_black">$20.000</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <div class="pagination center hide-sm">
+        <ul>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">Página siguiente</a></li>
+        </ul>
+      </div>
+      <div class="navbar-bottom hide-sm"><a href="#">
+          <div class="navbar-bottom-return"><img src="assets/icons/icon-volverizq.svg" alt=""/>
+            <p>Volver</p>
+          </div></a></div>
+    </div>
+    <div class="hide-md hide-lg">
+      <div class="footer-floating-option"><img src="assets/icons/icon-asistente.svg" alt=""/></div>
+      <footer class="footer-mo">
+        <div class="footer-brand-logo"><img src="assets/imgs/logo-cb-footer.png" alt=""/></div>
+        <div class="footer-comunication"><a class="phone" href="#"><img src="assets/imgs/phone.png" alt=""/></a><a class="whatsapp" href="#"><img src="assets/imgs/wsp.png" alt=""/></a><a class="location" href="#"><img src="assets/imgs/location.png" alt=""/></a></div>
+      </footer>
     </div>
   </body>
 </html>
 <script src="js/libs/jquery-3.3.1.min.js"></script>
 <script src="js/libs/bootstrap.min.js"></script>
 <script src="js/libs/owl.carousel.js"></script>
-<script src="js/libs/site.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/selectize.min.js"></script>
 <script src="js/func-flujo_historico.js"></script>
+<script src="js/funciones-bonos.js"></script>
+<script src="js/funciones.js"></script>

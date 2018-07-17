@@ -1,31 +1,9 @@
 // ----------------Flujo reembolso historico----------------//
 
-// Navegación tabla
-$('.show-table').click(function () {
-    $(this).next().toggleClass("no-view", 1000);
-    if ($(this).hasClass('table-active_bg')) {
-        $(this).removeClass('table-active_bg');
-    } else {
-        $(this).addClass('table-active_bg');
-    }
-
-    if ($(this).find('.table-hide').hasClass('hide')) {
-        $(this).find('.table-hide').removeClass('hide');
-    } else {
-        $(this).find('.table-hide').addClass('hide');
-    }
-
-    if ($(this).find('.table-show').hasClass('hide')) {
-        $(this).find('.table-show').removeClass('hide');
-    } else {
-        $(this).find('.table-show').addClass('hide');
-    }
-});
-
 //Apertura filtro
 $('.btn-filter-desk').click(function () {
-    $(".box-filtro_campos").toggleClass("hide", 1000);
-    $(this).toggleClass("active", 1000);
+    $(".box-filtro_campos").toggleClass("hide");
+    $(this).toggleClass("activeFilter");
 });
 
 //Funcionalidad calendario filtro

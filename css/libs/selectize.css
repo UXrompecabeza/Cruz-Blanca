@@ -208,7 +208,7 @@
   padding: 0 !important;
   min-height: 0 !important;
   max-height: none !important;
-  /* width: 100% !important; */
+  width: 100% !important;
   margin: 0 2px 0 0 !important;
   text-indent: 0 !important;
   border: 0 none !important;
@@ -296,7 +296,7 @@
 .selectize-control.single .selectize-input,
 .selectize-control.single .selectize-input input {
   cursor: pointer;
-  /* width: 100% !important; */
+  width: 100% !important;
   font-size: 16px;
 }
 .selectize-control.single .selectize-input.input-active,

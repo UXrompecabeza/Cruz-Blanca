@@ -39,14 +39,14 @@ table {
   border-spacing: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .main-container {
     width: 100% !important;
     padding: 0 14px !important;
   }
   .narrow-container {
     width: 100% !important;
-    padding: 0 14px !important;
+    padding: 0 !important;
   }
   .wrap-content {
     width: 100%;
@@ -112,6 +112,7 @@ table {
   .btnLink .button-large {
     min-height: 7em !important;
     padding: 1em 1em .7em !important;
+    min-height: 7em !important;
   }
   .btnLink .button-large .col-2, .btnLink .button-large .col-10 {
     margin: 0;
@@ -250,6 +251,7 @@ table {
     margin-bottom: .5em !important;
     display: inline-block !important;
     padding-left: 1em !important;
+    width: 85%;
   }
   .reembolso-form .flujo-lg .alert_date, .reembolso-form .flujo-md .alert_date {
     display: inline-block;
@@ -289,17 +291,25 @@ table {
     position: relative;
   }
   .reembolso-form .reembolso-main .reembolso-info .short-name .form-title {
-    margin-left: -6%;
-    margin-right: 4%;
-    width: 90%;
+    width: 86%;
+    padding: 0 0 0.5em 1em !important;
   }
   .reembolso-form .reembolso-main .reembolso-info .short-name .asterisc {
     position: absolute;
     left: 0;
   }
+  .reembolso-form #btnFormBox {
+    height: 2em;
+    width: 90%;
+    left: 5%;
+  }
   .reembolso-form .specialty {
     width: 100% !important;
     text-align: left !important;
+  }
+  .reembolso-form .specialty .specialty-input_desk {
+    width: 100% !important;
+    margin: 0 !important;
   }
   .reembolso-form .specialty select {
     width: 100% !important;
@@ -347,9 +357,6 @@ table {
     font-weight: 400 !important;
     padding-top: .3em;
   }
-  .reembolso-form .date-form label {
-    width: 85%;
-  }
   .reembolso-form .date-form input {
     width: 60% !important;
     cursor: text !important;
@@ -358,7 +365,11 @@ table {
     color: #4a4a4a;
     width: 100% !important;
   }
-  .reembolso-form #doctor {
+  .reembolso-form .doctor-form-box {
+    width: 100% !important;
+    margin: .5em 0 0 !important;
+  }
+  .reembolso-form .doctor-form-box #doctor {
     margin-left: 0 !important;
   }
   .reembolso-form .asterisc {
@@ -440,7 +451,11 @@ table {
     font-size: 15px;
   }
   #modalSucursal .actionBtn {
-    left: 12% !important;
+    left: 10% !important;
+    width: 80%;
+  }
+  #modalSucursal .actionBtn button {
+    width: 100% !important;
   }
   .reembolso-exito-main {
     padding: .5em 0 0 !important;
@@ -548,6 +563,9 @@ table {
   .excedentes-box .col-txt {
     padding-left: 16px;
   }
+  .feedback .box-footer {
+    width: 100% !important;
+  }
   .btn-area {
     padding: 0 1em;
     width: 100% !important;
@@ -615,6 +633,12 @@ table {
     border-top: 1px solid #bdbdbd;
     border-bottom: 1px solid #bdbdbd;
   }
+  .list-item {
+    width: 100% !important;
+  }
+  .flujo-progreso .progress-text, .flujo-progreso .progress-icons {
+    padding-left: 11% !important;
+  }
   .blue-box_result .title {
     font-size: 16px !important;
     padding-bottom: .5em !important;
@@ -640,11 +664,72 @@ table {
     padding: 0 0 .5em 0 !important;
     margin-top: -.5em;
   }
+  .narrow-md-sm {
+    padding: 0 28px !important;
+  }
+  #table-solicitud tbody tr td {
+    border: none !important;
+    padding: 1em 0 0 0 !important;
+  }
+  #table-solicitud tbody tr .next-col {
+    width: 10%;
+  }
+  .licencias-index table tbody tr {
+    border: none !important;
+  }
+  .licencias-index table tbody tr td {
+    padding: 0.5em 0 0 1em !important;
+  }
+  .flujo-licencias {
+    padding: 0 3% !important;
+  }
+  .licencia-detalles {
+    padding: 0 !important;
+  }
+  .licencia-detalles .datos-beneficiario {
+    padding: 1em 0.9em 0 !important;
+  }
+  .licencia-detalles .datos-licencia {
+    border-top: 1px solid #c0def2;
+    border-left: none !important;
+    margin: 0 15px !important;
+    padding: 1em 0 !important;
+    width: 91%;
+  }
+  .licencia-detalles .linkDeposito {
+    margin: 0 !important;
+  }
+  .licencia-detalles .secondRow {
+    border-top: 1px solid #c0def2;
+    padding-top: 1em;
+  }
+  .pago .monto-total {
+    border-top: 1px solid #c0def2;
+    border-left: none !important;
+    padding: 1em 0 !important;
+  }
+  .licencias-vacia p {
+    text-align: left !important;
+  }
+  .licencias-vacia ul {
+    padding-left: 0 !important;
+  }
+  .bajadaColorDate {
+    text-align: left !important;
+  }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1099px) {
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
   .main-container {
     width: 769px !important;
+  }
+  .licencias-index {
+    width: 769px !important;
+    margin: 0 auto;
+  }
+  .container-wide {
+    width: 769px !important;
+    margin: 0 auto;
   }
   .narrow-container {
     width: 769px !important;
@@ -666,6 +751,9 @@ table {
   }
   .center-lg {
     text-align: center !important;
+  }
+  .no-padd-left {
+    padding-left: 0 !important;
   }
   .box-filtro_campos {
     margin-top: .5em;
@@ -696,7 +784,7 @@ table {
     margin-bottom: 2em !important;
   }
   .resumen-box .change-request {
-    padding: 0 0 1.5em 0 !important;
+    padding: 0 0 1.5em 2em !important;
   }
   .resumen-box .change-request a {
     font-size: 12px !important;
@@ -704,12 +792,15 @@ table {
   .resumen-box .box-informe {
     padding: 1em 1em 0 1em;
   }
+  .resumen-box .metodo-pago-main {
+    margin: 0 1em 3em !important;
+  }
   .btn-area {
     width: 100% !important;
   }
   .consulta-medica .btnLink .button-large {
     text-align: center;
-    min-height: 19em !important;
+    min-height: 20em !important;
     line-height: 19px;
   }
   .consulta-medica .btnLink .button-large-subtitle {
@@ -721,11 +812,21 @@ table {
     min-height: 11.8em;
     padding: 2em !important;
   }
+  .menu-buttons-large .button-large {
+    height: 18.5em;
+  }
 }
 
 @media (min-width: 1100px) {
-  .main-container {
+  .main-container, .licencias-index {
     width: 1100px !important;
+  }
+  .container-wide {
+    width: 600px !important;
+    margin: 0 auto;
+  }
+  .licencias-index {
+    margin: 0 auto;
   }
   .wrap-content {
     width: 610px;
@@ -751,6 +852,47 @@ table {
   .menu-buttons-icons .menu-button {
     padding: 0 10em;
   }
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-semibold-webfont.ttf");
+  src: url("../assets/fonts/montserrat-bold-webfont.eot");
+  src: url("../assets/fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../assets/fonts/montserrat-bold-webfont.woff") format("woff"), url("../assets/fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../assets/fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-semibold-webfont.eot");
+  src: url("../assets/fonts/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../assets/fonts/montserrat-semibold-webfont.woff") format("woff"), url("../assets/fonts/montserrat-semibold-webfont.ttf") format("truetype"), url("../assets/fonts/montserrat-semibold-webfont.svg#montserratsemibold") format("svg");
+  font-weight: 600;
+  font-style: semi-bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-medium-webfont.eot");
+  src: url("../assets/fonts/montserrat-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../assets/fonts/montserrat-medium-webfont.woff") format("woff"), url("../assets/fonts/montserrat-semibold-webfont.ttf") format("truetype"), url("../assets/fonts/montserrat-medium-webfont.svg#montserratmedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-regular-webfont.eot");
+  src: url("../assets/fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../assets/fonts/montserrat-regular-webfont.woff") format("woff"), url("../assets/fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../assets/fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: 400;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/montserrat-light-webfont.eot");
+  src: url("../assets/fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/montserrat-light-webfont.woff2") format("woff2"), url("../assets/fonts/montserrat-light-webfont.woff") format("woff"), url("../assets/fonts/montserrat-light-webfont.ttf") format("truetype"), url("../assets/fonts/montserrat-light-webfont.svg#montserratlight") format("svg");
+  font-weight: 300;
+  font-style: light;
 }
 
 header {
@@ -914,10 +1056,6 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   font-size: 13px;
 }
 
-.table-area table tbody tr td img, .table-area table tbody tr td p {
-  display: inline-block;
-}
-
 .table-area .show-table:active .subtable {
   display: block !important;
 }
@@ -958,7 +1096,7 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   width: 3%;
 }
 
-#table-solicitud tbody tr td:nth-child(1) p {
+#table-solicitud tbody tr td:nth-child(1) span {
   padding-left: .3em;
 }
 
@@ -968,6 +1106,20 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   font-weight: 300;
   padding-left: 2.4em;
   display: block;
+}
+
+#table-solicitud tbody tr td:nth-child(1) .tipo {
+  color: #767676;
+  font-weight: 300;
+  font-size: 11px;
+  padding-left: 2.5em;
+}
+
+#table-solicitud tbody tr td:nth-child(1) .nombre {
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 1.8em;
 }
 
 #table-solicitud tbody tr td:nth-child(2) {
@@ -1019,6 +1171,64 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   float: right;
 }
 
+#table-solicitud tbody tr .days-row {
+  border-bottom: 1px solid #ddd !important;
+  font-size: 11px;
+  padding: 1em 0 1em 0 !important;
+}
+
+#table-solicitud tbody tr .days-row .dias-solicitados {
+  display: inline-block;
+  width: 40%;
+  padding-left: 2.5em;
+}
+
+#table-solicitud tbody tr .days-row .dias-solicitados .dias_grey {
+  color: #767676;
+  font-weight: 300;
+}
+
+#table-solicitud tbody tr .days-row .dias-solicitados .n-dias_grey {
+  font-weight: 400;
+  color: #767676;
+}
+
+#table-solicitud tbody tr .days-row .dias-autorizados {
+  display: inline-block;
+  border-left: 1px solid gray;
+  padding-left: 1em;
+}
+
+#table-solicitud tbody tr .days-row .dias-autorizados .dias_black {
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+#table-solicitud tbody tr .days-row .dias-autorizados .n-dias_black {
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+#table-solicitud tbody tr td {
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+}
+
+#table-solicitud tbody tr .next-col {
+  vertical-align: baseline;
+}
+
+#table-solicitud tbody tr .next-col .fecha {
+  color: #767676;
+  font-weight: 300;
+  font-size: 11px;
+  padding: 0 2em 2em 0;
+}
+
+#table-solicitud tbody tr .next-col .icon-arrow {
+  padding-top: .5em;
+}
+
 #table-solicitud tbody tr .table-item_icon p {
   padding-left: .5em;
 }
@@ -1027,115 +1237,6 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   font-size: 12px;
   color: #007a3d;
   font-weight: 300;
-}
-
-.subtable-table_row .subtable-table_item {
-  padding: 0;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box {
-  padding: 1em 0 1em 6em;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box .subtable-table_img {
-  width: 4%;
-  display: inline;
-  float: left;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box .subtable-table_img img {
-  width: 24px;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table {
-  width: 90%;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr {
-  border-top: 1px solid rgba(0, 168, 255, 0.5);
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr:first-child {
-  border-top: none !important;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(1) {
-  width: 8em;
-  color: #767676;
-  font-weight: 300;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(1) img, .subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(1) p {
-  position: relative;
-  right: 1em;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(2) {
-  width: 11em;
-  font-size: 13px;
-  color: black;
-  font-weight: 500;
-  text-align: left;
-  padding-bottom: 1em !important;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(3) {
-  color: #4a4a4a;
-  font-weight: 300;
-  font-size: 12px;
-  width: 40em;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(3) a {
-  display: block;
-  text-decoration: none;
-  margin: .3em 0;
-  padding-left: .3em;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(3) a p {
-  text-decoration: none;
-  color: #1697F3;
-  position: relative;
-  top: .2em;
-  font-size: 12px;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td:nth-child(3) a img {
-  text-decoration: none;
-  vertical-align: top;
-  height: 16px;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td {
-  padding: .5em !important;
-  border: none;
-  font-size: 12px;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr td .box {
-  text-align: left;
-  margin-top: 1em;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr .button-attach {
-  padding: 1em 0 !important;
-  text-align: center;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr .button-attach .box-header {
-  text-align: center;
-  margin: 0 auto .5em auto;
-  display: inline-block;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr .button-attach .box-header .instruccion {
-  margin-right: 8em;
-}
-
-.subtable-table_row .subtable-table_item .subtable-table_box table.subtable-table_table tbody tr .button-attach .box-content button {
-  width: 290px !important;
-  padding: 1em !important;
 }
 
 #centroconsulta3 tr th, #centroconsulta3-single tr th, #especonsulta tr th {
@@ -1371,7 +1472,7 @@ header .header-box-sesion .sesion-user-data .sesion-user-data-menu {
   border: 2px solid #1697F3;
   color: #1697F3;
   background-color: #fff;
-  width: 70%;
+  width: 90%;
   text-align: center;
 }
 
@@ -1581,6 +1682,8 @@ button:disabled:hover {
 
 .feedback .box-footer {
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .feedback .box-footer button {
@@ -1613,7 +1716,7 @@ button:disabled:hover {
   vertical-align: bottom;
 }
 
-.filtros .active {
+.filtros .activeFilter {
   background-color: transparent !important;
   border: 1px solid #1697F3 !important;
 }
@@ -1680,7 +1783,7 @@ button:disabled:hover {
 }
 
 .modales .modal-dialog .modal-content {
-  padding: 1em 2em !important;
+  padding: 1em 2em 3em !important;
 }
 
 .modales .modal-dialog .modal-content .modal-header {
@@ -1692,6 +1795,10 @@ button:disabled:hover {
   font-size: 1.5rem;
 }
 
+.modales .modal-dialog .modal-content .modal-header span {
+  font-size: 30px;
+}
+
 .modales .modal-dialog .modal-content .modal-body {
   padding-top: 0 !important;
 }
@@ -1701,9 +1808,9 @@ button:disabled:hover {
 }
 
 .modales .modal-dialog .modal-content .modal-body .modal-title_serie .modal-subTitle {
-  font-size: 1rem;
+  font-size: 28px;
+  padding-left: .45em;
   color: #000;
-  padding: 0;
 }
 
 .modales .modal-dialog .modal-content .modal-body .modal-info_reembolso .box-informes .box-label .label-grey {
@@ -1723,19 +1830,19 @@ button:disabled:hover {
   width: 240px !important;
 }
 
-#filtros-modal .modal-header, #calendar-modal .modal-header, #filtros-modal-2 .modal-header, #filtros-modal-3 .modal-header {
+#filtros-modal .modal-header, #calendar-modal .modal-header, #filtros-modal-2 .modal-header, #filtros-modal-3 .modal-header, #filtros-modal2 .modal-header {
   padding: 1em 1em .5em 1em;
   display: block;
 }
 
-#filtros-modal .modal-header .modal-title_small, #calendar-modal .modal-header .modal-title_small, #filtros-modal-2 .modal-header .modal-title_small, #filtros-modal-3 .modal-header .modal-title_small {
+#filtros-modal .modal-header .modal-title_small, #calendar-modal .modal-header .modal-title_small, #filtros-modal-2 .modal-header .modal-title_small, #filtros-modal-3 .modal-header .modal-title_small, #filtros-modal2 .modal-header .modal-title_small {
   font-size: 16px;
   text-align: center;
   display: block;
   padding-top: 1.5em;
 }
 
-#filtros-modal .modal-header button, #calendar-modal .modal-header button, #filtros-modal-2 .modal-header button, #filtros-modal-3 .modal-header button {
+#filtros-modal .modal-header button, #calendar-modal .modal-header button, #filtros-modal-2 .modal-header button, #filtros-modal-3 .modal-header button, #filtros-modal2 .modal-header button {
   position: absolute;
   right: .4em;
   margin: 0;
@@ -1757,15 +1864,10 @@ a.btnLink {
 a.btnLink .button-large {
   border: 2px solid #0079c8;
   border-radius: 5px;
-  padding: 1em 2em .7em;
+  padding: 1em 1.5em .7em;
   width: 100%;
   display: inline-block;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1099px) {
-  a.btnLink .button-large {
-    min-height: 14em;
-  }
+  min-height: 14em;
 }
 
 a.btnLink .button-large img {
@@ -1952,6 +2054,7 @@ a.btnLink:hover {
 .carousel-users .carousel {
   margin: 0 auto;
   width: 22em;
+  text-align: center;
 }
 
 .carousel-users .carousel .icon, .carousel-users .carousel .icon-left, .carousel-users .carousel .icon-right, .carousel-users .carousel-container .carousel-year .carousel .icon-left, .carousel-container .carousel-year .carousel-users .carousel .icon-left, .carousel-users .carousel-container .carousel-year .carousel .icon-right, .carousel-container .carousel-year .carousel-users .carousel .icon-right {
@@ -2072,7 +2175,7 @@ a.btnLink:hover {
 .carousel-container .carousel-year .owl-nav .owl-prev {
   float: left;
   position: relative;
-  top: -1.6em;
+  top: -1.37em;
   background-image: url("../assets/icons/icon_chevron-left.svg") !important;
   background-position: center !important;
   background-size: cover !important;
@@ -2094,7 +2197,7 @@ a.btnLink:hover {
   background-image: url("../assets/icons/icon_chevron-right.svg") !important;
   background-position: center !important;
   background-size: cover !important;
-  top: -1.6em;
+  top: -1.37em;
   width: .5em;
   height: 1em;
 }
@@ -2403,10 +2506,12 @@ a.btnLink:hover {
 
 .attach-files .document-charged .documentItem .box_grey .text-document {
   text-align: left;
+  display: inline-block;
 }
 
 .attach-files .document-charged .documentItem .box_grey .delete-document {
   text-align: right;
+  display: inline-block;
 }
 
 .attach-files .document-charged .documentItem:first-child {
@@ -3014,7 +3119,7 @@ a.btnLink:hover {
 }
 
 #modalSucursal .modal-dialog .modal-body .options .select-box .selectPersonalizado .select-hidden {
-  display: none;
+  display: none !important;
 }
 
 #modalSucursal .modal-dialog .modal-body .options .select-box .selectPersonalizado .select-styled {
@@ -3073,6 +3178,788 @@ a.btnLink:hover {
   position: absolute;
   bottom: -5em;
   left: 18%;
+}
+
+.licencias-index .tabla-licencias table {
+  width: 100%;
+}
+
+.licencias-index .tabla-licencias table thead tr th {
+  border-bottom: 2px solid #0079c8 !important;
+  border-top: none !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: .5em .75rem;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_estado {
+  width: 18%;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_ingreso {
+  width: 7%;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_nombre {
+  width: 18%;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_empleador {
+  width: 18%;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_solicitado {
+  width: 13%;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_autorizado {
+  width: 14%;
+}
+
+.licencias-index .tabla-licencias table thead tr .col_pago {
+  width: 11%;
+}
+
+.licencias-index .tabla-licencias table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.licencias-index .tabla-licencias table tbody td {
+  padding: 1.5em .75rem;
+}
+
+.licencias-index .tabla-licencias table tbody td span {
+  font-size: 14px;
+}
+
+.licencias-index .tabla-licencias table tbody td .light-typo {
+  font-weight: 300;
+  color: #767676;
+}
+
+.licencias-index .tabla-licencias table tbody td .bold-typo {
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.licencias-index .tabla-licencias table tbody .next-col {
+  vertical-align: top;
+  padding-right: 1em !important;
+  width: 30%;
+}
+
+.licencias-index .tabla-licencias table tbody .icon-state {
+  width: 19px;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo, .licencias-index .tabla-licencias table tbody .titulo-recibida, .licencias-index .tabla-licencias table tbody .titulo-pendiente, .licencias-index .tabla-licencias table tbody .titulo-rechazada, .licencias-index .tabla-licencias table tbody .titulo-reducida, .licencias-index .tabla-licencias table tbody .titulo-ampliada, .licencias-index .tabla-licencias table tbody .titulo-pagada {
+  font-size: 14px;
+  font-weight: 400;
+  vertical-align: middle;
+  padding-left: .5em;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo-recibida {
+  color: #409bd6;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo-pendiente {
+  color: #a4219b;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo-rechazada {
+  color: #d81e05;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo-reducida {
+  color: #fb7c40;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo-ampliada {
+  color: #40a2a4;
+}
+
+.licencias-index .tabla-licencias table tbody .titulo-pagada {
+  color: #007a3d;
+}
+
+.licencias-index .tabla-licencias table tbody .bajada-pagada {
+  font-size: 12px;
+  font-weight: 300;
+  color: #007a3d;
+  padding-left: 2em;
+}
+
+.licencias-index .tabla-licencias table tbody .motivo {
+  font-size: 15px;
+  color: #4a4a4a;
+  font-weight: 500;
+  padding: .3em 0 .2em 1.7em;
+}
+
+.licencias-index .tabla-licencias table tbody .empleador, .licencias-index .tabla-licencias table tbody .dias_grey {
+  font-size: 11px;
+  color: #767676;
+  font-weight: 300;
+  padding-left: 2.35em;
+}
+
+.licencias-index .tabla-licencias table tbody .empleador {
+  padding-bottom: 1em;
+}
+
+.licencias-index .tabla-licencias table tbody .fecha, .licencias-index .tabla-licencias table tbody .dias_black {
+  font-size: 11px;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+.licencias-index .tabla-licencias table tbody .fecha {
+  padding: 0 1.5em 1.5em 0;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row {
+  padding-bottom: 1.5em !important;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row .dias-solicitados {
+  display: inline-block;
+  border-right: 2px solid #bfbfbf;
+  padding-right: 1.5em;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row .dias-autorizados {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row .dias-autorizados .dias_black {
+  font-weight: 500;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row .n-dias, .licencias-index .tabla-licencias table tbody .days-row .n-dias_black, .licencias-index .tabla-licencias table tbody .days-row .n-dias_grey {
+  font-size: 11px;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row .n-dias_black {
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.licencias-index .tabla-licencias table tbody .days-row .n-dias_grey {
+  color: #767676;
+  font-weight: 300;
+  padding-left: 2.35em;
+}
+
+.licencia-detalles {
+  background-color: #f5faff;
+  padding: 1em;
+}
+
+.licencia-detalles .datos-beneficiario {
+  padding: 1.5em 2em;
+}
+
+.licencia-detalles .datos-licencia {
+  border-left: 1px solid #c0def2;
+  padding: 0 2em;
+  margin: 1.5em 0;
+  height: 22em;
+}
+
+.licencia-detalles .title-detalles {
+  font-size: 14px;
+  font-weight: 300;
+  color: #767676;
+}
+
+.licencia-detalles .body-detalles {
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a4a4a;
+  padding-bottom: 1em;
+}
+
+.licencia-detalles .linkDeposito {
+  margin-top: -1em;
+}
+
+.licencia-detalles .linkDeposito span {
+  margin: 0;
+  padding-right: .5em;
+  display: inline-block;
+  font-size: 12px;
+  color: #1697F3;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.licencia-detalles .linkDeposito img {
+  vertical-align: sub;
+}
+
+.link-licencia {
+  padding: 1.5em 0 3em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.link-licencia span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1697F3;
+  padding-left: 1em;
+}
+
+.licencia-btn {
+  text-align: center;
+}
+
+.licencia-btn .btn-outline-icon img {
+  height: 17px;
+  vertical-align: sub;
+}
+
+.licencia-btn .btn-outline-icon span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1697F3;
+}
+
+.licencias-vacia .licencias-info {
+  text-align: center;
+  border-bottom: 2px solid #cbe6eb;
+  padding: 1.5em 0 1em;
+  margin-bottom: 1.5em;
+}
+
+.licencias-vacia .licencias-info img {
+  padding-bottom: 1.5em;
+}
+
+.licencias-vacia .licencias-info h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.licencias-vacia p {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.licencias-vacia ul {
+  padding-left: 30%;
+}
+
+.licencias-vacia ul li {
+  position: relative;
+  padding: 0 0 .5em 1.5em;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1697F3;
+}
+
+.licencias-vacia ul li:before {
+  content: "\002022";
+  color: #dbf1fa;
+  font-size: 60px;
+  position: absolute;
+  top: -34px;
+  left: -4px;
+}
+
+.tablasDetallePagoLicencia {
+  padding: 2em 0;
+}
+
+.tablasDetallePagoLicencia h3 {
+  font-size: 18px;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.tablasDetallePagoLicencia table {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.tablasDetallePagoLicencia table thead {
+  border-bottom: 2px solid #1697F3;
+}
+
+.tablasDetallePagoLicencia table thead th {
+  font-size: 14px;
+  font-weight: 400;
+  padding: .5em 1em;
+}
+
+.tablasDetallePagoLicencia table tbody td {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 1.5em 1em;
+  border-bottom: 1px solid #e2e2e3;
+}
+
+.tablasDetallePagoLicencia-mo {
+  padding: 2em 0;
+}
+
+.tablasDetallePagoLicencia-mo .leyendaPago {
+  padding: 0 14px;
+}
+
+.tablasDetallePagoLicencia-mo .leyendaPago span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tablasDetallePagoLicencia-mo .leyendaPago p {
+  font-size: 14px;
+  font-weight: 300;
+  display: inline-block;
+  width: 91%;
+}
+
+.tablasDetallePagoLicencia-mo h3 {
+  background-color: #f5faff;
+  font-size: 16px;
+  font-weight: 300;
+  padding: .8em;
+  text-align: center;
+  border-top: 1px solid #e2e2e3;
+  border-bottom: 1px solid #7fbce3;
+  margin: 1.5em 0 0;
+}
+
+.tablasDetallePagoLicencia-mo table {
+  width: 100%;
+}
+
+.tablasDetallePagoLicencia-mo table thead tr {
+  background-color: #eeeeee;
+}
+
+.tablasDetallePagoLicencia-mo table thead tr th {
+  padding: .5em;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.tablasDetallePagoLicencia-mo table tbody tr td {
+  border: 1px solid #e2e2e3;
+  padding: 1em .5em;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.tablasDetallePagoLicencia-mo table tbody tr .boldTD {
+  font-weight: 500 !important;
+}
+
+.tablasDetallePagoLicencia-mo .step-link {
+  padding: 1em 14px 0;
+}
+
+.flujo-licencias {
+  padding: 0 1.3%;
+}
+
+.flujo-licencias .progress-step::after {
+  background-color: #e2e2e3 !important;
+}
+
+.flujo-licencias .progress-step .progress-marker {
+  background-color: #e2e2e3 !important;
+}
+
+.flujo-licencias .is-complete .progress-marker {
+  background-color: #b2d7ef !important;
+}
+
+.flujo-licencias .is-complete::after {
+  background-color: #b2d7ef !important;
+}
+
+.flujo-licencias .progress-text {
+  padding-bottom: .5em !important;
+}
+
+.flujo-licencias .progress-text .step-date {
+  font-size: 11px;
+  color: #767676;
+  font-weight: 300;
+}
+
+.flujo-licencias .progress-text .progress-title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: .5em;
+  color: #0079c8;
+}
+
+.flujo-licencias .progress-text .step-content {
+  font-size: 12px;
+  color: #767676;
+  font-weight: 300;
+}
+
+.flujo-licencias .progress-text .step-future {
+  font-size: 11px;
+  color: #4a4a4a;
+  font-style: italic;
+  font-weight: 300;
+  margin: .9em 0 .5em 0;
+}
+
+.flujo-licencias .progress-text .progress-title_disabled {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: .2em;
+  color: #e2e2e3;
+}
+
+.flujo-licencias .progress-text_noPadding {
+  padding-bottom: 0 !important;
+}
+
+.flujo-licencias .last-text {
+  position: relative;
+  top: -21px;
+}
+
+.flujo-licencias .flujo-img {
+  position: relative;
+  top: .6em;
+  left: .1em;
+  height: 23px;
+}
+
+.flujo-licencias .progress-tracker {
+  margin-bottom: 0 !important;
+  margin-top: 1em !important;
+}
+
+.flujo-licencias .progress-icons {
+  padding-top: 15px;
+  padding-left: 42px;
+}
+
+.flujo-licencias .grey {
+  color: #767676 !important;
+}
+
+.flujo-licencias .pendiente {
+  color: #a4219b !important;
+  font-weight: 400 !important;
+}
+
+.flujo-licencias .rechazada {
+  color: #d81e05 !important;
+  font-weight: 400 !important;
+}
+
+.flujo-licencias .reducida {
+  color: #fb7c40 !important;
+  font-weight: 400 !important;
+}
+
+.flujo-licencias .ampliada {
+  color: #40a2a4 !important;
+  font-weight: 400 !important;
+}
+
+.flujo-licencias .aprobada {
+  color: #007a3d !important;
+  font-weight: 400 !important;
+}
+
+.flujo-licencias .icon-marker {
+  position: absolute;
+  top: .8em;
+  left: .2em;
+}
+
+.flujo-licencias .bottom-lg {
+  padding-bottom: 1em;
+}
+
+.step-link {
+  text-decoration: none;
+  margin-top: 0.5em;
+  display: block;
+  cursor: pointer;
+}
+
+.step-link .step-img {
+  display: inline-block;
+  height: 16px;
+  vertical-align: sub;
+}
+
+.step-link span {
+  display: inline-block;
+  font-size: 12px;
+  color: #1697F3;
+  margin-left: .5em;
+  font-weight: 400;
+}
+
+.step-link:last-child {
+  margin-bottom: 1.5em;
+}
+
+.step-link .step-img_alert {
+  vertical-align: top;
+}
+
+.step-link .licencia, .step-link .licencia-p, .step-link .licencia-span {
+  font-style: italic;
+  font-size: 11px;
+  color: #4a4a4a;
+}
+
+.step-link .licencia-p {
+  width: 93%;
+  font-weight: 300;
+  display: inline-block;
+  padding-left: .3em;
+}
+
+.step-link .licencia-span {
+  font-weight: 500;
+  margin: 0;
+}
+
+.button-attach_invoice {
+  width: 100%;
+  display: inline-block;
+  padding: 0 5% 1em;
+}
+
+.button-attach_invoice h5 {
+  font-size: 18px;
+  padding-bottom: 1em;
+}
+
+.button-attach_invoice .box-header {
+  margin-bottom: .5em;
+}
+
+.button-attach_invoice .box-header .asterisc {
+  color: #d81e05;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button-attach_invoice .box-header .leyend-attach {
+  display: inline-block;
+  font-size: 12px;
+  color: #767676;
+  width: 90%;
+}
+
+.button-attach_invoice .box-header ol li {
+  font-size: 12px;
+  font-weight: 300;
+  color: #1697F3;
+}
+
+.button-attach_invoice .box-header ol li img {
+  padding-left: .5em;
+}
+
+.button-attach_invoice .button-attach-only button {
+  width: 100% !important;
+  margin-bottom: 1em;
+}
+
+.button-attach_invoice .button-attach-only .noDocument {
+  text-align: center;
+  border: 2px dashed #e6e6e6;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+
+.button-attach_invoice .button-attach-only .noDocument span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #6c6e71;
+}
+
+.button-attach_invoice .button-attach-only a img {
+  width: 16px;
+  vertical-align: top;
+}
+
+.button-attach_invoice .button-attach-only a .alert-attach {
+  display: inline-block;
+  font-size: 11px;
+  font-style: italic;
+  color: #767676;
+  width: 93%;
+}
+
+.button-attach_invoice .document-charged {
+  width: 100%;
+  display: none;
+}
+
+.button-attach_invoice .document-charged .documentItem .box_grey {
+  padding: 1em 0 !important;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e6e6e6;
+}
+
+.button-attach_invoice .document-charged .documentItem .box_grey .text-document {
+  text-align: left;
+  display: inline-block;
+}
+
+.button-attach_invoice .document-charged .documentItem .box_grey .delete-document {
+  text-align: right;
+  display: inline-block;
+}
+
+.button-attach_invoice .document-charged .documentItem:first-child {
+  padding-top: 2em;
+}
+
+.button-attach_invoice .document-charged .documentItem:last-child .box_grey {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.button-attach_invoice .btnEnviar {
+  display: none;
+  padding-top: 2em;
+}
+
+.reminder {
+  background-color: #efffda;
+  padding: 1em;
+}
+
+.reminder .title-sucursal {
+  padding-bottom: .5em;
+}
+
+.reminder .title-sucursal img {
+  width: 13px;
+  vertical-align: text-bottom;
+}
+
+.reminder .title-sucursal span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.reminder p {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+.info-sucursal {
+  padding: 1em;
+}
+
+.info-sucursal .sucursal-datos {
+  padding: .5em 0 1em;
+}
+
+.info-sucursal .sucursal-fecha {
+  padding: .5em 0 1em;
+}
+
+.info-sucursal h6 {
+  font-size: 12px;
+  font-weight: 300;
+  color: #767676;
+  margin: 0;
+}
+
+.info-sucursal p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.info-sucursal .step-link {
+  margin: 0;
+}
+
+.info-sucursal .step-link span {
+  margin: 0 .5em 0 0;
+}
+
+.info-sucursal .step-link img {
+  vertical-align: text-bottom;
+}
+
+.pago {
+  background-color: #f5faff;
+  padding: 1.5em 2.5em 1em;
+}
+
+.pago .info-pago {
+  font-size: 12px;
+  font-weight: 500;
+  color: #767676;
+}
+
+.pago .info-monto {
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 1em;
+}
+
+.pago .monto-total {
+  border-left: 1px solid #c0def2;
+  padding: 1em 1em 2em;
+}
+
+.pago .monto-total .title-monto {
+  font-size: 12px;
+  font-weight: 300;
+  color: #767676;
+}
+
+.pago .monto-total .body-monto {
+  font-size: 20px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.cuenta {
+  padding: 1.5em 2.5em;
+}
+
+.cuenta h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin-bottom: 1em;
+}
+
+.cuenta h6 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cuenta p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.listPagada .item-links {
+  display: none;
 }
 
 header {
@@ -3179,6 +4066,10 @@ header .header-mo .box-notification img {
   margin-left: .5em;
 }
 
+.flujo-progreso {
+  padding: 0 .7em;
+}
+
 .flujo-progreso .progress-text {
   padding-bottom: 25px !important;
 }
@@ -3229,7 +4120,7 @@ header .header-mo .box-notification img {
 
 .flujo-progreso .flujo-img {
   position: relative;
-  top: .6em;
+  top: .7em;
   left: .1em;
   height: 23px;
 }
@@ -3241,11 +4132,7 @@ header .header-mo .box-notification img {
 
 .flujo-progreso .progress-icons {
   padding-top: 15px;
-  padding-left: 42px;
-}
-
-.list-item {
-  margin-bottom: .5em;
+  padding-left: 4.4em;
 }
 
 .list-item h2 {
@@ -3296,6 +4183,17 @@ header .header-mo .box-notification img {
   padding-left: 14px;
 }
 
+.list-item .list-info-box .bajadaColorDate {
+  text-align: right;
+}
+
+.list-item .list-info-box .bajadaColorDate .bajada-color_date {
+  font-size: 12px;
+  font-weight: 300;
+  padding-left: 14px;
+  color: #007a3d !important;
+}
+
 .list-item .border-top-list {
   border-top: 1px solid #c0def2;
 }
@@ -3307,11 +4205,16 @@ header .header-mo .box-notification img {
   border-bottom: 1px solid #eeeeee;
   border-top: 1px solid #eeeeee;
   margin-top: .3em;
+  height: 3em;
 }
 
 .list-item .header-box .right-filter {
   text-align: right;
   padding-right: 1em;
+}
+
+.list-item .header-box .right-filter a {
+  cursor: pointer;
 }
 
 .list-item .header-box .item-date {
@@ -3494,6 +4397,104 @@ header .header-mo .box-notification img {
 .item-flujo-doc .item-details-date,
 .item-flujo-centro .item-details-date {
   display: inline;
+}
+
+.item-licencia {
+  border-bottom: 1px solid #eeeeee;
+  padding: 1em .5em;
+}
+
+.item-licencia .col-lg-8 {
+  padding: 0 0 0 1em;
+}
+
+.item-licencia .item-info .item-info_title {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.item-licencia .item-info .item-info_servicio {
+  font-size: 11px;
+}
+
+.item-licencia .item-info .item-info_asunto {
+  font-size: 15px;
+}
+
+.item-licencia .item-info .item-info_user {
+  font-size: 11px;
+}
+
+.item-licencia .item-info .item-prices {
+  display: inline-block;
+  margin-top: .5em;
+}
+
+.item-licencia .item-info .item-prices .item-col {
+  padding-right: .5em;
+  display: inline-block;
+}
+
+.item-licencia .item-info .item-prices .item-col .item-normal {
+  font-size: 11px;
+}
+
+.item-licencia .item-info .item-prices .item-col .value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.item-licencia .item-info .item-prices .item-col .grey {
+  color: #9b9b9b;
+}
+
+.item-licencia .item-info .item-prices .border-col {
+  border-left: 1px solid #bfbfbf;
+  padding-left: .5em;
+}
+
+.item-licencia .item-info .recibida {
+  color: #409bd6;
+}
+
+.item-licencia .item-info .pendiente {
+  color: #a4219b;
+}
+
+.item-licencia .item-info .rechazada {
+  color: #d81e05;
+}
+
+.item-licencia .item-info .reducida {
+  color: #fb7c40;
+}
+
+.item-licencia .item-info .ampliada {
+  color: #40a2a4 !important;
+}
+
+.item-licencia .item-info .aprobada {
+  color: #007a3d !important;
+}
+
+.item-licencia .item-details .item-details-date {
+  font-size: 11px;
+  margin-bottom: 2em;
+}
+
+.item-licencia .item-links {
+  margin-top: .5em;
+}
+
+.item-licencia .item-links a span {
+  vertical-align: text-top;
+  padding-left: .5em;
+}
+
+.item-licencia .item-icon img {
+  height: 23px;
+  margin-left: .3em;
 }
 
 .informes {
@@ -5196,7 +6197,7 @@ header .header-mo .box-notification img {
 }
 
 .select-hidden {
-  display: none;
+  display: none !important;
 }
 
 .select-styled {
@@ -5221,6 +6222,9 @@ header .header-mo .box-notification img {
   padding: 0;
   list-style: none;
   background-color: #fff;
+  border-left: 1px solid #9b9b9b;
+  border-right: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
 }
 
 .select-options li {
@@ -15624,7 +16628,7 @@ h3 span {
   line-height: 26px;
 }
 
-.caja .titulo {
+.caja .titulo, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada {
   height: 78px;
   background: #0079C8;
   float: left;
@@ -15637,7 +16641,7 @@ h3 span {
   margin-bottom: 10px;
 }
 
-.caja .titulo h2 {
+.caja .titulo h2, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida h2, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida h2, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente h2, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente h2, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada h2, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada h2, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida h2, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida h2, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada h2, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada h2, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada h2, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada h2 {
   color: #fff;
   font-size: 22px;
   font-family: 'gotham_bookregular';
@@ -15645,7 +16649,7 @@ h3 span {
   margin-top: 13px;
 }
 
-.caja .titulo i {
+.caja .titulo i, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida i, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida i, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente i, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente i, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada i, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada i, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida i, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida i, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada i, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada i, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada i, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada i {
   color: #fff;
   right: 20px;
   position: absolute;
@@ -15654,11 +16658,11 @@ h3 span {
   cursor: pointer;
 }
 
-.caja .titulo .icon-menos {
+.caja .titulo .icon-menos, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida .icon-menos, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida .icon-menos, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente .icon-menos, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente .icon-menos, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada .icon-menos, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada .icon-menos, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida .icon-menos, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida .icon-menos, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada .icon-menos, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada .icon-menos, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada .icon-menos, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada .icon-menos {
   display: none;
 }
 
-.caja .titulo .icon-mas {
+.caja .titulo .icon-mas, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida .icon-mas, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida .icon-mas, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente .icon-mas, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente .icon-mas, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada .icon-mas, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada .icon-mas, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida .icon-mas, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida .icon-mas, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada .icon-mas, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada .icon-mas, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada .icon-mas, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada .icon-mas {
   display: block;
 }
 
@@ -16556,11 +17560,11 @@ label {
   height: 240px;
 }
 
-#cotizaciones .caja .titulo {
+#cotizaciones .caja .titulo, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-recibida, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-recibida, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-pendiente, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-rechazada, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-reducida, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-reducida, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-ampliada, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-pagada, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-pagada {
   height: 50px;
 }
 
-#cotizaciones .caja .titulo i {
+#cotizaciones .caja .titulo i, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-recibida i, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-recibida i, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente i, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-pendiente i, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada i, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-rechazada i, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-reducida i, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-reducida i, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada i, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-ampliada i, #cotizaciones .caja .licencias-index .tabla-licencias table tbody .titulo-pagada i, .licencias-index .tabla-licencias table tbody #cotizaciones .caja .titulo-pagada i {
   top: 10px;
 }
 
@@ -17811,10 +18815,10 @@ span.uf {
   #plandesalud .caja {
     height: 330px;
   }
-  #plandesalud .caja .titulo.asistencia {
+  #plandesalud .caja .titulo.asistencia, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-recibida, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-recibida, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-pendiente, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-pendiente, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-rechazada, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-rechazada, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-reducida, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-reducida, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-ampliada, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-ampliada, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-pagada, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-pagada {
     cursor: default;
   }
-  #plandesalud .caja .titulo.asistencia i {
+  #plandesalud .caja .titulo.asistencia i, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-recibida i, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-recibida i, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-pendiente i, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-pendiente i, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-rechazada i, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-rechazada i, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-reducida i, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-reducida i, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-ampliada i, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-ampliada i, #plandesalud .caja .licencias-index .tabla-licencias table tbody .asistencia.titulo-pagada i, .licencias-index .tabla-licencias table tbody #plandesalud .caja .asistencia.titulo-pagada i {
     display: none !important;
   }
   .plan__mt {
@@ -18204,18 +19208,18 @@ span.uf {
   .caja .modificar {
     display: none !important;
   }
-  #cotizacionesPublico .caja .titulo {
+  #cotizacionesPublico .caja .titulo, #cotizacionesPublico .caja .licencias-index .tabla-licencias table tbody .titulo-recibida, .licencias-index .tabla-licencias table tbody #cotizacionesPublico .caja .titulo-recibida, #cotizacionesPublico .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente, .licencias-index .tabla-licencias table tbody #cotizacionesPublico .caja .titulo-pendiente, #cotizacionesPublico .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada, .licencias-index .tabla-licencias table tbody #cotizacionesPublico .caja .titulo-rechazada, #cotizacionesPublico .caja .licencias-index .tabla-licencias table tbody .titulo-reducida, .licencias-index .tabla-licencias table tbody #cotizacionesPublico .caja .titulo-reducida, #cotizacionesPublico .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada, .licencias-index .tabla-licencias table tbody #cotizacionesPublico .caja .titulo-ampliada, #cotizacionesPublico .caja .licencias-index .tabla-licencias table tbody .titulo-pagada, .licencias-index .tabla-licencias table tbody #cotizacionesPublico .caja .titulo-pagada {
     height: 78px !important;
   }
-  .caja .titulo {
+  .caja .titulo, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada {
     height: 50px;
     margin-bottom: 0px !important;
   }
-  .caja .titulo i {
+  .caja .titulo i, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida i, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida i, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente i, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente i, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada i, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada i, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida i, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida i, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada i, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada i, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada i, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada i {
     right: 15px;
     top: 17px;
   }
-  .caja .titulo h2 {
+  .caja .titulo h2, .caja .licencias-index .tabla-licencias table tbody .titulo-recibida h2, .licencias-index .tabla-licencias table tbody .caja .titulo-recibida h2, .caja .licencias-index .tabla-licencias table tbody .titulo-pendiente h2, .licencias-index .tabla-licencias table tbody .caja .titulo-pendiente h2, .caja .licencias-index .tabla-licencias table tbody .titulo-rechazada h2, .licencias-index .tabla-licencias table tbody .caja .titulo-rechazada h2, .caja .licencias-index .tabla-licencias table tbody .titulo-reducida h2, .licencias-index .tabla-licencias table tbody .caja .titulo-reducida h2, .caja .licencias-index .tabla-licencias table tbody .titulo-ampliada h2, .licencias-index .tabla-licencias table tbody .caja .titulo-ampliada h2, .caja .licencias-index .tabla-licencias table tbody .titulo-pagada h2, .licencias-index .tabla-licencias table tbody .caja .titulo-pagada h2 {
     font-size: 19px;
   }
   .caja br {
@@ -18452,12 +19456,6 @@ a.link-red:hover, a.link-red:focus {
 .table img {
   vertical-align: middle;
   margin-right: 4px;
-}
-
-@media (max-width: 1200px) {
-  .table img {
-    display: none;
-  }
 }
 
 .table,
@@ -19384,14 +20382,14 @@ td {
   margin-bottom: 0;
 }
 
-.section-licencias-medicas .licencia-info .titulo {
+.section-licencias-medicas .licencia-info .titulo, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-recibida, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-recibida, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-pendiente, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-pendiente, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-rechazada, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-rechazada, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-reducida, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-reducida, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-ampliada, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-ampliada, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-pagada, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-pagada {
   float: none;
   height: auto;
   text-align: right;
   padding: 10px 15px;
 }
 
-.section-licencias-medicas .licencia-info .titulo i {
+.section-licencias-medicas .licencia-info .titulo i, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-recibida i, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-recibida i, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-pendiente i, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-pendiente i, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-rechazada i, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-rechazada i, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-reducida i, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-reducida i, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-ampliada i, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-ampliada i, .section-licencias-medicas .licencia-info .licencias-index .tabla-licencias table tbody .titulo-pagada i, .licencias-index .tabla-licencias table tbody .section-licencias-medicas .licencia-info .titulo-pagada i {
   position: inherit;
   right: inherit;
   top: inherit;

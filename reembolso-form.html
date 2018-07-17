@@ -7,19 +7,15 @@
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon/favicon-bupa.png"/>
     <link rel="stylesheet" href="css/libs/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/libs/owl.carousel.css"/>
-    <link rel="stylesheet" href="css/libs/owl.theme.default.css"/>
     <link rel="stylesheet" href="css//libs/selectize.css"/>
-    <link rel="stylesheet" href="css/libs/progress-tracker.css"/>
-    <link rel="stylesheet" href="css/libs/site.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
     <title>Cruz Blanca</title>
   </head>
   <body>
     <div class="reembolso-form">
       <div class="main-container">
         <div class="hide-sm">
-          <header>
+          <header class="hide-sm">
             <div class="header-desk">
               <div class="header-box-brand"><img class="brand-logo" src="assets/imgs/logo-cb.png" alt=""/></div>
               <div class="header-box-sesion">
@@ -48,7 +44,7 @@
               <li><a href="#">Ges/Caec</a></li>
             </ul>
           </nav>
-          <div class="breadcrumb">
+          <div class="breadcrumb hide-sm">
             <ul>
               <li><a class="txt-black" href="#">Inicio /</a></li>
               <li><a class="txt-grey" href="#">Reembolso en linea /</a></li>
@@ -102,27 +98,17 @@
         </section>
       </div>
       <hr class="hide-md hide-lg"/>
-      <div class="main-container">
+      <div class="main-container narrow-md-sm">
         <h4 class="section-subtitle hide-md hide-lg">Datos consulta</h4>
         <div class="specialty">
           <h4 class="form-title">¿Qué especialidad?</h4>
           <p class="asterisc top">*</p>
-          <div class="specialty-input_desk hide-sm">
-            <select class="demo-default especialidad-desk input-specialty" name="especialidad" id="input-specialty" placeholder="Escriba o seleccione su especialidad" onchange="test()" onclick="test()">
+          <div class="specialty-input_desk">
+            <select class="demo-default especialidad-desk input-specialty" name="especialidad" id="input-specialty" placeholder="Seleccione su especialidad" onchange="test()" onclick="test()">
               <option value="">Seleccione su especialidad</option>
               <option value="Medicina general">Medicina general</option>
               <option value="Psicología">Psicología</option>
               <option value="Ginecología">Ginecología</option>
-            </select>
-          </div>
-          <div class="specialty-input_movil hide-lg hide-md">
-            <select class="input-specialty" name="especialidad-mo" id="input-specialty-mo" onchange="test()" onclick="test()">
-              <option active="active" value="">Seleccione una especialidad</option>
-              <option value="Medicina general">Medicina general</option>
-              <option value="Psicología">Psicología</option>
-              <option value="Psiquiatría">Psiquiatría</option>
-              <option value="Ginecología">Ginecología</option>
-              <option value="Medicina pediátrica">Medicina pediátrica</option>
             </select>
           </div>
           <div class="specialty-box specialty-box_op1 hide">
@@ -133,8 +119,7 @@
                   <div class="date-form">
                     <label class="form-label date-label" for="date">Fecha de atención</label>
                     <p class="asterisc">*</p>
-                    <input class="input-form input-date hide-sm input-validate" type="text" name="date" placeholder="dd/mm/aaaa" autocomplete="off" id="date"/>
-                    <input class="input-form input-date hide-md hide-lg input-validate" type="text" name="date-mo" placeholder="dd/mm/aaaa" autocomplete="off" id="date-mo"/>
+                    <input class="input-form input-date input-validate" type="text" name="date" placeholder="dd/mm/aaaa" autocomplete="off" readonly="true" id="date"/>
                     <div class="alert_date hide-md hide-lg"><img src="./assets/icons/icon-alert.svg"/>
                       <p>Fecha máxima: 28/09/2017</p>
                     </div>
@@ -210,9 +195,9 @@
                   </div>
                 </div>
               </div>
-              <div class="hide-lg hide-md">
-                <p class="info-obligatory-mo">* Son obligatorios</p>
-              </div>
+            </div>
+            <div class="hide-lg hide-md">
+              <p class="info-obligatory-mo">* Son obligatorios</p>
             </div>
             <div class="attach-files">
               <div class="hide-sm">
@@ -242,10 +227,10 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -256,30 +241,30 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>2 | Informe médico.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>3 | Orden médica.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -306,9 +291,9 @@
                   </div>
                 </div>
               </div>
-              <div class="hide-lg hide-md">
-                <p class="info-obligatory-mo">* Son obligatorios</p>
-              </div>
+            </div>
+            <div class="hide-lg hide-md">
+              <p class="info-obligatory-mo">* Son obligatorios</p>
             </div>
             <div class="attach-files">
               <div class="hide-sm">
@@ -338,10 +323,10 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -352,30 +337,30 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>2 | Informe médico.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>3 | Orden médica.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -414,9 +399,9 @@
                   </div>
                 </div>
               </div>
-              <div class="hide-lg hide-md">
-                <p class="info-obligatory-mo">* Son obligatorios</p>
-              </div>
+            </div>
+            <div class="hide-lg hide-md">
+              <p class="info-obligatory-mo">* Son obligatorios</p>
             </div>
             <div class="attach-files">
               <div class="hide-sm">
@@ -446,10 +431,10 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -460,30 +445,30 @@
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>1 | Boleta.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>2 | Informe médico.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
                     <div class="row documentItem">
                       <div class="col-12 no-padding">
                         <div class="row box_grey">
-                          <div class="col-md-6 col-10 text-document">
+                          <div class="col-6 text-document">
                             <p>3 | Orden médica.jpg</p>
                           </div>
-                          <div class="col-md-6 col-2 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
+                          <div class="col-5 delete-document"><a href="javascript:void(0)"><img class="deleteDoc" src="./assets/icons/icon_trash.svg"/></a></div>
                         </div>
                       </div>
                     </div>
@@ -522,7 +507,7 @@
     </div>
     <div class="hide-sm">
       <div class="main-container">
-        <div class="navbar-bottom"><a href="#">
+        <div class="navbar-bottom hide-sm"><a href="#">
             <div class="navbar-bottom-return"><img src="assets/icons/icon-volverizq.svg" alt=""/>
               <p>Volver</p>
             </div></a></div>
@@ -543,5 +528,4 @@
 <script src="js/libs/jquery-ui.min.js"></script>
 <script src="js/libs/jquery.rut.chileno.js"></script>
 <script src="js/libs/selectize.min.js"></script>
-<script src="js/libs/site.js"></script>
 <script src="js/funciones.js"></script>
