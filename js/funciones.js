@@ -4,10 +4,14 @@ $(document).ready(function () {
     clean();
     limpiarVal();
     usarExcedentes();
-    focusBtn();
 });
 
 // --------------- Validaciones ------------------//
+
+$( ".button-large" ).click(function() {
+    $('.button-large').removeClass('btn-active');
+    $(this).addClass('btn-active');
+});
 
 $("#checkTerms").click(function() {
     if($(this).is(':checked')) {  
@@ -105,14 +109,6 @@ $("#btnAdjuntarArchivos").click(function () {
     $(".document-charged").show();
     $(".box-dashed").hide();
 });
-
-// Focus boton elegido
-function focusBtn() {
-    $( ".button-large" ).click(function() {
-        $('.button-large').removeClass('btn-active');
-        $(this).addClass('btn-active');
-    });
-}
 
 //Función efecto excedentes
 function usarExcedentes(checkbox) {
